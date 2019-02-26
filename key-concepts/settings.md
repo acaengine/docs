@@ -2,6 +2,12 @@
 
 _Settings_ are key, value pairs and are used to associate configuration information or metadata to [zones](zones.md), [systems](systems.md), [drivers](drivers.md) and [devices](devices.md). They define the properties of that system/device and how it should be controlled by the system’s logic or the device’s driver.
 
+```javascript
+{
+  "key": "value"
+}
+```
+
 Settings defined on a zone are inherited by all systems in that zone.
 
 Settings defined for drivers are inherited by all devices of that driver.

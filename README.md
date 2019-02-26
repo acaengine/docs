@@ -1,7 +1,5 @@
 # Overview
 
-
-
 ## What is it?
 
 _ACAEngine_ is a platform for creating digital experiences for physical environments. It connects devices, hardware systems and third-party software to provide an API for the built environment.

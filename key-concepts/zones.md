@@ -2,7 +2,7 @@
 
 _Zones_ are collections of [systems](systems.md). A system can be tagged as a member of any number of zones.
 
-![Diagram of a zone](../.gitbook/assets/concepts-zone.svg)
+![Zones have settings and a collection of systems.](../.gitbook/assets/concepts-zone.svg)
 
 They serve two main purposes:
 
