@@ -6,13 +6,13 @@ Access to ACAEngine is secured via [OAuth2](https://www.oauth.com/). Before inte
 
 Depending on your application requirements, a number of approaches are available to authenticate.
 
-{% api-method method="post" host="https://aca.example.com" path="/auth/oauth/token" %}
+{% api-method method="get" host="https://aca.example.com" path="/auth/oauth/token" %}
 {% api-method-summary %}
 Password Grant
 {% endapi-method-summary %}
 
 {% api-method-description %}
-For server-to-server integration, or when designing a system where knowledge of auth information is acceptable, the password grant allows a direct exchange of a username and password for an access token in a single request.
+For server-to-server integration, or when designing a system where direct knowledge of auth information is acceptable, the password grant allows a direct exchange of a username and password for an access token in a single request.
 {% endapi-method-description %}
 
 {% api-method-spec %}
