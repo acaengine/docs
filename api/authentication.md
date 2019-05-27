@@ -6,7 +6,7 @@ Access to ACAEngine is secured via [OAuth2](https://www.oauth.com/). Before inte
 
 To support external interaction all applications using ACAEngine API's need to be registered in Backoffice. Further details on this can be found in the Backoffice user guide.
 
-{% page-ref page="../backoffice.md" %}
+{% page-ref page="../backoffice/" %}
 
 ## Obtaining An Access Token
 

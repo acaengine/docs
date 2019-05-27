@@ -9,12 +9,17 @@
   * [Settings](key-concepts/settings.md)
   * [Interfaces](key-concepts/interfaces.md)
   * [Triggers](key-concepts/triggers.md)
-* [Backoffice](backoffice.md)
-* [Deployment](deployment.md)
+* [Backoffice](backoffice/README.md)
+  * [Managing Systems](backoffice/systems.md)
+  * [Managing Devices](backoffice/devices.md)
+  * [Managing Drivers](backoffice/drivers.md)
+  * [Zones](backoffice/zones.md)
+  * [Triggers](backoffice/triggers.md)
+  * [Metrics](backoffice/metrics.md)
+  * [Users](backoffice/users.md)
+  * [Debugging Systems/Devices](backoffice/control-monitoring.md)
 
 ## Developer Guide
-
-## Integrations
 
 ## API
 
