@@ -21,7 +21,7 @@
 
 ## Developer Guide
 
-* [Setup a Development Environment](developer-guide/setup-a-development-environment.md)
+* [Development Environment](developer-guide/setup-a-development-environment.md)
 * [Building Drivers](developer-guide/writing-drivers/README.md)
   * [Discovery and Metadata](developer-guide/writing-drivers/metadata.md)
   * [State](developer-guide/writing-drivers/state.md)
