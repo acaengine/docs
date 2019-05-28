@@ -8,8 +8,8 @@ This environment runs across MacOS, Windows, or Linux - feel free to pick where 
 
 In order to run this environment you will need two common tools:
 
-1. [Vagrant](https://www.vagrantup.com/downloads.html): a tool for managing virtual environments.
-2. [VirtualBox](https://www.virtualbox.org/wiki/Downloads): an open source, cross-platform virtualisation provider.
+1. [ ] [Vagrant](https://www.vagrantup.com/downloads.html): a tool for managing virtual environments.
+2. [ ] [VirtualBox](https://www.virtualbox.org/wiki/Downloads): an open source, cross-platform virtualisation provider.
 
 Outside of these, nothing will need to be installed or modified on your machine.
 
@@ -33,6 +33,10 @@ This will create a [Vagrantfile](https://www.vagrantup.com/docs/vagrantfile/) th
 If you are planning on diving into [driver development](drivers/), you can also fork and clone the [open-source drivers repo](https://github.com/acaprojects/ruby-engine-drivers/), which contains a pre-initialised Vagrantfile ready for use.
 {% endhint %}
 
+{% hint style="warning" %}
+Older versions of the development environment used the `vagrant-triggers` plugin. This is no longer needed, or compatible with modern versions of Vagrant. If you see a warning about this, run:`vagrant plugin uninstall vagrant-triggers`before continuing.
+{% endhint %}
+
 ### Starting Up
 
 Open a terminal window in the same directory as your vagrant file and run:
@@ -46,7 +50,7 @@ You will see some updates while your environment boots up. This may take a coupl
 Congratulations you’re ready to go!
 
 {% hint style="info" %}
-Vagrant commands need to run within the folder containing the environment configuration \(i.e. where your `Vagrantfile` is\).
+Vagrant commands need to run within the folder containing the environment configuration \(i.e. where your Vagrantfile is\).
 
 If you get an error that says: `A Vagrant environment or target machine is required to run this command` check that you’re in the right place.
 {% endhint %}
