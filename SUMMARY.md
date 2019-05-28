@@ -21,6 +21,21 @@
 
 ## Developer Guide
 
+* [Setup a Development Environment](developer-guide/setup-a-development-environment.md)
+* [Building Drivers](developer-guide/writing-drivers/README.md)
+  * [Discovery and Metadata](developer-guide/writing-drivers/metadata.md)
+  * [State](developer-guide/writing-drivers/state.md)
+  * [Scheduling Actions](developer-guide/writing-drivers/scheduling-actions.md)
+  * [Device Drivers](developer-guide/writing-drivers/device-drivers.md)
+  * [SSH Drivers](developer-guide/writing-drivers/ssh-drivers.md)
+  * [Service Drivers](developer-guide/writing-drivers/service-drivers.md)
+  * [Logic Drivers](developer-guide/writing-drivers/logic-drivers.md)
+  * [Testing and Debugging](developer-guide/writing-drivers/testing-and-debugging.md)
+  * [Response Tokenisation](developer-guide/writing-drivers/response-tokenisation.md)
+  * [Logging](developer-guide/writing-drivers/logging.md)
+  * [Security](developer-guide/writing-drivers/security.md)
+  * [Utilities and Helpers](developer-guide/writing-drivers/utilities-and-helpers.md)
+
 ## API
 
 * [Authentication](api/authentication.md)
