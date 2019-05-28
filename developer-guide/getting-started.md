@@ -24,7 +24,7 @@ Welcome back.
 Now that you have the required tools, choose a directory where you'd like to work, then run
 
 ```bash
-vagrant init acaengine/dev-dev
+vagrant init acaengine/dev-env
 ```
 
 This will create a [Vagrantfile](https://www.vagrantup.com/docs/vagrantfile/) that contains your environment config.
