@@ -21,7 +21,7 @@
 
 ## Developer Guide
 
-* [Development Environment](developer-guide/dev-env.md)
+* [Development Environment](developer-guide/getting-started.md)
 * [Building Drivers](developer-guide/drivers/README.md)
   * [Discovery and Metadata](developer-guide/drivers/metadata.md)
   * [State](developer-guide/drivers/state.md)
@@ -35,10 +35,10 @@
   * [Logging](developer-guide/drivers/logging.md)
   * [Security](developer-guide/drivers/security.md)
   * [Utilities and Helpers](developer-guide/drivers/utilities-and-helpers.md)
-* [User Interfaces](developer-guide/ui/README.md)
-  * [Composer](developer-guide/ui/composer.md)
-  * [Virtual Systems](developer-guide/ui/virtual-systems.md)
-  * [Widgets](developer-guide/ui/widgets.md)
+* [User Interfaces](developer-guide/user-interfaces/README.md)
+  * [Composer](developer-guide/user-interfaces/composer.md)
+  * [Virtual Systems](developer-guide/user-interfaces/virtual-systems.md)
+  * [Widgets](developer-guide/user-interfaces/widgets.md)
 
 ## API
 
