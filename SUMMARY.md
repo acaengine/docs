@@ -17,7 +17,7 @@
   * [Triggers](backoffice/triggers.md)
   * [Metrics](backoffice/metrics.md)
   * [Users](backoffice/users.md)
-  * [Debugging Systems/Devices](backoffice/control-monitoring.md)
+  * [Debugging Systems/Devices](backoffice/debugging.md)
 
 ## Developer Guide
 
@@ -25,12 +25,12 @@
 * [Building Drivers](developer-guide/drivers/README.md)
   * [Discovery and Metadata](developer-guide/drivers/metadata.md)
   * [State](developer-guide/drivers/state.md)
-  * [Scheduling Actions](developer-guide/drivers/scheduling-actions.md)
-  * [Device Drivers](developer-guide/drivers/device-drivers.md)
-  * [SSH Drivers](developer-guide/drivers/ssh-drivers.md)
-  * [Service Drivers](developer-guide/drivers/service-drivers.md)
-  * [Logic Drivers](developer-guide/drivers/logic-drivers.md)
-  * [Testing and Debugging](developer-guide/drivers/testing-and-debugging.md)
+  * [Scheduling Actions](developer-guide/drivers/scheduling.md)
+  * [Device Drivers](developer-guide/drivers/device.md)
+  * [SSH Drivers](developer-guide/drivers/ssh.md)
+  * [Service Drivers](developer-guide/drivers/service.md)
+  * [Logic Drivers](developer-guide/drivers/logic.md)
+  * [Testing and Debugging](developer-guide/drivers/testing.md)
   * [Response Tokenisation](developer-guide/drivers/response-tokenisation.md)
   * [Logging](developer-guide/drivers/logging.md)
   * [Security](developer-guide/drivers/security.md)
