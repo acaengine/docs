@@ -35,6 +35,10 @@
   * [Logging](developer-guide/writing-drivers/logging.md)
   * [Security](developer-guide/writing-drivers/security.md)
   * [Utilities and Helpers](developer-guide/writing-drivers/utilities-and-helpers.md)
+* [User Interfaces](developer-guide/user-interfaces/README.md)
+  * [Composer](developer-guide/user-interfaces/composer.md)
+  * [Virtual Systems](developer-guide/user-interfaces/virtual-systems.md)
+  * [Widgets](developer-guide/user-interfaces/widgets.md)
 
 ## API
 
