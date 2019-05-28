@@ -1,12 +1,12 @@
 # Development Environment
 
-ACAEngine is distributed as a set of docker containers that are designed to deploy to your on-prem infrastructure or private cloud. To keep things simple for development, testing, and experimentation we also package this as a prebuilt environment that you can run on your local machine.
+ACAEngine is distributed as a set of docker containers that are designed to deploy to your on-prem infrastructure or private cloud. To keep things simple for development, testing, and experimentation this is also packaged as a prebuilt environment that you can run on your local machine.
 
 This environment runs across MacOS, Windows, or Linux - feel free to pick where you work best.
 
 ## Required Tooling
 
-In order to run this environment you will need a few common tools:
+In order to run this environment you will need two common tools:
 
 1. [Vagrant](https://www.vagrantup.com/downloads.html): a tool for managing virtual environments.
 2. [VirtualBox](https://www.virtualbox.org/wiki/Downloads): an open source, cross-platform virtualisation provider.
