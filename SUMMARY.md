@@ -57,3 +57,8 @@
   * [ignore](api/ws/ignore.md)
   * [ping](api/ws/ping.md)
 
+## Support
+
+* [Service Desk](https://support.acaprojects.com)
+* [Slack](support/slack.md)
+
