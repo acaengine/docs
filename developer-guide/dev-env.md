@@ -30,7 +30,7 @@ vagrant init acaengine/dev-dev
 This will create a [Vagrantfile](https://www.vagrantup.com/docs/vagrantfile/) that contains your environment config.
 
 {% hint style="success" %}
-If you are planning on diving into [driver development](writing-drivers/), you can also fork and clone the [open-source drivers repo](https://github.com/acaprojects/ruby-engine-drivers/), which contains a pre-initialised Vagrantfile ready for use.
+If you are planning on diving into [driver development](drivers/), you can also fork and clone the [open-source drivers repo](https://github.com/acaprojects/ruby-engine-drivers/), which contains a pre-initialised Vagrantfile ready for use.
 {% endhint %}
 
 ### Starting Up
