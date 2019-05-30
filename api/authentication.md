@@ -1,6 +1,20 @@
 # Authentication
 
-Access to ACAEngine is secured via [OAuth2](https://www.oauth.com/). Before interacting with either the REST or Realtime API's you must authenticate and obtain an access token. Once authenticated, this token must accompany all requests.
+Access to ACAEngine is secured via [OAuth2](https://www.oauth.com/). Before interacting with either the REST or Realtime API's you must authenticate and obtain an access token. Once authenticated, this token must accompany all requests as an `Authorization` header.
+
+{% tabs %}
+{% tab title="HTTPie" %}
+```bash
+http aca.example.com/systems 'Authorization:bearer <access token>'
+```
+{% endtab %}
+
+{% tab title="cURL" %}
+```bash
+curl -H "Authorization: bearer <access token>" aca.example.com/systems
+```
+{% endtab %}
+{% endtabs %}
 
 ## Registering Your Application
 
@@ -8,7 +22,7 @@ All applications using the ACAEngine API need to be registered in Backoffice. De
 
 {% page-ref page="../backoffice/" %}
 
-Once registered you will need to take note of the `client_id` as well as either the `client_secret` or `redirect_uri`, depending on the auth flow your application will use.
+Once registered, take note of the `client_id` as well as either the `client_secret` or `redirect_uri`, depending on the auth flow your application will use.
 
 ## Obtaining An Access Token
 
