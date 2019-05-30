@@ -180,20 +180,20 @@ Your server may then exchange this code for an access token.
 "authorization\_code"
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="username" type="string" required=true %}
-The user to authenticate as.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="password" type="string" required=true %}
-The password to authenticate with.
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="client\_id" type="string" required=true %}
 Application client ID.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="client\_secret" type="string" required=true %}
-Application client secret.
+Application secret.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="code" type="string" required=true %}
+The authorization code from the previous step.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="redirect\_uri" type="string" required=true %}
+The redirect URI used in the authorization code generation.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
