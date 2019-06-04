@@ -1,6 +1,0 @@
----
-description: Dependency operations.
----
-
-# /dependencies
-

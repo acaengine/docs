@@ -43,19 +43,16 @@
 ## API
 
 * [Authentication](api/authentication.md)
-* [REST API](api/rest/README.md)
-  * [/systems](api/rest/systems.md)
-  * [/modules](api/rest/modules.md)
-  * [/dependencies](api/rest/dependencies.md)
-  * [/zones](api/rest/zones.md)
-  * [/users](api/rest/users.md)
+* [REST API](api/rest.md)
 * [Realtime API](api/ws/README.md)
-  * [bind](api/ws/bind.md)
-  * [unbind](api/ws/unbind.md)
-  * [exec](api/ws/exec.md)
-  * [debug](api/ws/debug.md)
-  * [ignore](api/ws/ignore.md)
-  * [ping](api/ws/ping.md)
+  * [Commands](api/ws/commands/README.md)
+    * [bind](api/ws/commands/bind.md)
+    * [unbind](api/ws/commands/unbind.md)
+    * [exec](api/ws/commands/exec.md)
+    * [debug](api/ws/commands/debug.md)
+    * [ignore](api/ws/commands/ignore.md)
+  * [Heartbeat](api/ws/heartbeat.md)
+  * [Errors](api/ws/errors.md)
 
 ## Support
 

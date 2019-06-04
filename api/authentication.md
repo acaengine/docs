@@ -1,6 +1,8 @@
 # Authentication
 
-Access to ACAEngine is secured via [OAuth2](https://www.oauth.com/). Before interacting with either the REST or Realtime API's you must authenticate and obtain an access token. Once authenticated, this token must accompany all requests as an `Authorization` header.
+Access to ACAEngine is secured via [OAuth2](https://www.oauth.com/). Before interacting with either the REST or Realtime API's you must authenticate and obtain an access token. Once authenticated, this token must accompany all requests.
+
+This can either be included as an `Authorization` header \(recommended\):
 
 {% tabs %}
 {% tab title="HTTPie" %}
@@ -12,6 +14,22 @@ http aca.example.com/systems 'Authorization:bearer <access token>'
 {% tab title="cURL" %}
 ```bash
 curl -H "Authorization: bearer <access token>" aca.example.com/systems
+```
+{% endtab %}
+{% endtabs %}
+
+Or if this is not supported from your endpoint, as a query parameter:
+
+{% tabs %}
+{% tab title="HTTPie" %}
+```bash
+http aca.example.com/systems bearer_token==<access token>
+```
+{% endtab %}
+
+{% tab title="cURL" %}
+```bash
+curl "aca.example.com/systems?bearer_token=<access token>"
 ```
 {% endtab %}
 {% endtabs %}
