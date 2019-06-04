@@ -21,7 +21,7 @@ A typical response to the above request:
 {
     "id": 1,                  // tracking id
     "type": "success",        // request status (success or error)
-    "meta":{                  // meta data that might be useful
+    "meta": {                 // meta data that might be useful
         "sys": "sys-YNQ8uNfJvF",
         "mod": "Display",
         "index": 1,
