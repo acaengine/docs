@@ -57,5 +57,5 @@
 ## Support
 
 * [Service Desk](https://support.acaprojects.com)
-* [Slack](support/slack.md)
+* [Tech Chat](support/chat.md)
 
