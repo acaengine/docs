@@ -19,6 +19,14 @@
   * [Users](backoffice/users.md)
   * [Debugging Systems/Devices](backoffice/debugging.md)
 
+## Deployment
+
+* [System Architecture](deployment/architecture.md)
+* [Provisioning](deployment/requirements.md)
+* [Identity](deployment/identity.md)
+* [Security](deployment/security.md)
+* [Data Storage](deployment/data-storage.md)
+
 ## Developer Guide
 
 * [Development Environment](developer-guide/getting-started.md)
@@ -57,5 +65,5 @@
 ## Support
 
 * [Service Desk](https://support.acaprojects.com)
-* [Slack](support/slack.md)
+* [Tech Chat](support/chat.md)
 
