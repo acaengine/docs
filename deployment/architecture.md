@@ -60,7 +60,7 @@ Due to limitations of hardware being interacted with, integrations will only be 
 {% tab title="Active-Passive" %}
 ![Active-passive infrastructure deployment.](../.gitbook/assets/deployment-active-passive.svg)
 
-In an active-passive deployment each stack runs on a self-contained host. The load balancer should direct all traffic to the primary host. If this because unavailable traffic should be re-route to the secondary host to provide continued operation.
+In an active-passive deployment each stack runs on a self-contained host. The load balancer should direct all traffic to the primary host. If this becomes unavailable, traffic should be re-route to the secondary host to provide continued operation.
 {% endtab %}
 
 {% tab title="Standalone" %}
