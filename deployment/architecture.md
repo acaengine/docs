@@ -74,5 +74,3 @@ In a standalone deployment all application components are provisioned on a singl
 {% endtab %}
 {% endtabs %}
 
-
-
