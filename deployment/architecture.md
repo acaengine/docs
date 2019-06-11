@@ -64,9 +64,13 @@ In an active-passive deployment each stack runs on a self-contained host. The lo
 {% endtab %}
 
 {% tab title="Standalone" %}
-{% hint style="warning" %}
-Standalone deployments are not recommended for production use, although they can provide a good option for UAT environments, proof-of-concept deployments, or systems where availability is not a critical concern.
+{% hint style="danger" %}
+Standalone deployments are not recommended for production use. They provide a good option for UAT environments, proof-of-concept systems, or test environments where availability is not a critical concern.
 {% endhint %}
+
+![Standalone deployment overview.](../.gitbook/assets/deployment-standalone.svg)
+
+In a standalone deployment all application components are provisioned on a single host. This provides simplicity of deployment and minimises infrastructure requirements, but offers no redundancy in the event of network or infrastructure failure.
 {% endtab %}
 {% endtabs %}
 
