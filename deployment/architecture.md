@@ -32,7 +32,7 @@ Clients are devices running interfaces distributed by Web nodes, or native apps 
 
 ### ![](../.gitbook/assets/components-identity.svg) Identity Provider
 
-All interaction with ACAEngine must be associated with a valid user. To simplify UX and improve security, authentication integrates tightly with existing identity providers operating in an environment. This may be services such as Azure AD, Google Sign-In or other services providing SAML or OAuth2 endpoints.
+Interactions with ACAEngine must be associated with a valid user. To simplify UX and improve security, authentication integrates tightly with existing identity providers operating in an environment. This may be services such as Azure AD, Google Sign-In or other services providing SAML or OAuth2 endpoints.
 
 ### ![](../.gitbook/assets/components-load-balancer.svg) Load Balancer
 
@@ -46,11 +46,21 @@ The specifics of external service integrations will vary based on your system re
 
 {% tabs %}
 {% tab title="Distributed" %}
-![](../.gitbook/assets/deployment-distributed.svg)
+![Example distributed deployment architecture.](../.gitbook/assets/deployment-distributed.svg)
+
+Distributed deployments split application services across hosts using a three-tier architecture–web, app and db. This provides isolation of different application components and provisioning of resources appropriate for each.
+
+Each of these stacks may be replicated as required to meet availability requirements. To provide redundancy in the event of network or infrastructure failure it is recommended that these replications take place across availability zones.
+
+{% hint style="warning" %}
+Due to limitations of hardware being interacted with, integrations will only be active from a single Engine node at any point in time. In the case of primary node failure, the secondary node will establish device connectivity and begin accepting control traffic.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Active-Passive" %}
+![Active-passive infrastructure deployment.](../.gitbook/assets/deployment-active-passive.svg)
 
+In an active-passive deployment each stack runs on a self-contained host. The load balancer should direct all traffic to the primary host. If this because unavailable traffic should be re-route to the secondary host to provide continued operation.
 {% endtab %}
 
 {% tab title="Standalone" %}
@@ -59,4 +69,6 @@ Standalone deployments are not recommended for production use, although they can
 {% endhint %}
 {% endtab %}
 {% endtabs %}
+
+
 
