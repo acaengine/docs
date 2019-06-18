@@ -22,10 +22,6 @@
 ## Deployment
 
 * [System Architecture](deployment/architecture.md)
-* [Provisioning](deployment/requirements.md)
-* [Identity](deployment/identity.md)
-* [Security](deployment/security.md)
-* [Data Storage](deployment/data-storage.md)
 
 ## Developer Guide
 
