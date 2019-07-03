@@ -120,5 +120,49 @@ Argument to be sent to the method.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% api-method method="get" host="https://aca.example.com" path="/api/control/systems/{id}/state" %}
+{% api-method-summary %}
+Retrieve module state
+{% endapi-method-summary %}
 
+{% api-method-description %}
+Query the current state exposed by a module within the system.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=false %}
+ID of the system the module is in.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="module" type="string" required=true %}
+Class name of the module.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="index" type="integer" required=false %}
+\(default 1\) Module index within the system.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="lookup" type="string" required=false %}
+A specified status key of interest. If specified this is the only value returned.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
