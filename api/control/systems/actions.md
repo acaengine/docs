@@ -38,7 +38,7 @@ ID of the system to start.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://aca.example.com" path="/api/control/systems/{id}/start" %}
+{% api-method method="post" host="https://aca.example.com" path="/api/control/systems/{id}/stop" %}
 {% api-method-summary %}
 Stop all modules
 {% endapi-method-summary %}
