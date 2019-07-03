@@ -46,8 +46,10 @@
 
 ## API
 
-* [Authentication](api/authentication.md)
-* [REST API](api/rest.md)
+* [Authentication](api/auth.md)
+* [Control](api/control/README.md)
+  * [Systems](api/control/systems/README.md)
+    * [Module Interaction](api/control/systems/actions.md)
 * [Realtime API](api/ws/README.md)
   * [Commands](api/ws/commands/README.md)
     * [bind](api/ws/commands/bind.md)
