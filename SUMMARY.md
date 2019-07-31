@@ -22,6 +22,8 @@
 ## Deployment
 
 * [System Architecture](deployment/architecture.md)
+* [Integrations](deployment/integrations/README.md)
+  * [Device Drivers](deployment/integrations/device-drivers.md)
 
 ## Developer Guide
 
