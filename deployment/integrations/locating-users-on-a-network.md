@@ -2,7 +2,7 @@
 
 ### Overview
 
-Using existing infrastructure in an organisation there is typically enough data available to accurately track staff. Wireless networks provide a rough indication of location and cabled infrastructure accurately indicates who is sitting at individual desk locations.
+Using existing infrastructure in an organisation there is typically enough data available to accurately locate staff. Wireless networks provide a rough indication of location and cabled infrastructure accurately indicates who is sitting at individual desk locations.
 
 This can also be augmented with sensors, as required, however sensors can only be used to indicate desk usage - falling back to wifi for staff location.
 
@@ -15,7 +15,7 @@ This can also be augmented with sensors, as required, however sensors can only b
 3. Check if any of those devices are plugged in to a switch port \(or have a desk reserved\)
 4. Fallback to wireless lookup of username, email or wireless MAC address if no desk is found
 
-### Desk Tracking Requirements
+### Desk Locating Requirements
 
 * Switch IP addresses
 * SNMP or SSH service enabled on the switch \(SSH preferred as it is easier to troubleshoot and secure\)
@@ -30,7 +30,7 @@ CISCO switches support SSH and ACAEngine supports SSHv2 for secure data transfer
 
 ### Laptop Docking Stations
 
-Desk tracking relies on device MAC addresses to identify staff as they move around a building.
+Desk locating relies on device MAC addresses to identify staff as they move around a building.
 
 As docking stations often sit between the laptop and the switch, we need to ensure that the MAC address exposed by the docking station is unique to each staff member.  
 
@@ -88,7 +88,7 @@ At this point we have a user account and an IP address. We need to lookup the MA
 
 We query DHCP snooping tables on level 2 switches as they maintain a list of DHCP allocated IP addresses and the MAC addresses of assigned devices.
 
-DHCP snooping is a [security feature](http://packetpushers.net/five-things-to-know-about-dhcp-snooping/) and enabling it has additional advantages beyond user location tracking.  
+DHCP snooping is a [security feature](http://packetpushers.net/five-things-to-know-about-dhcp-snooping/) and enabling it has additional advantages beyond user locating.  
 If DHCP snooping is undesirable, DHCP Gleaning can be used instead.
 
 ### Example Powershell Scripts
