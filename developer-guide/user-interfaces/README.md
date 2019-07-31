@@ -37,6 +37,8 @@ This is a project that can run against the ACA Engine development environment,
 5. `npm install` to install the project dependencies
 6. `gulp serve` to run the development server
 
+NB: If you are planning to run the user interface project without the ACAEngine Developer environment, in Step 6 above you will need to use `gulp serve --mock` this will allow the interface to run 'headless' with mock data for development purposes.
+
 ## Angular Resources
 
 Angular is our preferred web application framework. We recommend being familiar with it before continuing.
