@@ -23,6 +23,7 @@
 
 * [System Architecture](deployment/architecture.md)
 * [Integrations](deployment/integrations/README.md)
+  * [Locating Users on a Network](deployment/integrations/locating-users-on-a-network.md)
   * [Device Drivers](deployment/integrations/device-drivers.md)
 
 ## Developer Guide
