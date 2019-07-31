@@ -8,7 +8,7 @@ If a driver for your device is not available, you can raise a request to have th
 
 ### Shortlist of Frequently Used Drivers
 
-#### Displays
+### Displays
 
 * LG \(Displays\)
 * Sony \(Displays/Projectors\)
@@ -17,7 +17,7 @@ If a driver for your device is not available, you can raise a request to have th
 * Sharp \(Displays\)
 * Panasonic \(Displays\)
 
-#### Hardware
+### Hardware
 
 * Extron \(Switchers\)
 * Kramer \(Switchers\)
@@ -26,8 +26,15 @@ If a driver for your device is not available, you can raise a request to have th
 * MediaSite Capture Appliances/Server
 * SVSi
 * VISCA Cameras
+* Barco ClickShare
+* TriplePlay
+* Lightware Switchers
+* Microsoft Surface Hub
+* ScreenTechnics
+* Wolfvision Document Cameras
+* Lumens Document Cameras
 
-#### Audio
+### Audio
 
 * BiAmp
 * QSC Q-SYS
@@ -35,15 +42,18 @@ If a driver for your device is not available, you can raise a request to have th
 * Clock Audio
 * AMX Ascendo
 * Shure
+* ClearOne
+* PowerSoft
+* Symetrix
 
-#### Network
+### Network
 
 * Cisco Meraki
 * Cisco CMX
 * Cisco ISE
 * Cisco Switches
 
-#### Other
+### Other
 
 * C Bus \(Lighting\)
 * KNX \(Lighting\)
@@ -54,4 +64,5 @@ If a driver for your device is not available, you can raise a request to have th
 * Pexip
 * Global Cache
 * Foxtel
+* Microsoft FindMe
 
