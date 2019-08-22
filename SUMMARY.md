@@ -33,7 +33,7 @@
 
 ## Integrations
 
-* [Directory Services (room booking)](integrations/directory/README.md)
+* [Directory Services](integrations/directory/README.md)
   * [Microsoft Office365](integrations/directory/office365.md)
 * [IoT](integrations/iot.md)
   * [Device Drivers](integrations/device-drivers.md)
@@ -48,8 +48,9 @@
 ## Administration
 * [Domains](administration/domain.md)
   * [Applications](administration/applications.md)
+* [Systems](administration/systems/README.md)
+  * [Adding a bookable room](administration/systems/add-room.md)
 * [User Roles](administration/user-roles.md)
-* [System Properties](administration/system-properties.md)
 
 ## Developer Guide
 
