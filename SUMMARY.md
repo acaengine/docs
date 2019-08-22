@@ -22,10 +22,34 @@
 ## Deployment
 
 * [System Architecture](deployment/architecture.md)
-* [Integrations](deployment/integrations/README.md)
-  * [SVG Map Creation](deployment/integrations/svg-map-creation.md)
-  * [Locating Users on a Network](deployment/integrations/locating-users-on-a-network.md)
-  * [Device Drivers](deployment/integrations/device-drivers.md)
+* [SSL Certificates](deployment/signed-ssl.md)  
+* [Load Balancer Config](deployment/load-balancer.md)  
+* [Single Sign-On](deployment/sso/README.md)  
+  * [SAML2 with Azure AD](deployment/sso/saml2-azure.md)
+  * [SAML2 with ADFS](deployment/sso/saml2-adfs.md)
+  * [SAML2 with GSuite](deployment/sso/saml2-gsuite.md)
+  * [OAuth2](deployment/sso/oauth2.md
+* [Engine Web Apps](deployment/frontend/README.md)  
+
+## Integrations
+
+* [Directory Services (room booking)](integrations/directory/README.md)
+  * [Microsoft Office365](integrations/directory/office365.md)
+* [IoT](integrations/iot.md)
+  * [Device Drivers](integrations/device-drivers.md)
+* [Location Services](integrations/location/README.md)
+  * [Locating Users on a Network](integrations/location/locating-users-on-a-network.md)
+  * [SVG Map Creation](integrations/location/svg-map-creation.md)
+  * [Cisco CMX](integrations/location/cisco-cmx.md)
+  * [Cisco Meraki RTLS](integrations/location/cisco-meraki.md)
+  * [Desk Sensors](integrations/location/desk-sensors.md)
+* [Email Notifications](integrations/email-notifications.md)
+
+## Administration
+* [Domains](administration/domain.md)
+  * [Applications](administration/applications.md)
+* [User Roles](administration/user-roles.md)
+* [System Properties](administration/system-properties.md)
 
 ## Developer Guide
 
