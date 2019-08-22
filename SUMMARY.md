@@ -28,7 +28,7 @@
   * [SAML2 with Azure AD](deployment/sso/saml2-azure.md)
   * [SAML2 with ADFS](deployment/sso/saml2-adfs.md)
   * [SAML2 with GSuite](deployment/sso/saml2-gsuite.md)
-  * [OAuth2](deployment/sso/oauth2.md
+  * [OAuth2](deployment/sso/oauth2.md)
 * [Engine Web Apps](deployment/frontend/README.md)  
 
 ## Integrations
