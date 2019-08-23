@@ -39,7 +39,7 @@ This tab will list the Triggers that have been added to this system. Click on th
 
 ![](../.gitbook/assets/backoffice-system-edit.JPG)
 
-If your account as System Admin access, then the edit button (a pen icon, at the top right of the system's page) will be available. Clicking this icon will show the above popup where the following details can be edited:
+If your account has System Admin access, then the edit button (a pen icon, at the top right of the system's page) will be available. Clicking this icon will show the above popup where the following details can be edited:
 
 * Name: The name of the system (room) that will be shown in Engine apps like the room booking panel
 * Email: The mailbox that represents the room's calendar. This email address' default calendar will be queried to check which bookings exist for this room. The email address will be invited to any room bookings that a user creates from an ACA Engine app (e.g. Staff App). The mailbox should be confgured in the directory service (typically MS Office 365) as a [Resource Mailbox](https://docs.microsoft.com/en-us/office365/admin/manage/room-and-equipment-mailboxes?view=o365-worldwide).
