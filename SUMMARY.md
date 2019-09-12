@@ -22,34 +22,35 @@
 ## Deployment
 
 * [System Architecture](deployment/architecture.md)
-* [SSL Certificates](deployment/signed-ssl.md)  
-* [Load Balancer Config](deployment/load-balancer.md)  
-* [Single Sign-On](deployment/sso/README.md)  
-  * [SAML2 with Azure AD](deployment/sso/saml2-azure.md)
-  * [SAML2 with ADFS](deployment/sso/saml2-adfs.md)
-  * [SAML2 with GSuite](deployment/sso/saml2-gsuite.md)
-  * [OAuth2](deployment/sso/oauth2.md)
-* [Engine Web Apps](deployment/frontend/README.md)  
+* [SSL Certificates](deployment/ssl-certificates.md)
+* [Load Balancer Config](deployment/load-balancer-config.md)
+* [Single Sign-On](deployment/single-sign-on/README.md)
+  * [SAML2 with Azure AD](deployment/single-sign-on/saml2-with-azure-ad.md)
+  * [SAML2 with ADFS](deployment/single-sign-on/saml2-with-adfs.md)
+  * [SAML2 with GSuite](deployment/single-sign-on/saml2-with-gsuite.md)
+  * [OAuth2](deployment/single-sign-on/oauth2.md)
+* [Engine Web Apps](deployment/engine-web-apps.md)
 
 ## Integrations
 
-* [Directory Services](integrations/directory/README.md)
-  * [Microsoft Office365](integrations/directory/office365.md)
-* [IoT](integrations/iot.md)
-  * [Device Drivers](integrations/device-drivers.md)
-* [Location Services](integrations/location/README.md)
-  * [Locating Users on a Network](integrations/location/locating-users-on-a-network.md)
-  * [SVG Map Creation](integrations/location/svg-map-creation.md)
-  * [Cisco CMX](integrations/location/cisco-cmx.md)
-  * [Cisco Meraki RTLS](integrations/location/cisco-meraki.md)
-  * [Desk Sensors](integrations/location/desk-sensors.md)
+* [Directory Services](integrations/directory-services/README.md)
+  * [Microsoft Office365](integrations/directory-services/microsoft-office365.md)
+* [IoT](integrations/iot/README.md)
+  * [Device Drivers](integrations/iot/device-drivers.md)
+* [Location Services](integrations/location-services/README.md)
+  * [Locating Users on a Network](integrations/location-services/locating-users-on-a-network.md)
+  * [SVG Map Creation](integrations/location-services/svg-map-creation.md)
+  * [Cisco CMX](integrations/location-services/cisco-cmx.md)
+  * [Cisco Meraki RTLS](integrations/location-services/cisco-meraki-rtls.md)
+  * [Desk Sensors](integrations/location-services/desk-sensors.md)
 * [Email Notifications](integrations/email-notifications.md)
 
 ## Administration
-* [Domains](administration/domain.md)
-  * [Applications](administration/applications.md)
+
+* [Domains](administration/domains/README.md)
+  * [Applications](administration/domains/applications.md)
 * [Systems](administration/systems/README.md)
-  * [Adding a bookable room](administration/systems/add-room.md)
+  * [Adding a bookable room](administration/systems/adding-a-bookable-room.md)
 * [User Roles](administration/user-roles.md)
 
 ## Developer Guide

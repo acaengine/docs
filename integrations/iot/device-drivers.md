@@ -6,9 +6,9 @@ You can view a full list of available drivers on our [GitHub Page](https://githu
 
 If a driver for your device is not available, you can raise a request to have the driver written via our Service Desk or refer to the [Developer Guide -&gt; Building Drivers](https://docs.acaengine.com/developer-guide/drivers) section to write your own.
 
-### Shortlist of Frequently Used Drivers
+## Shortlist of Frequently Used Drivers
 
-### Displays
+## Displays
 
 * LG \(Displays\)
 * Sony \(Displays/Projectors\)
@@ -17,7 +17,7 @@ If a driver for your device is not available, you can raise a request to have th
 * Sharp \(Displays\)
 * Panasonic \(Displays\)
 
-### Hardware
+## Hardware
 
 * Extron \(Switchers\)
 * Kramer \(Switchers\)
@@ -34,7 +34,7 @@ If a driver for your device is not available, you can raise a request to have th
 * Wolfvision Document Cameras
 * Lumens Document Cameras
 
-### Audio
+## Audio
 
 * BiAmp
 * QSC Q-SYS
@@ -46,14 +46,14 @@ If a driver for your device is not available, you can raise a request to have th
 * PowerSoft
 * Symetrix
 
-### Network
+## Network
 
 * Cisco Meraki
 * Cisco CMX
 * Cisco ISE
 * Cisco Switches
 
-### Other
+## Other
 
 * C Bus \(Lighting\)
 * KNX \(Lighting\)
