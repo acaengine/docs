@@ -27,6 +27,7 @@
 * [Single Sign-On](deployment/single-sign-on/README.md)
   * [SAML2 with Azure AD](deployment/single-sign-on/saml2-with-azure-ad.md)
   * [SAML2 with ADFS](deployment/single-sign-on/saml2-with-adfs.md)
+  * [SAML2 with Auth0](deployment/single-sign-on/saml2-with-auth0.md)
   * [SAML2 with GSuite](deployment/single-sign-on/saml2-with-gsuite.md)
   * [OAuth2](deployment/single-sign-on/oauth2.md)
 * [Engine Web Apps](deployment/engine-web-apps.md)
