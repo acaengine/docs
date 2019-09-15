@@ -1,10 +1,10 @@
-# Realtime API
+# Websocket
 
-The real-time API is the primary method for interacting with devices managed by ACA Engine. It uses a WebSocket connection to allow you to build efficient, responsive user interfaces, monitoring systems and other extensions which require live, two-way or asynchronous interaction.
+The `/websocket` endpoint is used to provide real-time interaction with modules running on ACAEngine. It provides an interface to build efficient, responsive user interfaces, monitoring systems and other extensions which require live, two-way or asynchronous interaction.
 
 If you are building browser-based experiences we have a pre-built AngularJS client library ready to go:
 
-{% page-ref page="../../developer-guide/user-interfaces/composer.md" %}
+{% page-ref page="../../../developer-guide/user-interfaces/composer.md" %}
 
 Otherwise, if you are working with other frameworks, or would like to build your own, read on.
 

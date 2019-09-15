@@ -63,11 +63,10 @@ Limit to systems that contain this module.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+A list of systems will be returned, matching the search criteria. If no systems match, an empty list will be provided.
 {% endapi-method-response-example-description %}
 
 ```
-{
     "total": 3,
     "results": [
         {

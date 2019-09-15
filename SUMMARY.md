@@ -81,18 +81,18 @@
 * [Control](api/control/README.md)
   * [Systems](api/control/systems/README.md)
     * [Module Interaction](api/control/systems/actions.md)
-* [Realtime API](api/ws/README.md)
-  * [Commands](api/ws/commands/README.md)
-    * [bind](api/ws/commands/bind.md)
-    * [unbind](api/ws/commands/unbind.md)
-    * [exec](api/ws/commands/exec.md)
-    * [debug](api/ws/commands/debug.md)
-    * [ignore](api/ws/commands/ignore.md)
-  * [Heartbeat](api/ws/heartbeat.md)
-  * [Errors](api/ws/errors.md)
+  * [Websocket](api/control/websocket/README.md)
+    * [Commands](api/control/websocket/commands/README.md)
+      * [bind](api/control/websocket/commands/bind.md)
+      * [unbind](api/control/websocket/commands/unbind.md)
+      * [exec](api/control/websocket/commands/exec.md)
+      * [debug](api/control/websocket/commands/debug.md)
+      * [ignore](api/control/websocket/commands/ignore.md)
+    * [Heartbeat](api/control/websocket/heartbeat.md)
+    * [Errors](api/control/websocket/errors.md)
 
 ## Support
 
-* [Service Desk](https://support.acaprojects.com)
 * [Tech Chat](support/chat.md)
+* [Service Desk](https://support.acaprojects.com)
 
