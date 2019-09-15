@@ -1,4 +1,4 @@
-# Managing Systems
+# Systems
 
 The Systems section \(1\) displays a list of all systems currently defined. This list can be filtered by using the search box \(2\).
 

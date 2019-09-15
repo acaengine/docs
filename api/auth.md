@@ -42,7 +42,7 @@ curl "aca.example.com/api/control/systems?bearer_token=<access token>"
 
 All applications using the ACAEngine API need to be registered in Backoffice. Details on this can be found in the Backoffice user guide.
 
-{% page-ref page="../backoffice/" %}
+{% page-ref page="../backoffice/domains/" %}
 
 Once registered, take note of the `client_id` as well as the `client_secret` or `redirect_uri`, depending on the auth flow your application will use.
 

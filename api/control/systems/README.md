@@ -26,7 +26,7 @@ All systems provide a base set of metadata that helps to describe their role and
 | `support_url` | string | A URL linking to the primary interface for controlling this system. |
 | `version` | integer | Incrementing counter for handling stale updates.v |
 
-{% api-method method="get" host="http://aca.example.com" path="/api/control/systems" %}
+{% api-method method="get" host="https://aca.example.com" path="/api/control/systems" %}
 {% api-method-summary %}
 Search
 {% endapi-method-summary %}
