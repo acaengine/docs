@@ -76,7 +76,7 @@ Execute a module method
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Run behaviour that has been exposed by a module.
+Run behaviour that has been exposed by a module. The associated method will be executed and the response returned. If this includes asynchonous or long running behaviour, the result will be awaiting up until a timeout value.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -109,11 +109,11 @@ Argument to be sent to the method.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+All response values are wrapped in an array. This ensures that method which return primatives \(strings, numbers, booleans or null\) still provide a valid JSON response.
 {% endapi-method-response-example-description %}
 
 ```
-
+[]
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
