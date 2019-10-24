@@ -377,3 +377,39 @@ Application client secret.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Token Revocation
+
+To end a session, applications should request a token revocation. This will invalidate the token, preventing further use.
+
+{% api-method method="post" host="https://aca.example.com" path="/auth/oauth/token" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="token" type="string" required=true %}
+The token to invalidate.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
