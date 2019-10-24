@@ -16,19 +16,28 @@ Get architectural floor plan from client and branding colours \(if provided\).
 
 ![](../../.gitbook/assets/image%20%283%29.png)
 
-## Step 2 - Create new Drawing
+## Step 2 - File Set up & Import Architecture Drawing To AI 
 
-Setup file in Adobe Illustrator. Open Adobe Illustrator&gt; file new&gt; setup as A4 landscape document&gt; one artboard&gt;name your file “client\_map\_level” and select create.
+When working in illustrator it is important to set your artboards to pixels \(px\) for web form
 
-![](../../.gitbook/assets/image%20%2812%29.png)
+* Drag drop a jpeg version of the floor plan into ai
+* To get started with the right settings we need to select preferences from Illustrator&gt;preferences&gt;General
+* Select "scale corners" and "scale strokes and effects" this will make sure all your objects will scale to the stroke you set it at which provides freedom in scalability .
+* Select "Units" from the Side options and double check everything is set to pixels as we are working in web.
 
-## Step 3 - Load Floor Plan
+![](../../.gitbook/assets/screen-shot-2019-10-11-at-12.34.26-pm.png)
 
-Start by creating a new layer on the artboard and place the architectural floor plan, select embed to ensure the image is saved with the map and lock the layer.
+![Make sure scale corners and scale strokes and effects are selected.](../../.gitbook/assets/screen-shot-2019-10-11-at-12.35.27-pm.png)
 
-![](../../.gitbook/assets/image%20%284%29.png)
+![Select &quot;Units&quot; and double check everything is set to &quot;Pixels&quot;](../../.gitbook/assets/screen-shot-2019-10-11-at-12.36.51-pm.png)
 
-![Be sure to name layer &quot;original map&quot;](../../.gitbook/assets/image%20%287%29.png)
+## Step 3 - Creating Your Layers
+
+Before getting started on design it is important to **name and order your layers**.  The ideal way to create layers is to start from the bottom working your way up. So for a floor plan that would be to start from the simple features such as the overall skeleton shaping of a building, signage such as toilets, stairs, lifts and lastly adding furniture and room statuses towards the end. 
+
+
+
+![Original floor plan should be locked to avoid it moving out of place while designing.](../../.gitbook/assets/screen-shot-2019-10-11-at-12.51.47-pm.png)
 
 ## Step 4 - Creating Floors
 
@@ -36,21 +45,21 @@ In a new layer start outlining your architectural floor plan, fill in shape with
 
 ![](../../.gitbook/assets/image%20%2810%29.png)
 
-## Step 5 - Floor Shadows
+## Step 5 - Floor Dimension 
 
-Copy and paste outline and fill in with colour \(new layer\) and lock the layer - name layer “shadow”. Ensure this shape is shifted to the side to give a shadow effect to the “outline” layer.
+Copy and paste outline and fill in with colour \(new layer\) and lock the layer - name layer “bkd”. Ensure this shape is shifted to the side or downward \(building shapes vary\) to give a shadow or building structure effect to the “outline” layer.
 
 ![](../../.gitbook/assets/image%20%281%29.png)
 
-## Step 6 - Outlining Floors
+## Step 6 - Outlining Floors aka "The Skeleton"
 
-In a new layer, unlock the architectural floor plan and place the architectural floor plan on the top layer but opacity turned down to 40%, begin outlining the rooms. Be sure to lock the map to ensure it doesn’t move. Once done combine room outlines with map outline and name layer “outline”.
+It is important to note that the floor plan walls and outlines do not need the exact thickness of each wall illustrated. The plan needs to define wall areas that are entrances to spaces to rooms . The outline shape of the floor should be a little but thicker in point size compared to its inner walls to define boundaries. To get started on the skeleton -select the "pen tool" and select a point size that is best to outline walls. This can be anywhere from 2px-6px. Begin illustrating the custom map ignoring any outlines that are not needed eg pipes near bathrooms or electrical rooms can be outlined around and given a darker blank space in its fill.
 
 ![](../../.gitbook/assets/image%20%282%29.png)
 
-## Step 7 - Outlining Rooms
+## Step 7 - Space Highlights
 
-Once rooms have been outlined check the architectural floor plan to see which rooms or spaces are in use and use the “rectangle tool” \(located on the side panel\) to draw place square panels over spaces to identify as a room. If the room will be used use one colour to identify that space and for rooms that will not be used another colour. Label layer “spaces”.
+Once rooms have been outlined check the architectural floor plan to see which spaces require signage eg rest rooms, stairs or cafe spots. these spaces can have a filled space highlight that compliments the background colour of the map.
 
 ![](../../.gitbook/assets/image%20%286%29.png)
 
