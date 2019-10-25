@@ -26,6 +26,8 @@
   * [Microsoft Office365](integrations/directory-services/microsoft-office365.md)
 * [IoT](integrations/iot/README.md)
   * [Device Drivers](integrations/iot/device-drivers.md)
+  * [Node-RED](integrations/iot/node-red.md)
+  * [Azure IOT Hub](integrations/iot/azure-iot-hub.md)
 * [Location Services](integrations/location-services/README.md)
   * [Locating Users on a Network](integrations/location-services/locating-users-on-a-network.md)
   * [SVG Map Creation](integrations/location-services/svg-map-creation.md)
