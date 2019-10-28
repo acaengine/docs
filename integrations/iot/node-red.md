@@ -4,7 +4,7 @@
 
 ## Access to Node-RED web interface
 
-By default, The Node-RED web interface is exposed _locally only_ on the machine that is running engine, at http://127.0.0.1:1880. If accessing the Node-RED web interface from a remote client, use methods such as SSH port forwarding to securely mirror the engine server's 127.0.0.1:1880 to your machine's 127.0.0.1:1880.
+By default, the Node-RED web interface is exposed _locally only_ on the machine that is running engine, at http://127.0.0.1:1880. If accessing the Node-RED web interface from a remote client, use methods such as SSH port forwarding to securely mirror the engine server's 127.0.0.1:1880 to your machine's 127.0.0.1:1880.
 
 ## Installing nodes
 
@@ -29,6 +29,6 @@ ACAEngine connects to Node-RED via Node-RED's websockets modules (one for input 
  * Port: `1880`
 After creating the module, start it and then monitor the [debug messages](../../backoffice/debugging.md).
 
-Messages coming out of the Node-RED websocket output should appear as console log output when debugging the ACAEngine "Node-RED Websocket" module.
+Messages coming out of the Node-RED websocket output should appear as console log output when debugging the ACAEngine "Node-RED Websocket" module. The status variable "message_received" will also update to show the last string recieved. Simple strings may be used as inputs for ACAEngine Triggers.
 
-The Driver can be used as a template for creating new drivers that take actions upon receiving messages from Node-RED, or send websocket messages to a Node-RED Websocket Input module. One example of this is the [Pressac desk sensor driver](https://github.com/acaprojects/ruby-engine-drivers/blob/beta/modules/pressac/sensors/ws_protocol.rb), which uses Node-RED in subscribe to real time updates from Azure IOT Hub.
+The "Node-RED Websocket" driver can be used as a template for creating new drivers that take actions upon receiving messages from Node-RED, or send websocket messages to a Node-RED Websocket Input module. One example of this is the [Pressac desk sensor driver](https://github.com/acaprojects/ruby-engine-drivers/blob/beta/modules/pressac/sensors/ws_protocol.rb), which uses Node-RED in subscribe to real time updates from Azure IOT Hub.
