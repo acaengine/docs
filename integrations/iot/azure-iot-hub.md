@@ -24,6 +24,6 @@ Prerequisite: First, ensure you've read the article on how Engine works with [No
 
 4. Create a "websocket output" node and connect the output of the Azure node to the input of the websocket node
 
-![Node-RED Websocket Module](../.gitbook/assets/node-red_websocket_module.JPG)
+![Node-RED Websocket Module](../../.gitbook/assets/node-red_websocket_module.JPG)
 
 For instructions on how to connect and ACAEngine Module to Node-RED, see the page on [Node-RED](./node-red.md)
