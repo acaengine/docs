@@ -1,68 +1,26 @@
 # Azure IOT Hub
 
-ACAEngine provides a range of pre-built drivers for integrating with third party hardware and software. ACAEngine Device Drivers are all written in Ruby.
+[Many IOT devices](https://catalog.azureiotsolutions.com/) can be configured to push messages to Microsoft Azure IOT Hub. IOT Hub can receive and collate messages from thousands of devices, and provide a single interface for applications such as ACAEngine to securely connect to in order to recieve realtime updates from any connected devices.
 
-You can view a full list of available drivers on our [GitHub Page](https://github.com/acaprojects/ruby-engine-drivers).
+## Connection via Node-RED
 
-If a driver for your device is not available, you can raise a request to have the driver written via our Service Desk or refer to the [Developer Guide -&gt; Building Drivers](https://docs.acaengine.com/developer-guide/drivers) section to write your own.
+ACAEngine supports connection to Azure IOT Hub via a local Node-RED docker container (at `node-red:1880`) which ships by default as part of all ACAEngine deployments. Once the connection is configured, ACAEngine modules will recieve realtime notifications from MS Azure IOT Hub via the Node-RED websocket.
 
-## Shortlist of Frequently Used Drivers
+`ACAEngine module >>(websockets)>> Node-RED (port 1880) >>(AMQP over websockets)>> MS Azure IOT Hub`
 
-## Displays
+### Configuring Node-RED to connect to Azure IOT Hub
 
-* LG \(Displays\)
-* Sony \(Displays/Projectors\)
-* NEC \(Displays/Projectors\)
-* Samsung \(Displays\)
-* Sharp \(Displays\)
-* Panasonic \(Displays\)
+Prerequisite: First, ensure you've read the article on how Engine works with [Node-RED](./node-red.md)
 
-## Hardware
+1. Install the Node-RED [connector for Azure IOT Hub](https://flows.nodered.org/node/node-red-contrib-azure-iot-hub), by running the below command on the VM/machine where ACAEngine is installed:
 
-* Extron \(Switchers\)
-* Kramer \(Switchers\)
-* Atlona \(Video over IP\)
-* Echo360 Capture Appliances
-* MediaSite Capture Appliances/Server
-* SVSi
-* VISCA Cameras
-* Barco ClickShare
-* TriplePlay
-* Lightware Switchers
-* Microsoft Surface Hub
-* ScreenTechnics
-* Wolfvision Document Cameras
-* Lumens Document Cameras
+`docker exec -it node-red npm install node-red-contrib-azure-iot-hub`
+`docker restart node-red`
 
-## Audio
+2. Access the Node-RED web interface by visiting http://<engine>:1880 to configure Node-RED.
+3. Create an "Azure IoT Hub Receiver" node. Connect it it to your IOT Hub by setting the connectionstring, which you will find in your Azure Portal, under your `IOT Hub > Shared Access policies > iothubowner > Connection string-primary key` See heading ["Reading all messages received into Azure IoT Hub"](https://flows.nodered.org/node/node-red-contrib-azure-iot-hub) for more details.
 
-* BiAmp
-* QSC Q-SYS
-* Denon
-* Clock Audio
-* AMX Ascendo
-* Shure
-* ClearOne
-* PowerSoft
-* Symetrix
+4. Create a "websocket output" node and connect the output of the Azure node to the input of the websocket node
+       ![](../.gitbook/assets/node-red_websocket_module.JPG)
 
-## Network
-
-* Cisco Meraki
-* Cisco CMX
-* Cisco ISE
-* Cisco Switches
-
-## Other
-
-* C Bus \(Lighting\)
-* KNX \(Lighting\)
-* DynaLite \(Lighting\)
-* Lutron \(Lighting\)
-* Dali
-* Kentix Sensors
-* Pexip
-* Global Cache
-* Foxtel
-* Microsoft FindMe
-
+For instructions on how to connect and ACAEngine Module to Node-RED, see the page on [Node-RED](./node-red.md)
