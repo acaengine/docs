@@ -20,7 +20,7 @@ For example, to install the [connector for Azure IOT Hub](https://flows.nodered.
 
 ### Node-RED Websocket output
 ACAEngine connects to Node-RED via Node-RED's websockets modules (one for input and one for output). Drag an output websocket module into the Flow, double-click it and set the Type to `Listen on` and the Path to `/ws/`.
-![](../.gitbook/assets/node-red_websocket_module.JPG)
+![](../../.gitbook/assets/node-red_websocket_module.JPG)
 
 ### ACAEngine websocket input
 * On the Drivers page of ACAEngine backoffice, import the [Node-RED Websocket](https://github.com/acaprojects/ruby-engine-drivers/blob/beta/modules/node_red/websocket.rb) driver by searching for it and clicking "Import".
