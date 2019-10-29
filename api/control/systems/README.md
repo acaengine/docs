@@ -22,9 +22,9 @@ All systems provide a base set of metadata that helps to describe their role and
 | `bookable` | boolean | Flag for signifying the space as reservable. |
 | `installed_ui_devices` | integer | Expected number of fixed installation touch panels. |
 | `settings` | object | JSON object representing the system's configuration. |
-| `created_at` | integer | Timestamp of creation time. |
+| `created_at` | integer | Timestamp of creation. |
 | `support_url` | string | A URL linking to the primary interface for controlling this system. |
-| `version` | integer | Incrementing counter for handling stale updates.v |
+| `version` | integer | Incremental counter for handling stale updates. |
 
 {% api-method method="get" host="https://aca.example.com" path="/api/control/systems" %}
 {% api-method-summary %}
@@ -170,12 +170,16 @@ Create
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="edge\_id" type="string" required=true %}
-ID of the preferred engine node to run on.
+{% api-method-parameter name="name" type="string" required=true %}
+
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="name" type="string" required=true %}
-System name.
+{% api-method-parameter name="zones" type="array" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="edge\_id" type="string" required=false %}
+
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="description" type="string" required=false %}
@@ -191,14 +195,10 @@ System name.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="bookable" type="boolean" required=false %}
-Default to false
+
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="installed\_ui\_devices" type="integer" required=false %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="zones" type="array" required=true %}
 
 {% endapi-method-parameter %}
 
