@@ -298,6 +298,7 @@ Include full models of all modules and zones associated with the system rather t
     "settings": {},
     "created_at": 1562041110,
     "support_url": "https://aca.example.com/foo",
+    "version": 3,
     "id": "sys-rJQQlR4Cn7"
 }
 ```
@@ -312,7 +313,9 @@ Update
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Update system attributes.
+Updates system attributes. Any selection of attributes may be included in the query - unspecified items will retain their current values.  
+  
+When requesting an update a **version** _****_parameter must be included that matches the current system version. Following a successful update this will be incremented automatically.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -397,6 +400,16 @@ The current system metadata version. This must match the current version attribu
 }
 ```
 {% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=409 %}
+{% api-method-response-example-description %}
+The specified version does not match the current system version.
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
@@ -407,7 +420,7 @@ Delete
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Remove a system.
+Removes a system. This will stop, and remove any modules that are not associated with other systems.
 {% endapi-method-description %}
 
 {% api-method-spec %}
