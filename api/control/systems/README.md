@@ -22,9 +22,9 @@ All systems provide a base set of metadata that helps to describe their role and
 | `bookable` | boolean | Flag for signifying the space as reservable. |
 | `installed_ui_devices` | integer | Expected number of fixed installation touch panels. |
 | `settings` | object | JSON object representing the system's configuration. |
-| `created_at` | integer | Timestamp of creation time. |
+| `created_at` | integer | Timestamp of creation. |
 | `support_url` | string | A URL linking to the primary interface for controlling this system. |
-| `version` | integer | Incrementing counter for handling stale updates.v |
+| `version` | integer | Incremental counter for handling stale updates. |
 
 {% api-method method="get" host="https://aca.example.com" path="/api/control/systems" %}
 {% api-method-summary %}
@@ -170,12 +170,16 @@ Create
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="edge\_id" type="string" required=true %}
-ID of the preferred engine node to run on.
+{% api-method-parameter name="name" type="string" required=true %}
+
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="name" type="string" required=true %}
-System name.
+{% api-method-parameter name="zones" type="array" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="edge\_id" type="string" required=false %}
+
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="description" type="string" required=false %}
@@ -191,14 +195,10 @@ System name.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="bookable" type="boolean" required=false %}
-Default to false
+
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="installed\_ui\_devices" type="integer" required=false %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="zones" type="array" required=true %}
 
 {% endapi-method-parameter %}
 
@@ -298,6 +298,7 @@ Include full models of all modules and zones associated with the system rather t
     "settings": {},
     "created_at": 1562041110,
     "support_url": "https://aca.example.com/foo",
+    "version": 3,
     "id": "sys-rJQQlR4Cn7"
 }
 ```
@@ -312,7 +313,9 @@ Update
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Update system attributes.
+Updates system attributes. Any selection of attributes may be included in the query - unspecified items will retain their current values.  
+  
+When requesting an update a **version** _****_parameter must be included that matches the current system version. Following a successful update this will be incremented automatically.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -397,6 +400,16 @@ The current system metadata version. This must match the current version attribu
 }
 ```
 {% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=409 %}
+{% api-method-response-example-description %}
+The specified version does not match the current system version.
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
@@ -407,7 +420,7 @@ Delete
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Remove a system.
+Removes a system. This will stop, and remove any modules that are not associated with other systems.
 {% endapi-method-description %}
 
 {% api-method-spec %}
