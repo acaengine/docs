@@ -74,8 +74,7 @@
 
 * [Authentication](api/auth.md)
 * [Control](api/control/README.md)
-  * [Systems](api/control/systems/README.md)
-    * [Module Interaction](api/control/systems/actions.md)
+  * [Systems](api/control/systems.md)
   * [Websocket](api/control/websocket/README.md)
     * [Commands](api/control/websocket/commands/README.md)
       * [bind](api/control/websocket/commands/bind.md)
