@@ -315,7 +315,7 @@ Update
 {% api-method-description %}
 Updates system attributes. Any selection of attributes may be included in the query - unspecified items will retain their current values.  
   
-When requesting an update a **version** _****_parameter must be included that matches the current system version. Following a successful update this will be incremented automatically.
+When requesting an update a **version** parameter must be included that matches the current system version. Following a successful update this will be incremented automatically.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -414,7 +414,7 @@ The specified version does not match the current system version.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="https://aca.example/com" path="/api/control/systems/{id}" %}
+{% api-method method="delete" host="https://aca.example.com" path="/api/control/systems/{id}" %}
 {% api-method-summary %}
 Delete
 {% endapi-method-summary %}
@@ -430,6 +430,166 @@ Removes a system. This will stop, and remove any modules that are not associated
 ID of the system to retrieve.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="https://aca.example.com" path="/api/control/systems/{id}/start" %}
+{% api-method-summary %}
+Start
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Starts all modules contained in the specified system.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=false %}
+ID of the system to start.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="https://aca.example.com" path="/api/control/systems/{id}/stop" %}
+{% api-method-summary %}
+Stop
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Stops and deactivates all modules in the specified system.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=false %}
+ID of the system to stop.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="https://aca.example.com" path="/api/control/systems/{id}/exec" %}
+{% api-method-summary %}
+Execute
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Run behaviour that has been exposed by a module. The associated method will be executed and the response returned. If this includes asynchonous or long running behaviour, the result will be awaiting up until a timeout value.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=false %}
+ID of the system to execute within.a
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="module" type="string" required=true %}
+Class name of the module. i.e. \`Display\`, \`Bookings\` etc
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="index" type="integer" required=false %}
+\(default 1\) Module index in the system. 
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="method" type="string" required=true %}
+The name of the method that should be executed.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="args" type="array" required=false %}
+Argument to be sent to the method.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+All response values are wrapped in an array. This ensures that method which return primatives \(strings, numbers, booleans or null\) still provide a valid JSON response.
+{% endapi-method-response-example-description %}
+
+```
+[]
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://aca.example.com" path="/api/control/systems/{id}/state" %}
+{% api-method-summary %}
+Retrieve module state
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Query the current state exposed by a module within the system.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=false %}
+ID of the system the module is in.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="module" type="string" required=true %}
+Class name of the module.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="index" type="integer" required=false %}
+\(default 1\) Module index within the system.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="lookup" type="string" required=false %}
+A specified status key of interest. If specified this is the only value returned.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
