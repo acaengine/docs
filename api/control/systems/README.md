@@ -10,21 +10,21 @@ All systems provide a base set of metadata that helps to describe their role and
 
 | Attribute | Type | Description |
 | :--- | :--- | :--- |
-| `id` | string | The system's unique ID. |
-| `edge_id` | string | ID of the preferred engine node to run on. |
-| `name` | string | The system's primary identifier. |
-| `zones` | array | Zone IDs that this system is a member of. |
-| `modules` | array | Module ID's that this system contains. |
-| `description` | string | Markdown formatted text that describes the system. |
-| `email` | string | Calendar email that represents this system. Typically used for room scheduling / bookings. |
-| `capacity` | integer | Number of people that can be accommodated in this space. |
-| `features` | string | List of features in the room for searching and filtering spaces. |
-| `bookable` | boolean | Flag for signifying the space as reservable. |
-| `installed_ui_devices` | integer | Expected number of fixed installation touch panels. |
-| `settings` | object | JSON object representing the system's configuration. |
-| `created_at` | integer | Timestamp of creation. |
-| `support_url` | string | A URL linking to the primary interface for controlling this system. |
-| `version` | integer | Incremental counter for handling stale updates. |
+| id | `string` | The system's unique ID. |
+| edge\_id | `string` | ID of the preferred engine node to run on. |
+| name | `string` | The system's primary identifier. |
+| zones | `array` | Zone IDs that this system is a member of. |
+| modules | `array` | Module ID's that this system contains. |
+| description | `string` | Markdown formatted text that describes the system. |
+| email | `string` | Calendar email that represents this system. Typically used for room scheduling / bookings. |
+| capacity | `integer` | Number of people that can be accommodated in this space. |
+| features | `string` | List of features in the room for searching and filtering spaces. |
+| bookable | `boolean` | Flag for signifying spaces that may be reserved. |
+| installed\_ui\_devices | `integer` | Expected number of fixed installation touch panels. |
+| settings | `object` | JSON object representing the system's configuration. |
+| created\_at | `integer` | Timestamp of creation. |
+| support\_url | `string` | A URL linking to the primary interface for controlling this system. |
+| version | `integer` | Incremental counter for handling stale updates. |
 
 {% api-method method="get" host="https://aca.example.com" path="/api/control/systems" %}
 {% api-method-summary %}
@@ -164,7 +164,7 @@ Create
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+Defines a new system. Systems must be given a unique name within the instance they are running on. Additionally, a system must be a member of at least one zone. All other attributes are optional at the time of creation.
 {% endapi-method-description %}
 
 {% api-method-spec %}
