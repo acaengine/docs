@@ -26,6 +26,8 @@ All systems provide a base set of metadata that helps to describe their role and
 | support\_url | `string` | A URL linking to the primary interface for controlling this system. |
 | version | `integer` | Incremental counter for handling stale updates. |
 
+## Management
+
 {% api-method method="get" host="https://aca.example.com" path="/api/control/systems" %}
 {% api-method-summary %}
 Search
@@ -443,6 +445,8 @@ ID of the system to retrieve.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+## Interactions
 
 {% api-method method="post" host="https://aca.example.com" path="/api/control/systems/{id}/start" %}
 {% api-method-summary %}
