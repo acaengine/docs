@@ -2,7 +2,7 @@
 
 The Devices section \(1\) will list all devices that have been added to ACA Engine. This list can be filtered \(2\) by Name, IP Address or online status \(3\).
 
-![](../.gitbook/assets/image5.png)
+![](../../.gitbook/assets/image5.png)
 
 Clicking on a Device in the list will bring up that device’s details in the main section for viewing and editing.
 
@@ -23,13 +23,13 @@ The next section of checkboxes define the nature of the connection to the device
 * If the TCP session to the device should always be terminated instead of kept open, enable Make-Break \(7\)
 * If the device is expected to be offline regularly \(e.g. a portable device\) and it’s status should not be tracked on the ACA Metrics Dashboard, check Ignore connected \(8\)
 
-![](../.gitbook/assets/image9.png)
+![](../../.gitbook/assets/image9.png)
 
 The URI field \(9\) is only for devices that are controlled by HTTP requests \(instead of direct TCP commands\). See Driver Types under [Key Concepts](https://docs.google.com/document/d/14ckH_Jzy_2Vx3uoRy1eN8-o1T96YT6Q7qnHfDKOiEAo/edit#heading=h.5vlc4vgj6sfu) for more information. If the Driver is type ‘Device’ then this field should be blank and the IP \(3\) should be entered. If the Driver is type ‘Service’ then the IP field should be blank and the control URI of the device should be entered \(this should be documented in the device’s control protocol manual\).
 
 The Notes section \(10\) is for any text based metadata \(for reference purposes\). Notes are inherited from Dependencies in the same way as Settings. [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format is supported:
 
-![](../.gitbook/assets/image16.png)
+![](../../.gitbook/assets/image16.png)
 
 
 

@@ -6,7 +6,7 @@ Settings and a list of Devices can be viewed for each Driver by clicking on the 
 
 New Drivers can be added by clicking the + icon.
 
-![](../.gitbook/assets/image1.png)
+![](../../.gitbook/assets/image1.png)
 
 ## Adding and Editing Drivers
 
@@ -21,5 +21,5 @@ Select a Driver to add from the list \(1\) and additional fields will appear:
 * Default Port \(6\): Defines the default IP port on which ACA Engine should attempt to connect to all devices defined of this type. This should generally be left as default. Individual devices can still override the default defined here by defining a port for that device
 * Settings \(7\): JSON format settings that will be inherited by all devices of this type. For more information on the function of Settings and their inheritance. See Key Concepts
 
-![](../.gitbook/assets/image15.png)
+![](../../.gitbook/assets/image15.png)
 

@@ -4,7 +4,7 @@ Triggers are a way to set process automation profiles in an ACAEngine system. Yo
 
 Triggers can be used for a mix of support actions based on device/system conditions \(EG “if the display reaches 60^C, trigger a shutdown and email support”\) and space logic \(“EG “if Sensor status is “1”, trigger air conditioning pre-set “3”\). You can stack up as many triggers in your system as you like.
 
-![](../.gitbook/assets/image11.png)
+![](../../.gitbook/assets/image11.png)
 
 ## Creating a Trigger
 
@@ -12,7 +12,7 @@ From the Triggers section, click the + icon to add a new Trigger. Type in the Tr
 
 ### Defining Conditions
 
-![](../.gitbook/assets/image14.png)
+![](../../.gitbook/assets/image14.png)
 
 A template system must be selected before the list of available conditions and actions is populated. Choosing a template system does not apply this trigger to that system. Choose a template system that most closely matches the system\(s\) that this Trigger will be applied to.
 
@@ -20,7 +20,7 @@ Once a template system is selected, a Condition can be added by clicking the + i
 
 ### Defining Actions
 
-![](../.gitbook/assets/image3.png)
+![](../../.gitbook/assets/image3.png)
 
 Actions will be performed to the applied Systems every time the Conditions are met.
 

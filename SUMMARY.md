@@ -35,18 +35,18 @@
   * [Cisco Meraki RTLS](integrations/location-services/cisco-meraki-rtls.md)
   * [Desk Sensors](integrations/location-services/desk-sensors.md)
 
-## Administration <a id="backoffice"></a>
+## Administration
 
-* [Backoffice](backoffice/about.md)
-* [Systems](backoffice/systems.md)
-* [Devices](backoffice/devices.md)
-* [Drivers](backoffice/drivers.md)
-* [Zones](backoffice/zones.md)
-* [Triggers](backoffice/triggers.md)
-* [Metrics](backoffice/metrics.md)
-* [Users](backoffice/users.md)
-* [Domains](backoffice/domains/README.md)
-  * [Applications](backoffice/domains/applications.md)
+* [Backoffice](administration/backoffice/README.md)
+  * [Systems](administration/backoffice/systems.md)
+  * [Devices](administration/backoffice/devices.md)
+  * [Drivers](administration/backoffice/drivers.md)
+  * [Zones](administration/backoffice/zones.md)
+  * [Triggers](administration/backoffice/triggers.md)
+  * [Metrics](administration/backoffice/metrics.md)
+  * [Users](administration/backoffice/users.md)
+  * [Domains](administration/backoffice/domains/README.md)
+    * [Applications](administration/backoffice/domains/applications.md)
 
 ## Developer Guide
 
