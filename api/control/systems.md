@@ -1,8 +1,8 @@
 # Systems
 
-The `/systems` endpoint provides methods for discovering, creating and interacting systems within a deployment. For more on the role that systems play, please see:
+The `/systems` endpoint provides methods for discovering, creating and interacting with systems. For more on the role that systems play, see:
 
-{% page-ref page="../../../key-concepts/systems.md" %}
+{% page-ref page="../../key-concepts/systems.md" %}
 
 All systems provide a base set of metadata that helps to describe their role and capabilities, as well as provide references to the modules they contain, and the zones they exist in.
 
@@ -66,7 +66,7 @@ Limit to systems that contain this module.
 A list of systems will be returned, matching the search criteria. If no systems match, an empty list will be provided.
 {% endapi-method-response-example-description %}
 
-```
+```text
     "total": 3,
     "results": [
         {
@@ -148,15 +148,15 @@ A list of systems will be returned, matching the search criteria. If no systems 
 
 Within the query parameter - `q` - a small query language is supported:
 
-| Operator | Action |
-| :--- | :--- |
-| `+` | Matches both terms. |
-| `|` | Matches either terms. |
-| `-` | Negates a single token. |
-| `"` | Wraps tokens to form a phrase. |
-| `(` and `)` | Provide precedence. |
-| `~N` | Specifices edit distance \(fuziness\) after a word. |
-| `~N` | Specifies slop amount \(deviation\) after a phrase. |
+| Operator | Action |  |
+| :--- | :--- | :--- |
+| `+` | Matches both terms. |  |
+| \` | \` | Matches either terms. |
+| `-` | Negates a single token. |  |
+| `"` | Wraps tokens to form a phrase. |  |
+| `(` and `)` | Provide precedence. |  |
+| `~N` | Specifies edit distance \(fuzziness\) after a word. |  |
+| `~N` | Specifies slop amount \(deviation\) after a phrase. |  |
 
 {% api-method method="post" host="https://aca.example.com" path="/api/control/systems" %}
 {% api-method-summary %}
@@ -313,9 +313,7 @@ Update
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Updates system attributes. Any selection of attributes may be included in the query - unspecified items will retain their current values.  
-  
-When requesting an update a **version** parameter must be included that matches the current system version. Following a successful update this will be incremented automatically.
+Updates system attributes. Any selection of attributes may be included in the query - unspecified items will retain their current values.When requesting an update a **version** parameter must be included that matches the current system version. Following a successful update this will be incremented automatically.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -328,7 +326,7 @@ ID of the system to update.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="version" type="integer" required=true %}
-The current system metadata version. This must match the current version attribute of the system and will be incrememented following a successful update.
+The current system metadata version. This must match the current version attribute of the system and will be incremented following a successful update.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="name" type="string" required=false %}
@@ -406,7 +404,7 @@ The current system metadata version. This must match the current version attribu
 The specified version does not match the current system version.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -438,7 +436,7 @@ ID of the system to retrieve.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -470,7 +468,7 @@ ID of the system to start.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -502,7 +500,7 @@ ID of the system to stop.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -512,11 +510,11 @@ ID of the system to stop.
 
 {% api-method method="post" host="https://aca.example.com" path="/api/control/systems/{id}/exec" %}
 {% api-method-summary %}
-Execute
+Exec
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Run behaviour that has been exposed by a module. The associated method will be executed and the response returned. If this includes asynchonous or long running behaviour, the result will be awaiting up until a timeout value.
+Run behaviour that has been exposed by a module. The associated method will be executed and the response returned. If this includes asynchronous or long running behaviour, the result will be awaiting up until a timeout value.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -533,7 +531,7 @@ Class name of the module. i.e. \`Display\`, \`Bookings\` etc
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="index" type="integer" required=false %}
-\(default 1\) Module index in the system. 
+\(default 1\) Module index in the system.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="method" type="string" required=true %}
@@ -552,7 +550,7 @@ Argument to be sent to the method.
 All response values are wrapped in an array. This ensures that method which return primatives \(strings, numbers, booleans or null\) still provide a valid JSON response.
 {% endapi-method-response-example-description %}
 
-```
+```text
 []
 ```
 {% endapi-method-response-example %}
@@ -562,7 +560,7 @@ All response values are wrapped in an array. This ensures that method which retu
 
 {% api-method method="get" host="https://aca.example.com" path="/api/control/systems/{id}/state" %}
 {% api-method-summary %}
-Retrieve module state
+State
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -598,7 +596,7 @@ A specified status key of interest. If specified this is the only value returned
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}

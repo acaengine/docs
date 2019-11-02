@@ -1,5 +1,5 @@
 ---
-description: The control API provides interactions with Engine core.
+description: The control API provides interactions with ACAEngine core.
 ---
 
 # Control
@@ -7,4 +7,8 @@ description: The control API provides interactions with Engine core.
 {% hint style="warning" %}
 Full API documentation will soon be available here. In the mean time, please refer to the external [Swagger API doc](https://app.swaggerhub.com/apis/ACAprojects/ACAEngine/3.5.0#/) which details all endpoints.
 {% endhint %}
+
+The control API is the primary point for querying, structuring, defining and interacting with ACAEngine deployments. The endpoints that it provides enable interaction between drivers operating on an instance and the outside world.
+
+The capabilities of these integrations will be dependant on the operating environment, however using this API provides a high level structure for interacting with this configuration and discovering the capabilities available.
 
