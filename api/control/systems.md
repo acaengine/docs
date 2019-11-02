@@ -1,6 +1,6 @@
 # Systems
 
-The `/systems` endpoint provides methods for discovering, creating and interacting with systems. For more on the role that systems play, see:
+mThe `/systems` endpoint provides methods for discovering, creating and interacting with systems. For more on the role that systems play, see:
 
 {% page-ref page="../../key-concepts/systems.md" %}
 
@@ -319,7 +319,7 @@ Updates system attributes. Any selection of attributes may be included in the qu
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=true %}
 ID of the system to update.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -456,7 +456,7 @@ Starts all modules contained in the specified system.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=true %}
 ID of the system to start.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -488,7 +488,7 @@ Stops and deactivates all modules in the specified system.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=true %}
 ID of the system to stop.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -520,7 +520,7 @@ Run behaviour that has been exposed by a module. The associated method will be e
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=true %}
 ID of the system to execute within.a
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -550,7 +550,7 @@ Argument to be sent to the method.
 All response values are wrapped in an array. This ensures that method which return primatives \(strings, numbers, booleans or null\) still provide a valid JSON response.
 {% endapi-method-response-example-description %}
 
-```text
+```javascript
 []
 ```
 {% endapi-method-response-example %}
@@ -564,13 +564,13 @@ State
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Query the current state exposed by a module within the system.
+Query the state exposed by a module within the system.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=true %}
 ID of the system the module is in.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -581,11 +581,11 @@ Class name of the module.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="index" type="integer" required=false %}
-\(default 1\) Module index within the system.
+\(default 1\) Index of the module.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="lookup" type="string" required=false %}
-A specified status key of interest. If specified this is the only value returned.
+A specific status key of interest. If includes, only this value will be returned.
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -596,8 +596,136 @@ A specified status key of interest. If specified this is the only value returned
 
 {% endapi-method-response-example-description %}
 
-```text
+```javascript
+{
+  "foo": "abc",
+  "bar": 42
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
+{% api-method method="get" host="https://aca.example.com" path="/api/control/systems/{id}/funcs" %}
+{% api-method-summary %}
+Funcs
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Query the behaviour exposed by a module within the system.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=true %}
+ID of the system that the module is in.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="module" type="string" required=true %}
+Class of the module.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="index" type="integer" required=false %}
+\(default 1\) Index of the module.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "function_name": {
+    "arity": 1,
+    "params": [
+      "string"
+    ]
+  }
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://aca.example.com" path="/api/control/systems/{id}/count" %}
+{% api-method-summary %}
+Count
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Counts the  instances of a driver currently available in a system.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=true %}
+ID of the system to query.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="module" type="string" required=true %}
+Class name of the modules to count.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "count": 3
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://aca.example.com" path="/api/control/systems/{id}/types" %}
+{% api-method-summary %}
+Types
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Query the types of modules available within a system.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=true %}
+ID of the system to query.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "Booking": 1,
+  "Display": 2,
+  "VidConf": 1
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
