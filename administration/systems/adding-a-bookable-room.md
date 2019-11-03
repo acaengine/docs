@@ -1,2 +1,0 @@
-# Adding a bookable room
-
