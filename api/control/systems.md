@@ -1,6 +1,6 @@
 # Systems
 
-mThe `/systems` endpoint provides methods for discovering, creating and interacting with systems. For more on the role that systems play, see:
+The `/systems` endpoint provides methods for discovering, creating and interacting with systems. For more on the role that systems play, see:
 
 {% page-ref page="../../key-concepts/systems.md" %}
 
@@ -454,7 +454,7 @@ Start
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Starts all modules contained in the specified system.
+Starts all modules associated with the system.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -486,7 +486,7 @@ Stop
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Stops and deactivates all modules in the specified system.
+Stops all modules associated with the system.
 {% endapi-method-description %}
 
 {% api-method-spec %}
