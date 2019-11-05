@@ -64,7 +64,7 @@ All interaction within this flow takes place within a client-side user agent, ma
 
 To authenticate you will need to direct users to the authorisation endpoint, accompanied by your registered application details.
 
-{% api-method method="get" host="https://aca.example.com" path="/auth/oauth/authorize" %}
+{% api-method method="post" host="https://aca.example.com" path="/auth/oauth/authorize" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -134,7 +134,7 @@ Using this flow, users first authorize your application by creating a short-live
 
 To generate the authorisation code, direct your users to the authorisation endpoint with `code` as the requested response type.
 
-{% api-method method="get" host="https://aca.example.com" path="/auth/oauth/authorize" %}
+{% api-method method="post" host="https://aca.example.com" path="/auth/oauth/authorize" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -250,7 +250,7 @@ The redirect URI used in the authorization code generation.
 The Oauth2 password grant flow provides a good option for server-to-server integration, or when designing a system where direct knowledge of both user, and application secrets is acceptable.
 
 {% hint style="danger" %}
-This flow should not be used as part of any components distributed to users or untrusted endpoints. This includes usage within client side code for web apps or mobile apps, including in compiled form.
+This flow should not be used as part of any components distributed to users or un-trusted endpoints. This includes usage within client side code for web apps or mobile apps, including in compiled form.
 {% endhint %}
 
 This flow provides the ability to directly exchange a username and password for an access token as a single request.
@@ -381,7 +381,7 @@ Application client secret.
 
 To end a session, applications should request a token revocation. This will invalidate the token, preventing further use.
 
-{% api-method method="post" host="https://aca.example.com" path="/auth/oauth/token" %}
+{% api-method method="post" host="https://aca.example.com" path="/auth/oauth/revoke" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
