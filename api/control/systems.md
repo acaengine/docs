@@ -17,7 +17,7 @@ All systems provide a base set of metadata that helps to describe their role and
 | modules | `array` | Module ID's that this system contains. |
 | description | `string` | Markdown formatted text that describes the system. |
 | email | `string` | Calendar email that represents this system. Typically used for room scheduling / bookings. |
-| capacity | `integer` | Number of people this space can accomodate. |
+| capacity | `integer` | Number of people this space can accommodate. |
 | features | `string` | List of features in the room for searching and filtering spaces. |
 | bookable | `boolean` | Flag for signifying the space is bookable. |
 | installed\_ui\_devices | `integer` | Expected number of fixed installation touch panels. |
@@ -68,7 +68,7 @@ Limit to systems that contain this module.
 A list of systems matching the search criteria.
 {% endapi-method-response-example-description %}
 
-```javascipt
+```text
 {
     "total": 3,
     "results": [
@@ -149,12 +149,12 @@ A list of systems matching the search criteria.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-Queries default to seaching for any of the entered terms (words). A small query language provides the ability to structure complex queries.
+Queries default to searching for any of the entered terms \(words\). A small query language provides the ability to structure complex queries.
 
 | Operator | Action |
 | :--- | :--- |
 | `+` | Matches both terms. |
-| \` \| \` | Matches either terms. |
+| `|`  | Matches either terms. |
 | `-` | Negates a single token. |
 | `"` | Wraps tokens to form a phrase. |
 | `(` and `)` | Provide precedence. |
