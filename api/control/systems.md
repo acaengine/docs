@@ -17,9 +17,9 @@ All systems provide a base set of metadata that helps to describe their role and
 | modules | `array` | Module ID's that this system contains. |
 | description | `string` | Markdown formatted text that describes the system. |
 | email | `string` | Calendar email that represents this system. Typically used for room scheduling / bookings. |
-| capacity | `integer` | Number of people that can be accommodated in this space. |
+| capacity | `integer` | Number of people this space can accomodate. |
 | features | `string` | List of features in the room for searching and filtering spaces. |
-| bookable | `boolean` | Flag for signifying spaces that may be reserved. |
+| bookable | `boolean` | Flag for signifying the space is bookable. |
 | installed\_ui\_devices | `integer` | Expected number of fixed installation touch panels. |
 | settings | `object` | JSON object representing the system's configuration. |
 | created\_at | `integer` | Timestamp of creation. |
@@ -34,7 +34,7 @@ Search
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Direct queries to the systems endpoint can be used to enumerate, or search for existing systems.
+Direct queries to the systems endpoint list, or search for existing systems.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -65,10 +65,11 @@ Limit to systems that contain this module.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-A list of systems will be returned, matching the search criteria. If no systems match, an empty list will be provided.
+A list of systems matching the search criteria.
 {% endapi-method-response-example-description %}
 
-```text
+```javascipt
+{
     "total": 3,
     "results": [
         {
@@ -141,24 +142,24 @@ A list of systems will be returned, matching the search criteria. If no systems 
             "id": "sys-rJQVPIR9Uf"
         }
     ]
-]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
-Within the query parameter - `q` - a small query language is supported:
+Queries default to seaching for any of the entered terms (words). A small query language provides the ability to structure complex queries.
 
-| Operator | Action |  |
-| :--- | :--- | :--- |
-| `+` | Matches both terms. |  |
-| \` | \` | Matches either terms. |
-| `-` | Negates a single token. |  |
-| `"` | Wraps tokens to form a phrase. |  |
-| `(` and `)` | Provide precedence. |  |
-| `~N` | Specifies edit distance \(fuzziness\) after a word. |  |
-| `~N` | Specifies slop amount \(deviation\) after a phrase. |  |
+| Operator | Action |
+| :--- | :--- |
+| `+` | Matches both terms. |
+| \` \| \` | Matches either terms. |
+| `-` | Negates a single token. |
+| `"` | Wraps tokens to form a phrase. |
+| `(` and `)` | Provide precedence. |
+| `~N` | Specifies edit distance \(fuzziness\) after a word. |
+| `~N` | Specifies slop amount \(deviation\) after a phrase. |
 
 {% api-method method="post" host="https://aca.example.com" path="/api/control/systems" %}
 {% api-method-summary %}
@@ -166,7 +167,7 @@ Create
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Defines a new system. Systems must be given a unique name within the instance they are running on. Additionally, a system must be a member of at least one zone. All other attributes are optional at the time of creation.
+Defines a new system. Systems names must be unique within the instance they are running on and all systems must have at least one zone associated. All other attributes are optional at the time of creation.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -228,7 +229,7 @@ Defines a new system. Systems must be given a unique name within the instance th
 {
     "edge_id": "edge-QC03B3OM",
     "name": "Example Room",
-    "description": "This is a room that does... things",
+    "description": "Example room description containing further cotnext",
     "email": "room@example.com",
     "capacity": 10,
     "features": "",
@@ -268,7 +269,7 @@ ID of the system to retrieve.
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="complete" type="boolean" required=false %}
-Include full models of all modules and zones associated with the system rather than just ID's.
+Include full models of all modules and zones associated with the system rather than their ID.
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -283,7 +284,7 @@ Include full models of all modules and zones associated with the system rather t
 {
     "edge_id": "edge-QC03B3OM",
     "name": "Example Room",
-    "description": "This is a room that does... things",
+    "description": "Example room description containing further context",
     "email": "room@example.com",
     "capacity": 10,
     "features": "",
@@ -315,7 +316,7 @@ Update
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Updates system attributes. Any selection of attributes may be included in the query - unspecified items will retain their current values.When requesting an update a **version** parameter must be included that matches the current system version. Following a successful update this will be incremented automatically.
+Updates system attributes. Any selection of attributes form the request - unspecified items will keep their current values. All requests must include a **version** parameter that matches the current system version.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -328,7 +329,7 @@ ID of the system to update.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="version" type="integer" required=true %}
-The current system metadata version. This must match the current version attribute of the system and will be incremented following a successful update.
+The system metadata version. This must match the current version and increments following each successful update.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="name" type="string" required=false %}
@@ -383,7 +384,7 @@ The current system metadata version. This must match the current version attribu
 {
     "edge_id": "edge-QC03B3OM",
     "name": "Example Room",
-    "description": "This is a room that does... things",
+    "description": "Example room description containing further context",
     "email": "room@example.com",
     "capacity": 10,
     "features": "",
@@ -518,7 +519,7 @@ Exec
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Run behaviour that has been exposed by a module. The associated method will be executed and the response returned. If this includes asynchronous or long running behaviour, the result will be awaiting up until a timeout value.
+Run behaviour exposed by a module. The associated method will execute and the response returned. If this includes asynchronous or long running behaviour, the result will be awaiting up until a timeout value.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -539,11 +540,11 @@ Class name of the module. i.e. \`Display\`, \`Bookings\` etc
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="method" type="string" required=true %}
-The name of the method that should be executed.
+The name of the method to execute.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="args" type="array" required=false %}
-Argument to be sent to the method.
+Method arguments.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -551,7 +552,7 @@ Argument to be sent to the method.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-All response values are wrapped in an array. This ensures that method which return primatives \(strings, numbers, booleans or null\) still provide a valid JSON response.
+Response values are always wrapped in an outer array. This ensures that method which return primatives \(strings, numbers, booleans or null\) still provide a valid JSON response.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -589,7 +590,7 @@ Class name of the module.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="lookup" type="string" required=false %}
-A specific status key of interest. If includes, only this value will be returned.
+A status key of interest. If included, the response filters to this value.
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -666,7 +667,7 @@ Count
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Counts the  instances of a driver currently available in a system.
+Counts the instances of a driver type within a system.
 {% endapi-method-description %}
 
 {% api-method-spec %}
