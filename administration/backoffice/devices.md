@@ -1,6 +1,6 @@
 # Devices
 
-The Devices section \(1\) will list all devices that have been added to ACA Engine. This list can be filtered \(2\) by Name, IP Address or online status \(3\).
+The Devices section \(1\) will list all devices that have been added to ACAEngine. This list can be filtered \(2\) by Name, IP Address or online status \(3\).
 
 ![](../../.gitbook/assets/image5.png)
 

@@ -1,6 +1,6 @@
 # Debugging Systems/Devices
 
-ACA Engine features live, in-browser debugging. All debug messages are outputted to the browser console \(F12 or Ctrl+Shift+I, then Console tab\).
+ACAEngine features live, in-browser debugging. All debug messages are outputted to the browser console \(F12 or Ctrl+Shift+I, then Console tab\).
 
 Ensure that the Console logging is set to enable Verbose messages, as highlighted below:
 
@@ -24,5 +24,5 @@ The device’s response to these commands will be output to the bottom of right 
 
 Some commands will require parameters. When blank, the text field will describe the type of parameter required by the function.
 
-In the event that ACA Engine is not able to send a command to the device, an error message \(red instead of blue\) will appear at the bottom of the screen with the details.
+In the event that ACAEngine is not able to send a command to the device, an error message \(red instead of blue\) will appear at the bottom of the screen with the details.
 

@@ -151,7 +151,7 @@ You can `get` the following resource factories:
 
 ## Authentication
 
-Authentication with Engine is handled automatically by composer.
+Authentication with ACAEngine is handled automatically by composer.
 
 1. Composer will request `/auth/authority` which contains information about how to authenticate
 2. If composer doesn’t have a valid OAuth2 token it will redirect to the defined login page

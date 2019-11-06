@@ -4,11 +4,11 @@
 
 ## Access to Node-RED web interface
 
-By default, the Node-RED web interface is exposed _locally only_ on the machine that is running engine, at [http://127.0.0.1:1880](http://127.0.0.1:1880). If accessing the Node-RED web interface from a remote client, use methods such as SSH port forwarding to securely mirror the engine server's 127.0.0.1:1880 to your machine's 127.0.0.1:1880.
+By default, the Node-RED web interface is exposed _locally only_ on the machine that is running ACAEngine, at [http://127.0.0.1:1880](http://127.0.0.1:1880). If accessing the Node-RED web interface from a remote client, use methods such as SSH port forwarding to securely mirror the ACAEngine server's 127.0.0.1:1880 to your machine's 127.0.0.1:1880.
 
 ## Installing nodes
 
-Additional Node-RED nodes can be installed by running the below command on the machine running Engine:
+Additional Node-RED nodes can be installed by running the below command on the machine running ACAEngine:
 
 `docker exec -it node-red npm install <package-name>`
 
@@ -16,7 +16,7 @@ For example, to install the [connector for Azure IOT Hub](https://flows.nodered.
 
 `docker exec -it node-red npm install node-red-contrib-azure-iot-hub`
 
-## Connecting Engine to Node-RED
+## Connecting ACAEngine to Node-RED
 
 ### Node-RED Websocket output
 

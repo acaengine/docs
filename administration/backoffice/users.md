@@ -1,6 +1,6 @@
 # Users
 
-ACA Engine usually integrates with an external directory system \(such as Active Directory\) for authentication.
+ACAEngine usually integrates with an external directory system \(such as Active Directory\) for authentication.
 
 The Users Section lists all users who have signed in, their level of access and a History \(log\) of the Systems which were accessed \(controlled from an Interface or viewed in Backoffice\).
 

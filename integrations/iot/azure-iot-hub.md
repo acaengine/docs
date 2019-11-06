@@ -10,7 +10,7 @@ ACAEngine supports connection to Azure IOT Hub via a local Node-RED docker conta
 
 ### Configuring Node-RED to connect to Azure IOT Hub
 
-Prerequisite: First, ensure you've read the article on how Engine works with [Node-RED](node-red.md)
+Prerequisite: First, ensure you've read the article on how ACAEngine works with [Node-RED](node-red.md)
 
 1. Install the Node-RED [connector for Azure IOT Hub](https://flows.nodered.org/node/node-red-contrib-azure-iot-hub), by running the below command on the VM/machine where ACAEngine is installed:
 
