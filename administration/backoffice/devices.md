@@ -31,8 +31,6 @@ The Notes section \(10\) is for any text based metadata \(for reference purposes
 
 ![](../../.gitbook/assets/image16.png)
 
-
-
 Additional settings can be defined in the Settings section \(11\). See [Key Concepts](https://docs.google.com/document/d/14ckH_Jzy_2Vx3uoRy1eN8-o1T96YT6Q7qnHfDKOiEAo/edit#heading=h.dbxexbsp1oib) for more information on the function of Settings. Devices will always inherit settings defined in the Driver that they are an instance of. Settings must be in valid JSON format or else the field will be highlighted red and the ‘Create’ button will be disabled.
 
 The Custom Name field \(12\) is for defining a name that can be used to refer to this device in the System’s settings. For example, if there are multiple video switchers in the system, one can be referred to as ‘Table Front’ and another as ‘Table Rear’ and these names can be used to differentiate between them in the System’s settings.

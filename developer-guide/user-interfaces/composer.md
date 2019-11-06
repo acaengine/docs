@@ -1,6 +1,6 @@
 # Composer
 
-[Composer](https://github.com/acaprojects/ngx-composer) is an Angular library that simplifies interacting with ACA Engine. It abstracts the complexity of the WebSocket API and manages the following:
+[Composer](https://github.com/acaprojects/ngx-composer) is an Angular library that simplifies interacting with ACA Engine. It abstracts the complexity of the WebSocket API and manages the following:
 
 * Directives for binding to Status variables
 * Calling functions in the Driver
@@ -14,7 +14,7 @@ The magic of Angular is that it allows you to build a dynamic web page in a decl
 
 ## Status Variable Bindings
 
-Imagine the driver below running on ACA Engine.
+Imagine the driver below running on ACA Engine.
 
 * [https://github.com/acaprojects/aca-device-modules/blob/master/modules/philips/display/sicp\_protocol.rb\#L117](https://github.com/acaprojects/aca-device-modules/blob/master/modules/philips/display/sicp_protocol.rb#L117)
 * It is a type of Display
@@ -24,7 +24,6 @@ Imagine the driver below running on ACA Engine.
 You can request the status values available in drivers so you can present these graphically to a user. This is performed using the `binding` directive and the data requested is updated in real time as the status changes.
 
 ```text
-
 <span binding [sys]="system" mod="Display" bind="input" [(value)]="model.input" exec="switch_to" [params]="[model.input]">
     Display's current input: {{input}}
 </span>
