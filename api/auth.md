@@ -231,14 +231,7 @@ The redirect URI used in the authorization code generation.
 {% endapi-method-response-example-description %}
 
 ```javascript
-{
-  "access_token": "1f0af717251950dbd4d73154fdf0a474a5c5119adad999683f5b450c460726aa",
-  "created_at": 1559193360,
-  "expires_in": 1209600,
-  "refresh_token": "ac56ce17189cd8c2afc6c0fc7feeb4710bcc7985847b6f428a9a54ad6450cee0",
-  "scope": "public",
-  "token_type": "bearer"
-}
+{  "access_token": "1f0af717251950dbd4d73154fdf0a474a5c5119adad999683f5b450c460726aa",  "created_at": 1559193360,  "expires_in": 1209600,  "refresh_token": "ac56ce17189cd8c2afc6c0fc7feeb4710bcc7985847b6f428a9a54ad6450cee0",  "scope": "public",  "token_type": "bearer"}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -304,14 +297,7 @@ Application client secret.
 {% endapi-method-response-example-description %}
 
 ```javascript
-{
-  "access_token": "1f0af717251950dbd4d73154fdf0a474a5c5119adad999683f5b450c460726aa",
-  "created_at": 1559193360,
-  "expires_in": 1209600,
-  "refresh_token": "ac56ce17189cd8c2afc6c0fc7feeb4710bcc7985847b6f428a9a54ad6450cee0",
-  "scope": "public",
-  "token_type": "bearer"
-}
+{  "access_token": "1f0af717251950dbd4d73154fdf0a474a5c5119adad999683f5b450c460726aa",  "created_at": 1559193360,  "expires_in": 1209600,  "refresh_token": "ac56ce17189cd8c2afc6c0fc7feeb4710bcc7985847b6f428a9a54ad6450cee0",  "scope": "public",  "token_type": "bearer"}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -363,14 +349,7 @@ Application client secret.
 {% endapi-method-response-example-description %}
 
 ```
-{
-  "access_token": "1f0af717251950dbd4d73154fdf0a474a5c5119adad999683f5b450c460726aa",
-  "created_at": 1559193360,
-  "expires_in": 1209600,
-  "refresh_token": "ac56ce17189cd8c2afc6c0fc7feeb4710bcc7985847b6f428a9a54ad6450cee0",
-  "scope": "public",
-  "token_type": "bearer"
-}
+{  "access_token": "1f0af717251950dbd4d73154fdf0a474a5c5119adad999683f5b450c460726aa",  "created_at": 1559193360,  "expires_in": 1209600,  "refresh_token": "ac56ce17189cd8c2afc6c0fc7feeb4710bcc7985847b6f428a9a54ad6450cee0",  "scope": "public",  "token_type": "bearer"}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

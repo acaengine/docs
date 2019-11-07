@@ -46,9 +46,7 @@ system.all(:Display).power Off
 A [promise](http://documentup.com/kriskowal/q/) is returned to obtain the returned result
 
 ```ruby
-system[:Display].firmware_version.then do |version|
-    logger.info "Display firmware is #{version}"
-end
+system[:Display].firmware_version.then do |version|    logger.info "Display firmware is #{version}"end
 ```
 
 Or using [futures](https://msdn.microsoft.com/en-us/library/ff963556.aspx) call `.value` on a promise
@@ -65,9 +63,7 @@ If you want to communicate with a driver in another system you need to know the 
 When the system is booting, it is probable that some other logic modules will not have finished loading and any attempts to communicate with them may fail. If you need to communicate with other logic modules in the `on_load` callback there is a helper method:
 
 ```ruby
-system.load_complete do
-    # All modules are guaranteed to be loaded in this callback
-end
+system.load_complete do    # All modules are guaranteed to be loaded in this callbackend
 ```
 
 This is only required for logic modules as the load order is:
@@ -83,25 +79,7 @@ This is only required for logic modules as the load order is:
 You can subscribe to status variable updates so it is easy to react to changes when they occur.
 
 ```ruby
-device_index = 1
-ref = system.subscribe(:Device, device_index, :status_variable) do |notification|
-    notification.value     # => value of the status variable that triggered this notification
-    notification.old_value # => the value of the variable before this change
-
-    # Also comes with the subscription information
-    notification.sys_name  # => The system name
-    notification.sys_id    # => The system ID this value originated from
-    notification.mod_name  # => The generic module name 
-    notification.mod_id    # => The module database ID
-    notification.index     # => The device index
-    notification.status    # => the name of the status variable
-
-    # And a reference to the subscription should you want to unsubscribe
-    unsubscribe(notification.subscription)
-end
-
-# Then to unsubscribe (you'll have to keep track of the subscription reference)
-unsubscribe(ref)
+device_index = 1ref = system.subscribe(:Device, device_index, :status_variable) do |notification|    notification.value     # => value of the status variable that triggered this notification    notification.old_value # => the value of the variable before this change    # Also comes with the subscription information    notification.sys_name  # => The system name    notification.sys_id    # => The system ID this value originated from    notification.mod_name  # => The generic module name     notification.mod_id    # => The module database ID    notification.index     # => The device index    notification.status    # => the name of the status variable    # And a reference to the subscription should you want to unsubscribe    unsubscribe(notification.subscription)end# Then to unsubscribe (you'll have to keep track of the subscription reference)unsubscribe(ref)
 ```
 
 Unsubscribe is done locally \(not on the system proxy\) as the subscription is stored locally. This is so it can be tracked and unsubscribed automatically when the module is stopped.

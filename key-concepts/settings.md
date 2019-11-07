@@ -4,16 +4,13 @@ _Settings_ are the configuration information that define how an ACAEngine deploy
 
 Settings are expressed as [JSON data](https://en.wikipedia.org/wiki/JSON#JSON_sample), or simply–key/value pairs:
 
+{% tabs %}
+{% tab title="" %}
 ```javascript
-{
-  "key": "value",
-  "foo": [1, 2, 3],
-  "bar": true 
-  "baz": { 
-    "qux": 1.234
-  }
-}
+{  "key": "value",  "foo": [1, 2, 3],  "bar": true   "baz": {     "qux": 1.234  }}
 ```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 JSON is a common, simple data-interchange format that is designed to be easy for humans to read and write, and for machines to parse and generate. If it is a new concept, you can [learn more here](https://learnxinyminutes.com/docs/json/).

@@ -15,29 +15,7 @@ Backoffice can be used to define settings.
 ## Typical Layout
 
 ```ruby
-class Manufacturer::Type::ModuleName
-  # Called on module load before the connection has initiated
-  def on_load; end
-
-  # Called before the module is cleaned up (disconnected already)
-  def on_unload; end
-
-  # Called after dependency reload and settings updates
-  def on_update; end
-
-  # Called once the connection to the device is ready
-  def connected; end
-
-  # Called once the connection closes
-  def disconnected; end
-
-  # Called when the device transmits data
-  def received(data, deferrable, command)
-    # data == data from the device as a String
-    # deferrable == allows you to decide if a result was a success asynchronously
-    # command == last command sent that hasn’t been resolved (raw command + metadata)
-  end
-end
+class Manufacturer::Type::ModuleName  # Called on module load before the connection has initiated  def on_load; end  # Called before the module is cleaned up (disconnected already)  def on_unload; end  # Called after dependency reload and settings updates  def on_update; end  # Called once the connection to the device is ready  def connected; end  # Called once the connection closes  def disconnected; end  # Called when the device transmits data  def received(data, deferrable, command)    # data == data from the device as a String    # deferrable == allows you to decide if a result was a success asynchronously    # command == last command sent that hasn’t been resolved (raw command + metadata)  endend
 ```
 
 ## Transmitting a Request
@@ -93,22 +71,7 @@ Priorities ensure requests are processed in a sane order. For example if you are
 Sometimes a query might be made for control flow purposes so it is often useful to differentiate between user initiated requests and polling.
 
 ```ruby
-# A best practice query function
-def power?(opts = {}, &block)
-    opts[:emit] = block if block_given?
-    opts[:name] = :power_query
-    send('power_query', opts)
-end
-
-# Example polling function
-def poll
-    power? priority: 0 do
-        if self[:power] == On
-            input? priority: 0
-            volume? priority: 0
-        end
-    end
-end
+# A best practice query functiondef power?(opts = {}, &block)    opts[:emit] = block if block_given?    opts[:name] = :power_query    send('power_query', opts)end# Example polling functiondef poll    power? priority: 0 do        if self[:power] == On            input? priority: 0            volume? priority: 0        end    endend
 ```
 
 Priorities are also increased on a contextual basis. This is how retries, for instance, make their way back to the front of the queue - which is what you would expect. There is a configuration option called `priority_bonus` which increases the priority of a command in the following circumstances:
@@ -138,22 +101,6 @@ For the various defaults and configuration options see the [command processor](h
 When you `include ::Orchestrator::Constants` some common configuration and default options are exposed in a more declarative manner.
 
 ```ruby
-tokenize delimiter: "\xAA"  # See the page on Tokenisation
-delay between_sends: 200, on_receive: 100
-wait_response false
-queue_priority default: 50, bonus: 20
-clear_queue_on_disconnect!
-flush_buffer_on_disconnect!
-
-before_transmit :run_function
-def run_function(data, command)
-    # You can modify the data at the last minute here.
-    # A request in the queue might require an update before sending.
-    # Example: https://github.com/acaprojects/aca-device-modules/blob/master/modules/panasonic/projector/tcp.rb
-    return data
-end
-
-# For make break connections, in milliseconds
-inactivity_timeout 5000
+tokenize delimiter: "\xAA"  # See the page on Tokenisationdelay between_sends: 200, on_receive: 100wait_response falsequeue_priority default: 50, bonus: 20clear_queue_on_disconnect!flush_buffer_on_disconnect!before_transmit :run_functiondef run_function(data, command)    # You can modify the data at the last minute here.    # A request in the queue might require an update before sending.    # Example: https://github.com/acaprojects/aca-device-modules/blob/master/modules/panasonic/projector/tcp.rb    return dataend# For make break connections, in millisecondsinactivity_timeout 5000
 ```
 

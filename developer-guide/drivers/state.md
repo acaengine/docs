@@ -43,26 +43,7 @@ All state values should be limited to objects that can be converted to JSON for 
 All drivers can subscribe to their own state.
 
 ```ruby
-# Subscribe to internal state
-
-ref = subscribe(:state_variable) do |notify|
-    notification.value     # => value of the status variable that triggered this notification
-    notification.old_value # => the value of the variable before this change
-
-    # Also comes with the subscription information
-    notify.sys_name # => The system name
-    notify.sys_id   # => The system ID this value originated from
-    notify.mod_name # => The generic module name 
-    notify.mod_id   # => The module database ID
-    notify.index    # => The device index
-    notify.status   # => the name of the status variable
-
-    # And a reference to the subscription should you want to unsubscribe
-    unsubscribe(notification.subscription)
-end
-
-# Optionally unsubscribe
-unsubscribe(ref)
+# Subscribe to internal stateref = subscribe(:state_variable) do |notify|    notification.value     # => value of the status variable that triggered this notification    notification.old_value # => the value of the variable before this change    # Also comes with the subscription information    notify.sys_name # => The system name    notify.sys_id   # => The system ID this value originated from    notify.mod_name # => The generic module name     notify.mod_id   # => The module database ID    notify.index    # => The device index    notify.status   # => the name of the status variable    # And a reference to the subscription should you want to unsubscribe    unsubscribe(notification.subscription)end# Optionally unsubscribeunsubscribe(ref)
 ```
 
 Logic can additionally subscribe to state of other drivers.
@@ -72,23 +53,13 @@ Logic can additionally subscribe to state of other drivers.
 When state is applied it is checked against the existing value and subscribers are only notified if the value has changed.
 
 ```ruby
-self[:power] = On  # => subscribers are notified of the change
-self[:power] = On  # => no change detected, no action taken
-self[:power] = Off # => subscribers are notified of the change
+self[:power] = On  # => subscribers are notified of the changeself[:power] = On  # => no change detected, no action takenself[:power] = Off # => subscribers are notified of the change
 ```
 
 Change detection doesn’t work if you mutate a variable.
 
 ```ruby
-self[:my_array] = [1, 2, 3] # => subscribers are notified of the change
-self[:my_array] << 4        # => no action taken (change detection isn't run)
-
-@my_copy = self[:my_array]
-@my_copy << 5
-self[:my_array] = @my_copy  # => no change detected (change detection did run)
-
-# Only if you are really sure you know what you are doing!
-signal_status(:my_array)    # => forces a change notification to subscribers
+self[:my_array] = [1, 2, 3] # => subscribers are notified of the changeself[:my_array] << 4        # => no action taken (change detection isn't run)@my_copy = self[:my_array]@my_copy << 5self[:my_array] = @my_copy  # => no change detected (change detection did run)# Only if you are really sure you know what you are doing!signal_status(:my_array)    # => forces a change notification to subscribers
 ```
 
 {% hint style="warning" %}
@@ -105,13 +76,6 @@ The recommended method for updating complex state is:
 This can be achieved by using operations that create a new object
 
 ```ruby
-self[:my_array] = [1, 2, 3] # => subscribers are notified of the change
-self[:my_array] += [4]      # => subscribers are notified of the change
-self[:my_array]             # => [1, 2, 3, 4]
-
-# These will both trigger notifications
-self[:my_hash] = { example: 1 }
-self[:my_hash] = self[:my_hash].merge({ update: true })
-self[:my_hash] # => { example: 1, update: true }
+self[:my_array] = [1, 2, 3] # => subscribers are notified of the changeself[:my_array] += [4]      # => subscribers are notified of the changeself[:my_array]             # => [1, 2, 3, 4]# These will both trigger notificationsself[:my_hash] = { example: 1 }self[:my_hash] = self[:my_hash].merge({ update: true })self[:my_hash] # => { example: 1, update: true }
 ```
 

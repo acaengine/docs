@@ -69,80 +69,7 @@ A list of systems matching the search criteria.
 {% endapi-method-response-example-description %}
 
 ```text
-{
-    "total": 3,
-    "results": [
-        {
-            "edge_id": "edge-QC03B3OM",
-            "name": "Room 1",
-            "description": null,
-            "email": "room1@example.com",
-            "capacity": 10,
-            "features": "",
-            "bookable": true,
-            "installed_ui_devices": 0,
-            "zones": [
-                "zone-rGhCRp_aUD"
-            ],
-            "modules": [
-                "mod-rJRCVYKVuB",
-                "mod-rJRGK21pya",
-                "mod-rJRHYsZExU"
-            ],
-            "settings": {},
-            "created_at": 1562041110,
-            "support_url": null,
-            "version": 5,
-            "id": "sys-rJQQlR4Cn7"
-        },
-        {
-            "edge_id": "edge-QC03B3OM",
-            "name": "Room 2",
-            "description": null,
-            "email": "room2@example.com",
-            "capacity": 10,
-            "features": "",
-            "bookable": true,
-            "installed_ui_devices": 0,
-            "zones": [
-                "zone-rGhCRp_aUD"
-            ],
-            "modules": [
-                "mod-rJRJOM27Kb",
-                "mod-rJRLE4_PQ7",
-                "mod-rJRLwe72Mo"
-            ],
-            "settings": {},
-            "created_at": 1562041127,
-            "support_url": null,
-            "version": 4,
-            "id": "sys-rJQSySsELE"
-        },
-        {
-            "edge_id": "edge-QC03B3OM",
-            "name": "Room 3",
-            "description": null,
-            "email": "room3@example.com",
-            "capacity": 4,
-            "features": "",
-            "bookable": true,
-            "installed_ui_devices": 0,
-            "zones": [
-                "zone-rGhCRp_aUD"
-            ],
-            "modules": [
-                "mod-rJRNrLDPNz",
-                "mod-rJRQ~JwE7U",
-                "mod-rJRV1qokbH"
-            ],
-            "settings": {},
-            "created_at": 1562041145,
-            "support_url": null,
-            "version": 4,
-            "id": "sys-rJQVPIR9Uf"
-        }
-    ]
-}
+{    "total": 3,    "results": [        {            "edge_id": "edge-QC03B3OM",            "name": "Room 1",            "description": null,            "email": "room1@example.com",            "capacity": 10,            "features": "",            "bookable": true,            "installed_ui_devices": 0,            "zones": [                "zone-rGhCRp_aUD"            ],            "modules": [                "mod-rJRCVYKVuB",                "mod-rJRGK21pya",                "mod-rJRHYsZExU"            ],            "settings": {},            "created_at": 1562041110,            "support_url": null,            "version": 5,            "id": "sys-rJQQlR4Cn7"        },        {            "edge_id": "edge-QC03B3OM",            "name": "Room 2",            "description": null,            "email": "room2@example.com",            "capacity": 10,            "features": "",            "bookable": true,            "installed_ui_devices": 0,            "zones": [                "zone-rGhCRp_aUD"            ],            "modules": [                "mod-rJRJOM27Kb",                "mod-rJRLE4_PQ7",                "mod-rJRLwe72Mo"            ],            "settings": {},            "created_at": 1562041127,            "support_url": null,            "version": 4,            "id": "sys-rJQSySsELE"        },        {            "edge_id": "edge-QC03B3OM",            "name": "Room 3",            "description": null,            "email": "room3@example.com",            "capacity": 4,            "features": "",            "bookable": true,            "installed_ui_devices": 0,            "zones": [                "zone-rGhCRp_aUD"            ],            "modules": [                "mod-rJRNrLDPNz",                "mod-rJRQ~JwE7U",                "mod-rJRV1qokbH"            ],            "settings": {},            "created_at": 1562041145,            "support_url": null,            "version": 4,            "id": "sys-rJQVPIR9Uf"        }    ]}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -226,24 +153,7 @@ Defines a new system. Systems names must be unique within the instance they are 
 {% endapi-method-response-example-description %}
 
 ```javascript
-{
-    "edge_id": "edge-QC03B3OM",
-    "name": "Example Room",
-    "description": "Example room description containing further cotnext",
-    "email": "room@example.com",
-    "capacity": 10,
-    "features": "",
-    "bookable": true,
-    "installed_ui_devices": 0,
-    "zones": [
-        "zone-rGhCRp_aUD"
-    ],
-    "modules": [],
-    "settings": {},
-    "created_at": 1562041110,
-    "support_url": "https://aca.example.com/foo",
-    "id": "sys-rJQQlR4Cn7"
-}
+{    "edge_id": "edge-QC03B3OM",    "name": "Example Room",    "description": "Example room description containing further cotnext",    "email": "room@example.com",    "capacity": 10,    "features": "",    "bookable": true,    "installed_ui_devices": 0,    "zones": [        "zone-rGhCRp_aUD"    ],    "modules": [],    "settings": {},    "created_at": 1562041110,    "support_url": "https://aca.example.com/foo",    "id": "sys-rJQQlR4Cn7"}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -281,29 +191,7 @@ Include full models of all modules and zones associated with the system rather t
 {% endapi-method-response-example-description %}
 
 ```javascript
-{
-    "edge_id": "edge-QC03B3OM",
-    "name": "Example Room",
-    "description": "Example room description containing further context",
-    "email": "room@example.com",
-    "capacity": 10,
-    "features": "",
-    "bookable": true,
-    "installed_ui_devices": 0,
-    "zones": [
-        "zone-rGhCRp_aUD"
-    ],
-    "modules": [
-        "mod-rJRCVYKVuB",
-        "mod-rJRGK21pya",
-        "mod-rJRHYsZExU"
-    ],
-    "settings": {},
-    "created_at": 1562041110,
-    "support_url": "https://aca.example.com/foo",
-    "version": 3,
-    "id": "sys-rJQQlR4Cn7"
-}
+{    "edge_id": "edge-QC03B3OM",    "name": "Example Room",    "description": "Example room description containing further context",    "email": "room@example.com",    "capacity": 10,    "features": "",    "bookable": true,    "installed_ui_devices": 0,    "zones": [        "zone-rGhCRp_aUD"    ],    "modules": [        "mod-rJRCVYKVuB",        "mod-rJRGK21pya",        "mod-rJRHYsZExU"    ],    "settings": {},    "created_at": 1562041110,    "support_url": "https://aca.example.com/foo",    "version": 3,    "id": "sys-rJQQlR4Cn7"}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -381,24 +269,7 @@ The system metadata version. This must match the current version and increments 
 {% endapi-method-response-example-description %}
 
 ```javascript
-{
-    "edge_id": "edge-QC03B3OM",
-    "name": "Example Room",
-    "description": "Example room description containing further context",
-    "email": "room@example.com",
-    "capacity": 10,
-    "features": "",
-    "bookable": true,
-    "installed_ui_devices": 0,
-    "zones": [
-        "zone-rGhCRp_aUD"
-    ],
-    "modules": [],
-    "settings": {},
-    "created_at": 1562041110,
-    "support_url": "https://aca.example.com/foo",
-    "id": "sys-rJQQlR4Cn7"
-}
+{    "edge_id": "edge-QC03B3OM",    "name": "Example Room",    "description": "Example room description containing further context",    "email": "room@example.com",    "capacity": 10,    "features": "",    "bookable": true,    "installed_ui_devices": 0,    "zones": [        "zone-rGhCRp_aUD"    ],    "modules": [],    "settings": {},    "created_at": 1562041110,    "support_url": "https://aca.example.com/foo",    "id": "sys-rJQQlR4Cn7"}
 ```
 {% endapi-method-response-example %}
 
@@ -602,10 +473,7 @@ A status key of interest. If included, the response filters to this value.
 {% endapi-method-response-example-description %}
 
 ```javascript
-{
-  "foo": "abc",
-  "bar": 42
-}
+{  "foo": "abc",  "bar": 42}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -647,14 +515,7 @@ Class of the module.
 {% endapi-method-response-example-description %}
 
 ```javascript
-{
-  "function_name": {
-    "arity": 1,
-    "params": [
-      "string"
-    ]
-  }
-}
+{  "function_name": {    "arity": 1,    "params": [      "string"    ]  }}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -692,9 +553,7 @@ Class name of the modules to count.
 {% endapi-method-response-example-description %}
 
 ```javascript
-{
-  "count": 3
-}
+{  "count": 3}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -726,11 +585,7 @@ ID of the system to query.
 {% endapi-method-response-example-description %}
 
 ```javascript
-{
-  "Booking": 1,
-  "Display": 2,
-  "VidConf": 1
-}
+{  "Booking": 1,  "Display": 2,  "VidConf": 1}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

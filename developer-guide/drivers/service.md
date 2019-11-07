@@ -22,41 +22,7 @@ Each request should either set the `on_receive` callback option or provide a blo
 | delete | path, options = {}, &blk |  |
 
 ```ruby
-# Example usage:
-
-def query_position
-    # Get request will look like:
-    # http://domain.or.ip/api/status_of?coordinates=detailed
-    get('/api/status_of', {
-        query: {
-            coordinates: :detailed
-        }
-    }) do |data, resolve, command|
-        check_response(data) do |resp|
-            # Update status (made available to interfaces)
-            self[:position] = resp['coords']
-        end
-    end
-end
-
-def check_response(data)
-    # Check response status
-    # (might have been 500 or 404, depends on what you are expecting)
-    if data.status == 200
-        begin
-            # We're assuming a JSON response and we are passing that data
-            # back to the calling function and assuming success at this point
-            yield ::JSON.parse(data.body) if block_given?
-            return :success
-        rescue => e
-            logger.print_error e
-        end 
-    end
-
-    # Fail if there are any issues
-    # Obviously this behaviour depends on the service etc
-    :abort
-end
+# Example usage:def query_position    # Get request will look like:    # http://domain.or.ip/api/status_of?coordinates=detailed    get('/api/status_of', {        query: {            coordinates: :detailed        }    }) do |data, resolve, command|        check_response(data) do |resp|            # Update status (made available to interfaces)            self[:position] = resp['coords']        end    endenddef check_response(data)    # Check response status    # (might have been 500 or 404, depends on what you are expecting)    if data.status == 200        begin            # We're assuming a JSON response and we are passing that data            # back to the calling function and assuming success at this point            yield ::JSON.parse(data.body) if block_given?            return :success        rescue => e            logger.print_error e        end     end    # Fail if there are any issues    # Obviously this behaviour depends on the service etc    :abortend
 ```
 
 ### Request Options
@@ -78,11 +44,7 @@ NOTE:: Both NTLM and Digest auth are challenge response protocols and won’t wo
 Basic auth is supported natively along with NTLM and digest authentication techniques. All that is required is to set the `authorization` header like so:
 
 ```ruby
-options = {
-    headers: {
-        authorization: [username, password]
-    }
-}
+options = {    headers: {        authorization: [username, password]    }}
 ```
 
 For more advanced methods of authentication see Utilities and Helpers.
@@ -92,26 +54,7 @@ For more advanced methods of authentication see Utilities and Helpers.
 The response object is passed to your received block and looks like this:
 
 ```ruby
-get '/' do |data|
-    # Response body as a string
-    data.body
-
-    # HTTP version the server is using (a string)
-    data.http_version
-
-    # The status code returned as an integer
-    data.status
-
-    # Was the connection kept alive for possible further requests
-    data.keep_alive
-
-    # What cookies have been stored at this path (as a Hash)
-    data.cookies
-    data.cookies['user_id']
-
-    # The data object itself is a hash of all the headers
-    data['Content-Type'] # => 'text/html'
-end
+get '/' do |data|    # Response body as a string    data.body    # HTTP version the server is using (a string)    data.http_version    # The status code returned as an integer    data.status    # Was the connection kept alive for possible further requests    data.keep_alive    # What cookies have been stored at this path (as a Hash)    data.cookies    data.cookies['user_id']    # The data object itself is a hash of all the headers    data['Content-Type'] # => 'text/html'end
 ```
 
 ## Cookies

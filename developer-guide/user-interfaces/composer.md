@@ -24,12 +24,7 @@ Imagine the driver below running on ACA Engine.
 You can request the status values available in drivers so you can present these graphically to a user. This is performed using the `binding` directive and the data requested is updated in real time as the status changes.
 
 ```text
-<span binding [sys]="system" mod="Display" bind="input" [(value)]="model.input" exec="switch_to" [params]="[model.input]">
-    Display's current input: {{input}}
-</span>
-<button (press)="model.input = 'hdmi'">Switch to HDMI</button>
-<button (press)="model.input = 'dvi'">Switch to DVI</button>
-<button (press)="model.input = 'usb'">Switch to USB</button>
+<span binding [sys]="system" mod="Display" bind="input" [(value)]="model.input" exec="switch_to" [params]="[model.input]">    Display's current input: {{input}}</span><button (press)="model.input = 'hdmi'">Switch to HDMI</button><button (press)="model.input = 'dvi'">Switch to DVI</button><button (press)="model.input = 'usb'">Switch to USB</button>
 ```
 
 Our aim with the client library was to make the interface code as self describing as possible, no abstract channel codes or feedback numbers. Let’s break this line down a little more.
@@ -51,29 +46,7 @@ Our aim with the client library was to make the interface code as self describin
 When the status variable and function used to update that status variable have the same name, the exec process can be simplified. This is an example of controlling volume and power for the same device.
 
 ```markup
-<!-- Power Toggle Button -->
-<button
-    binding
-    [sys]="system"
-    mod="Display"
-    bind="power"
-    [(value)]="model.power"
-    exec
-    (press)="model.power = !model.power"
->Touch to Power {{ model.power ? 'Off' : 'On' }}</button>
-
-<!-- Hide unless powered on -->
-<div *ngIf="model.power == true">
-    <span
-        binding
-        [sys]="system"
-        mod="Display"
-        bind="volume"
-        [(value)]="model.volume"
-        exec
-    >Volume is {{model.volume}}</span>
-    <input #volSlider type="range" (change)="model.volume = volSlider.value" min="0" max="100" />
-</div>
+<!-- Power Toggle Button --><button    binding    [sys]="system"    mod="Display"    bind="power"    [(value)]="model.power"    exec    (press)="model.power = !model.power">Touch to Power {{ model.power ? 'Off' : 'On' }}</button><!-- Hide unless powered on --><div *ngIf="model.power == true">    <span        binding        [sys]="system"        mod="Display"        bind="volume"        [(value)]="model.volume"        exec    >Volume is {{model.volume}}</span>    <input #volSlider type="range" (change)="model.volume = volSlider.value" min="0" max="100" /></div>
 ```
 
 You can see that exec is present with no value configured. The result of this code is a power toggle button for the device and when the device is on there is a volume slider available.
@@ -83,35 +56,13 @@ You can see that exec is present with no value configured. The result of this co
 You can call functions without binding to values first.
 
 ```markup
-<!-- template method -->
-<button
-    binding
-    [sys]="system"
-    mod="Display"
-    <!-- a change to this value will cause execute to fire, inital value is ignored -->
-    [value]="model.power"
-    exec="power"
-    <!-- params that will be passed to the function can be customised -->
-    [params]="[model.power, model.index]"
-
-    <!-- Event triggering the exec -->
-    (press)="model.power = !model.power"
->Touch to Toggle Power</button>
+<!-- template method --><button    binding    [sys]="system"    mod="Display"    <!-- a change to this value will cause execute to fire, inital value is ignored -->    [value]="model.power"    exec="power"    <!-- params that will be passed to the function can be customised -->    [params]="[model.power, model.index]"    <!-- Event triggering the exec -->    (press)="model.power = !model.power">Touch to Toggle Power</button>
 ```
 
 You can also execute functions from type script
 
 ```javascript
-import { SystemsService } from `@acaprojects/ngx-composer`
-@Component({ ... })
-class DemoExec {
-  constructor(private service: SystemsService) { }
-
-  // use route or query params or local storgage for system ID
-  power_on_display() {
-    this.service.get(`sys-B0`).get(`Display`).exec(`power`, true);
-  }
-}
+import { SystemsService } from `@acaprojects/ngx-composer`@Component({ ... })class DemoExec {  constructor(private service: SystemsService) { }  // use route or query params or local storgage for system ID  power_on_display() {    this.service.get(`sys-B0`).get(`Display`).exec(`power`, true);  }}
 ```
 
 ## Resource Access
@@ -119,23 +70,7 @@ class DemoExec {
 Engine exposes a rich set of APIs that can be easily accessed via composer resources on the `SystemsService`
 
 ```javascript
-import { SystemsService } from `@acaprojects/ngx-composer`
-@Component({ ... })
-class DemoExec {
-  constructor(private service: SystemsService) { }
-
-  get_list_of_systems() {
-    // Returns a list of systems matching the seatch query
-    this.service.resources.get(`System`).get({
-      q: `search`
-    });
-
-    // Gets the system information for this system
-    this.service.resources.get(`System`).get({
-      id: `sys-B0`
-    });
-  }
-}
+import { SystemsService } from `@acaprojects/ngx-composer`@Component({ ... })class DemoExec {  constructor(private service: SystemsService) { }  get_list_of_systems() {    // Returns a list of systems matching the seatch query    this.service.resources.get(`System`).get({      q: `search`    });    // Gets the system information for this system    this.service.resources.get(`System`).get({      id: `sys-B0`    });  }}
 ```
 
 You can `get` the following resource factories:
@@ -173,13 +108,7 @@ The composer starter example
 It is possible to request debug logging to be redirected to your browser. This provides a real time window into the inner workings of the driver as it is executing.
 
 ```markup
-<div
-    debug
-    [sys]="model.system_id"
-    [mod]="model.module_id"
-    numLines="20"
-    [(output)]="model.output"
->{{model.output.join("<br />")}}</div>
+<div    debug    [sys]="model.system_id"    [mod]="model.module_id"    numLines="20"    [(output)]="model.output">{{model.output.join("<br />")}}</div>
 ```
 
 Useful for technical or administration pages.

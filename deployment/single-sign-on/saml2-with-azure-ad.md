@@ -11,27 +11,6 @@ If using Azure Active Directory for SSO, [these instructions](https://docs.micro
 * Set the value of the `optionalClaims"`to include the above 4 claims \(firstname, lastname, user ID, email address\) in the saml2Token. An example is below:
 
   ```text
-    "optionalClaims": {
-        "idToken": [],
-        "accessToken": [],
-        "saml2Token": [
-            {
-                "name": "email",
-                "essential": true,
-            },
-            {
-                "name": "upn",
-                "essential": true,
-            },
-            {
-                "name": "family_name",
-                "essential": true,
-            },
-            {
-                "name": "given_name",
-                "essential": true
-            }
-        ]
-    },
+    "optionalClaims": {      "idToken": [],      "accessToken": [],      "saml2Token": [          {              "name": "email",              "essential": true,          },          {              "name": "upn",              "essential": true,          },          {              "name": "family_name",              "essential": true,          },          {              "name": "given_name",              "essential": true          }      ]  },
   ```
 
