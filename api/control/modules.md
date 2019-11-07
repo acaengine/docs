@@ -496,7 +496,7 @@ Module updated.
   "uri": null,
   "custom_name": null,
   "settings": {},
-  "updated_at": 15724An error occurred while starting the module.12023,
+  "updated_at": 1572412023,
   "created_at": 1572414543,
   "role": 1,
   "connected": true,
@@ -647,7 +647,7 @@ Module started.
 
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
-
+An error occurred that prevented the module from starting.
 {% endapi-method-response-example-description %}
 
 ```
