@@ -15,7 +15,8 @@ Prerequisite: First, ensure you've read the article on how ACAEngine works with 
 1. Install the Node-RED [connector for Azure IOT Hub](https://flows.nodered.org/node/node-red-contrib-azure-iot-hub), by running the below command on the VM/machine where ACAEngine is installed:
 
    ```text
-   docker exec -it node-red npm install node-red-contrib-azure-iot-hubdocker restart node-red
+   docker exec -it node-red npm install node-red-contrib-azure-iot-hub
+   docker restart node-red
    ```
 
 2. Access the Node-RED web interface by visiting [http://:1880](http://:1880) to configure Node-RED.

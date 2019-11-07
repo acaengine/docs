@@ -14,7 +14,10 @@ ACA Engine ships with two tokenisers to help you break up the incoming data. T
 Usage:
 
 ```ruby
-class Example::Driver    # Device driver helper    tokenize delimiter: "\x0D"end
+class Example::Driver
+    # Device driver helper
+    tokenize delimiter: "\x0D"
+end
 ```
 
 Options:
@@ -46,7 +49,27 @@ The primary use case for this tokeniser is variable length messages, where lengt
 Usage:
 
 ```ruby
-class Samsung::Displays::MdSeries    tokenize indicator: "\xAA", callback: :check_length    # Called by the Abstract Tokenizer    def check_length(byte_str)        # Check for minimum length        return false if byte_str.bytesize <= 3        response = str_to_array(byte_str)        # data length byte + (header + checksum) == message length        len = response[2] + 4        if response.length >= len            # return the length of this message (any excess will be buffered)            return len        else            # false if the complete message hasn't arrived yet            return false        end    endend
+class Samsung::Displays::MdSeries
+    tokenize indicator: "\xAA", callback: :check_length
+
+    # Called by the Abstract Tokenizer
+    def check_length(byte_str)
+        # Check for minimum length
+        return false if byte_str.bytesize <= 3
+        response = str_to_array(byte_str)
+
+        # data length byte + (header + checksum) == message length
+        len = response[2] + 4
+
+        if response.length >= len
+            # return the length of this message (any excess will be buffered)
+            return len
+        else
+            # false if the complete message hasn't arrived yet
+            return false
+        end
+    end
+end
 ```
 
 Options:

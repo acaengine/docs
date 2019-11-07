@@ -85,7 +85,7 @@ The `/modules` endpoint provides creation, management and direct interaction wit
     </tr>
     <tr>
       <td style="text-align:left">settings</td>
-      <td style="text-align:left"><code>string</code>
+      <td style="text-align:left"><code>object</code>
       </td>
       <td style="text-align:left">A JSON object containing module configuration.</td>
     </tr>
@@ -121,7 +121,7 @@ The `/modules` endpoint provides creation, management and direct interaction wit
     </tr>
     <tr>
       <td style="text-align:left">connected</td>
-      <td style="text-align:left"><code>boolean</code> 
+      <td style="text-align:left"><code>boolean</code>
       </td>
       <td style="text-align:left">Flag for connectivity state.</td>
     </tr>
@@ -145,9 +145,7 @@ The `/modules` endpoint provides creation, management and direct interaction wit
         for modules shared by many systems (e.g. a lighting gateway).</td>
     </tr>
   </tbody>
-</table>
-
-## Management
+</table>## Management
 
 {% api-method method="get" host="https://aca.example.com" path="/api/control/modules" %}
 {% api-method-summary %}
@@ -190,7 +188,33 @@ Return modules that are an instance of the specified dependency.
 {% endapi-method-response-example-description %}
 
 ```javascript
-{  "total": 1,  "results": [    {      "dependency_id": "dep-wJHShR4Ffa",      "control_system_id": null,      "edge_id": "edge-E9vIruSZ",      "ip": "10.45.6.3",      "tls": false,      "udp": false,      "port": 8192,      "makebreak": false,      "uri": null,      "custom_name": null,      "settings": {},      "updated_at": 1572412023,      "created_at": 1572392714,      "role": 1,      "connected": true,      "running": true,      "notes": null,      "ignore_connected": false,      "ignore_startstop": false,      "id": "mod-wJHYeHm6Yn"    }  ]}
+{
+  "total": 1,
+  "results": [
+    {
+      "dependency_id": "dep-wJHShR4Ffa",
+      "control_system_id": null,
+      "edge_id": "edge-E9vIruSZ",
+      "ip": "10.45.6.3",
+      "tls": false,
+      "udp": false,
+      "port": 8192,
+      "makebreak": false,
+      "uri": null,
+      "custom_name": null,
+      "settings": {},
+      "updated_at": 1572412023,
+      "created_at": 1572392714,
+      "role": 1,
+      "connected": true,
+      "running": true,
+      "notes": null,
+      "ignore_connected": false,
+      "ignore_startstop": false,
+      "id": "mod-wJHYeHm6Yn"
+    }
+  ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -202,7 +226,7 @@ Queries default to searching for any of the entered terms \(words\). A small que
 | Operator | Action |
 | :--- | :--- |
 | `+` | Matches both terms. |
-| `|`  | Matches either terms. |
+| `|` | Matches either terms. |
 | `-` | Negates a single token. |
 | `"` | Wraps tokens to form a phrase. |
 | `(` and `)` | Provide precedence. |
@@ -282,7 +306,28 @@ Successful creations will return the full module.
 {% endapi-method-response-example-description %}
 
 ```javascript
-{  "id": "mod-wJHYeHm6Yn",  "dependency_id": "dep-wJHShR4Ffa",  "control_system_id": null,  "edge_id": "edge-E9vIruSZ",  "ip": "10.45.6.3",  "tls": false,  "udp": false,  "port": 8192,  "makebreak": false,  "uri": null,  "custom_name": null,  "settings": {},  "updated_at": 1572412023,  "created_at": 1572412023,  "role": 1,  "connected": true,  "running": true,  "notes": null,  "ignore_connected": false,  "ignore_startstop": false}
+{
+  "dependency_id": "dep-wJHShR4Ffa",
+  "control_system_id": null,
+  "edge_id": "edge-E9vIruSZ",
+  "ip": "10.45.6.3",
+  "tls": false,
+  "udp": false,
+  "port": 8192,
+  "makebreak": false,
+  "uri": null,
+  "custom_name": null,
+  "settings": {},
+  "updated_at": 1572412023,
+  "created_at": 1572412023,
+  "role": 1,
+  "connected": true,
+  "running": true,
+  "notes": null,
+  "ignore_connected": false,
+  "ignore_startstop": false,
+  "id": "mod-wJHYeHm6Yn"
+}
 ```
 {% endapi-method-response-example %}
 
@@ -292,7 +337,9 @@ Missing or invalid module configuration.
 {% endapi-method-response-example-description %}
 
 ```javascript
-{  "dependency_id": [    "can't be blank"  ]}
+{
+  "dependency_id": ["can't be blank"]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -324,7 +371,28 @@ ID of the modules to retrieve.
 {% endapi-method-response-example-description %}
 
 ```javascript
-{  "id": "mod-wJHYeHm6Yn",  "dependency_id": "dep-wJHShR4Ffa",  "control_system_id": null,  "edge_id": "edge-E9vIruSZ",  "ip": "10.45.6.3",  "tls": false,  "udp": false,  "port": 8192,  "makebreak": false,  "uri": null,  "custom_name": null,  "settings": {},  "updated_at": 1572412023,  "created_at": 1572412023,  "role": 1,  "connected": true,  "running": true,  "notes": null,  "ignore_connected": false,  "ignore_startstop": false}
+{
+  "dependency_id": "dep-wJHShR4Ffa",
+  "control_system_id": null,
+  "edge_id": "edge-E9vIruSZ",
+  "ip": "10.45.6.3",
+  "tls": false,
+  "udp": false,
+  "port": 8192,
+  "makebreak": false,
+  "uri": null,
+  "custom_name": null,
+  "settings": {},
+  "updated_at": 1572412023,
+  "created_at": 1572412023,
+  "role": 1,
+  "connected": true,
+  "running": true,
+  "notes": null,
+  "ignore_connected": false,
+  "ignore_startstop": false,
+  "id": "mod-wJHYeHm6Yn"
+}
 ```
 {% endapi-method-response-example %}
 
@@ -416,7 +484,28 @@ Module updated.
 {% endapi-method-response-example-description %}
 
 ```javascript
-{  "id": "mod-wJHYeHm6Yn",  "dependency_id": "dep-wJHShR4Ffa",  "control_system_id": null,  "edge_id": "edge-E9vIruSZ",  "ip": "10.45.6.3",  "tls": false,  "udp": false,  "port": 8192,  "makebreak": false,  "uri": null,  "custom_name": null,  "settings": {},  "updated_at": 1572412023,  "created_at": 1572412023,  "role": 1,  "connected": true,  "running": true,  "notes": null,  "ignore_connected": false,  "ignore_startstop": false}
+{
+  "dependency_id": "dep-wJHShR4Ffa",
+  "control_system_id": null,
+  "edge_id": "edge-E9vIruSZ",
+  "ip": "10.45.6.3",
+  "tls": false,
+  "udp": false,
+  "port": 8192,
+  "makebreak": false,
+  "uri": null,
+  "custom_name": null,
+  "settings": {},
+  "updated_at": 15724An error occurred while starting the module.12023,
+  "created_at": 1572414543,
+  "role": 1,
+  "connected": true,
+  "running": true,
+  "notes": null,
+  "ignore_connected": false,
+  "ignore_startstop": false,
+  "id": "mod-wJHYeHm6Yn"
+}
 ```
 {% endapi-method-response-example %}
 
@@ -459,7 +548,7 @@ Delete
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Removes a module. This will delete is from all systems.
+Removes a module. Modules that are associated with multiple systems be removed from all.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -505,7 +594,7 @@ ID of the module to delete.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-## Interactions
+## Interaction
 
 {% api-method method="post" host="https://aca.example.com" path="/api/control/modules/{id}/start" %}
 {% api-method-summary %}
@@ -558,7 +647,7 @@ Module started.
 
 {% api-method-response-example httpCode=500 %}
 {% api-method-response-example-description %}
-An error occured while starting the module.
+
 {% endapi-method-response-example-description %}
 
 ```
@@ -646,7 +735,12 @@ ID of the module to check.
 {% endapi-method-response-example-description %}
 
 ```javascript
-{  "host": "10.45.5.2",  "pingable": true,  "warning": "",  "exception": ""}
+{
+  "host": "10.45.5.2",
+  "pingable": true,
+  "warning": null,
+  "exception": null
+}
 ```
 {% endapi-method-response-example %}
 
@@ -694,7 +788,10 @@ Status key of interest. If included, the response filters to this value.
 {% endapi-method-response-example-description %}
 
 ```javascript
-{  "foo": "abc",  "bar": 42}
+{
+  "foo": "abc",
+  "bar": 42
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

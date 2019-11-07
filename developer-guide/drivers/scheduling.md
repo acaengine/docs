@@ -20,19 +20,50 @@ Every driver can schedule events to occur in a number of different ways. Schedul
 ## Examples
 
 ```ruby
-schedule.every('1m') do    # perform some action, such as pollingendschedule.in(500) do    # ...endschedule.at(Time.now + 2.hours) do    # ...endschedule.at('2018-02-02T15:32:41+11:00') do    # ...end# Every day at 8amschedule.cron('0 8 * * *') do    # ...end# Canceling an individual schedule@email_sched = schedule.in(500) do    send_emailend@email_sched.cancel
+schedule.every('1m') do
+    # perform some action, such as polling
+end
+
+schedule.in(500) do
+    # ...
+end
+
+schedule.at(Time.now + 2.hours) do
+    # ...
+end
+
+schedule.at('2018-02-02T15:32:41+11:00') do
+    # ...
+end
+
+# Every day at 8am
+schedule.cron('0 8 * * *') do
+    # ...
+end
+
+# Canceling an individual schedule
+@email_sched = schedule.in(500) do
+    send_email
+end
+@email_sched.cancel
 ```
 
 There are often situations where you want to run the block immediately.
 
 ```ruby
-def connected    schedule.every('1m', :run_now) do        poll_current_state    endend
+def connected
+    schedule.every('1m', :run_now) do
+        poll_current_state
+    end
+end
 ```
 
 CRON also supports time zones - which should always be configured
 
 ```ruby
-schedule.cron('0 8 * * *', timezone: 'Sydney') do    # ...end
+schedule.cron('0 8 * * *', timezone: 'Sydney') do
+    # ...
+end
 ```
 
 See the list of supported [time zone strings](http://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html) and information [about time zones](https://robots.thoughtbot.com/its-about-time-zones).

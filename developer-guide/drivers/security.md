@@ -7,25 +7,56 @@ A global callback can be defined to check if a user should be able to access a s
 In a [Rails initialiser](http://guides.rubyonrails.org/configuring.html#using-initializer-files):
 
 ```ruby
-# Returning true means access should be grantedRails.application.config.orchestrator.check_access = proc { |system_id, user|    if system_id == 'sys-nuclear-warheads'        user.sys_admin ? true : false    else        # We only want to block access to the warheads        true    end}
+# Returning true means access should be granted
+Rails.application.config.orchestrator.check_access = proc { |system_id, user|
+    if system_id == 'sys-nuclear-warheads'
+        user.sys_admin ? true : false
+    else
+        # We only want to block access to the warheads
+        true
+    end
+}
 ```
 
 All drivers have a helper method for accessing the user details so you can manually manage permissions:
 
 ```ruby
-def some_method_in_driver    user = current_user    if user.nil?        # Method was invoked internally - timer, onload callback etc    else        logger.info "Method called by user #{user.email} (#{user.id})"    endend
+def some_method_in_driver
+    user = current_user
+    if user.nil?
+        # Method was invoked internally - timer, onload callback etc
+    else
+        logger.info "Method called by user #{user.email} (#{user.id})"
+    end
+end
 ```
 
 You can also protect methods using `protect_method`. The last `protect_method` call for any function is the one that will be used.
 
 ```ruby
-class Some::Device::Driver    include ::Orchestrator::Security    # By default both Tech Support and Admin users have access to these methods    # Regular users will be rejected    protect_method :method_1, :method_2    # if you provide a block then it can be used to decide if a user should have access    protect_method :method_1, :method_2 do |user|        user.sys_admin || user.name == 'service account' || check_room_bookings(user)    end    def method_1; end    def method_2; endend
+class Some::Device::Driver
+    include ::Orchestrator::Security
+
+    # By default both Tech Support and Admin users have access to these methods
+    # Regular users will be rejected
+    protect_method :method_1, :method_2
+
+    # if you provide a block then it can be used to decide if a user should have access
+    protect_method :method_1, :method_2 do |user|
+        user.sys_admin || user.name == 'service account' || check_room_bookings(user)
+    end
+
+    def method_1; end
+    def method_2; end
+end
 ```
 
 you can also check if a user has access to a method
 
 ```ruby
-can_access? :method_name# by default it checks against the current user, this can be overriddencan_access? :method_name, user
+can_access? :method_name
+# by default it checks against the current user, this can be overridden
+can_access? :method_name, user
 ```
 
 NOTE:: the current user is maintained across asynchronous function calls and timers.
@@ -41,7 +72,9 @@ Finally all system access is logged and saved for a few months to make it fairly
 Passwords often need to be stored in the database for accessing secure devices. To have a setting stored securely, you enter the key with a `$` sign prefix.
 
 ```javascript
-{    "$password": "secret"}
+{
+    "$password": "secret"
+}
 ```
 
 once saved, the setting is encrypted with 256 bit [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) using [GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode) ciphers to prevent tampering

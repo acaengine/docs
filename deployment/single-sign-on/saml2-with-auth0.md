@@ -13,6 +13,12 @@
 * Paste in the below for `Settings`:
 
   ```text
-  {"mappings": {  "email": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",  "full_name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",  "upn": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"}}
+  {
+  "mappings": {
+    "email": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
+    "full_name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+    "upn": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"
+  }
+  }
   ```
 

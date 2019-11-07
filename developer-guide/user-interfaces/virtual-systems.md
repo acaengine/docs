@@ -60,7 +60,25 @@ You’ll find that the mock version of a system looks and feels much like the co
 A representation of the example system, above, looks like:
 
 ```javascript
-window.control.systems['sys-b0W12'] = {    Presentation: [{        ...    }],    Display: [        {            // Display_1        },        {            // Display_2        }    ],    Switcher: [{        ...    }],    Lighting: [{        ...    }]};
+window.control.systems['sys-b0W12'] = {
+    Presentation: [{
+        ...
+    }],
+    Display: [
+        {
+            // Display_1
+        },
+        {
+            // Display_2
+        }
+    ],
+    Switcher: [{
+        ...
+    }],
+    Lighting: [{
+        ...
+    }]
+};
 ```
 
 The keys of system `sys-b0W12` represent the generic name of the drivers present in the system. These keys are an array of drivers where the position of that driver in the array defines it’s index.
@@ -75,7 +93,30 @@ Drivers have state and functions.
 Functions are scoped to the driver. So you can modify the state of driver by using `this`.
 
 ```javascript
-// example Display driver{    // Initial state values    power: false,    volume: 0,    mute: true,    input: `hdmi`    // Functions    $power: (state: boolean) => {        this.power = state;        this.mute = state;    },    $volume: (level: number) => {        this.volume = level;    },    $mute: (state: boolean) => {        this.mute = state;    },    $input: (name: string) => {        this.input = name;    }}
+// example Display driver
+
+{
+    // Initial state values
+    power: false,
+    volume: 0,
+    mute: true,
+    input: `hdmi`
+
+    // Functions
+    $power: (state: boolean) => {
+        this.power = state;
+        this.mute = state;
+    },
+    $volume: (level: number) => {
+        this.volume = level;
+    },
+    $mute: (state: boolean) => {
+        this.mute = state;
+    },
+    $input: (name: string) => {
+        this.input = name;
+    }
+}
 ```
 
 > You only need to define functions that modify the state that you are tracking. The absence of a mock function won’t throw errors.
@@ -83,6 +124,41 @@ Functions are scoped to the driver. So you can modify the state of driver by usi
 Logic modules, such as `Presentation` in the example, will communicate with devices in a system. This is achieved by providing a helper `$system` which provides access to the system definition.
 
 ```javascript
-// example Presentation logic{    // Initial state values    state: `shutdown`,    inputs: {        `Laptop HDMI`: 1,        `Wireless Presenter`: 2,        `Document Camera`: 3    },    outputs: {        `Left`: 1,        `Right`: 2    }    // Functions    $powerup: () => {        this.$system.Display.forEach((display) => {            display.$power(true);        });    },    $shutdown: () => {        // Iterate over all the displays        this.$system.Display.forEach((display) => {            display.$power(false);        });    },    $switch_input: (input: string, display: string) => {        this.$powerup();        // Access Switcher_1        this.$system.Switcher[0].$switch(            this.inputs[input], this.outputs[display]        );    }}
+// example Presentation logic
+
+{
+    // Initial state values
+    state: `shutdown`,
+    inputs: {
+        `Laptop HDMI`: 1,
+        `Wireless Presenter`: 2,
+        `Document Camera`: 3
+    },
+    outputs: {
+        `Left`: 1,
+        `Right`: 2
+    }
+
+    // Functions
+    $powerup: () => {
+        this.$system.Display.forEach((display) => {
+            display.$power(true);
+        });
+    },
+    $shutdown: () => {
+        // Iterate over all the displays
+        this.$system.Display.forEach((display) => {
+            display.$power(false);
+        });
+    },
+    $switch_input: (input: string, display: string) => {
+        this.$powerup();
+
+        // Access Switcher_1
+        this.$system.Switcher[0].$switch(
+            this.inputs[input], this.outputs[display]
+        );
+    }
+}
 ```
 

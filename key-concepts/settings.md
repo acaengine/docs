@@ -7,7 +7,14 @@ Settings are expressed as [JSON data](https://en.wikipedia.org/wiki/JSON#JSON_sa
 {% tabs %}
 {% tab title="" %}
 ```javascript
-{  "key": "value",  "foo": [1, 2, 3],  "bar": true   "baz": {     "qux": 1.234  }}
+{
+  "key": "value",
+  "foo": [1, 2, 3],
+  "bar": true 
+  "baz": { 
+    "qux": 1.234
+  }
+}
 ```
 {% endtab %}
 {% endtabs %}

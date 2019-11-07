@@ -76,6 +76,7 @@
 * [Control](api/control/README.md)
   * [Systems](api/control/systems.md)
   * [Modules](api/control/modules.md)
+  * [Dependencies](api/control/dependencies.md)
   * [Websocket](api/control/websocket/README.md)
     * [Commands](api/control/websocket/commands/README.md)
       * [bind](api/control/websocket/commands/bind.md)
