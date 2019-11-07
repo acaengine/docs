@@ -31,13 +31,13 @@ The `/modules` endpoint provides creation, management and direct interaction wit
       <td style="text-align:left">control_system_id</td>
       <td style="text-align:left"><code>string</code>
       </td>
-      <td style="text-align:left">ID of the system that this module is bound to (logic modules only).</td>
+      <td style="text-align:left">ID of the system this module is bound to (logic modules only).</td>
     </tr>
     <tr>
       <td style="text-align:left">edge_id</td>
       <td style="text-align:left"><code>string</code>
       </td>
-      <td style="text-align:left">ID of the the preferred engine node to run on.</td>
+      <td style="text-align:left">ID of the preferred engine node to run on.</td>
     </tr>
     <tr>
       <td style="text-align:left">ip</td>
@@ -67,7 +67,7 @@ The `/modules` endpoint provides creation, management and direct interaction wit
       <td style="text-align:left">makebreak</td>
       <td style="text-align:left"><code>boolean</code>
       </td>
-      <td style="text-align:left">If enabled, provides an ephemeral connection that is broken during idle
+      <td style="text-align:left">If enabled, provides an ephemeral connection that disconnects during idle
         periods.</td>
     </tr>
     <tr>
@@ -135,7 +135,7 @@ The `/modules` endpoint provides creation, management and direct interaction wit
       <td style="text-align:left">ignore_connected</td>
       <td style="text-align:left"><code>boolean</code>
       </td>
-      <td style="text-align:left">If enabled, connectivity state is ignored by system metrics and alerting.</td>
+      <td style="text-align:left">If enabled, system metrics ignore connectivity state.</td>
     </tr>
     <tr>
       <td style="text-align:left">ignore_startstop</td>
@@ -145,7 +145,9 @@ The `/modules` endpoint provides creation, management and direct interaction wit
         for modules shared by many systems (e.g. a lighting gateway).</td>
     </tr>
   </tbody>
-</table>## Management
+</table>
+
+## Management
 
 {% api-method method="get" host="https://aca.example.com" path="/api/control/modules" %}
 {% api-method-summary %}
@@ -172,11 +174,11 @@ The offset within the result set.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="system\_id" type="string" required=false %}
-Return only modules associated with the specified system.
+Return modules associated with the specified system.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="dependency\_id" type="string" required=false %}
-Return only modules that are an instance of the specified dependency.
+Return modules that are an instance of the specified dependency.
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -457,7 +459,7 @@ Delete
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Removes a module. This will delete is from all systems it is currently running in.
+Removes a module. This will delete is from all systems.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -526,7 +528,7 @@ ID of the module to start.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Module started successfully.
+Module started.
 {% endapi-method-response-example-description %}
 
 ```
@@ -573,7 +575,7 @@ Stop
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Stops the module. Previously exposed state will still be available, however this will cease to update, or provide further control until restarted.
+Stops the module. Exposed state will still be available but will not update.
 {% endapi-method-description %}
 
 {% api-method-spec %}
