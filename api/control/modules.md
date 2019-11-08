@@ -115,7 +115,7 @@ The `/modules` endpoint provides creation, management and direct interaction wit
     </tr>
     <tr>
       <td style="text-align:left">notes</td>
-      <td style="text-align:left"><code>strig</code>
+      <td style="text-align:left"><code>string</code>
       </td>
       <td style="text-align:left">Markdown formatted text that describes this module.</td>
     </tr>
