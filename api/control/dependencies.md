@@ -1,6 +1,6 @@
 # Dependencies
 
-When a driver is loaded into ACAEngine, it become a _dependency_. Dependencies are available as the blueprint from which modules are created.  The `/dependencies` endpoint provide method to discover, load and update these. For more on the role the drivers play, see:
+When a driver is loaded into ACAEngine, it becomes a _dependency_. Dependencies are available as the blueprint from which modules are created.  The `/dependencies` endpoint provide methods to discover, load and update these. For more on the role the drivers play, see:
 
 {% page-ref page="../../key-concepts/drivers.md" %}
 
