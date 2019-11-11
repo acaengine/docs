@@ -19,8 +19,8 @@ Prerequisite: First, ensure you've read the article on how ACAEngine works with 
    docker restart node-red
    ```
 
-2. Access the Node-RED web interface by visiting http://localhost:1880 to configure Node-RED.
-3. Create an "Azure IoT Hub Receiver" node. Connect it it to your IOT Hub by setting the `connectionstring`, which you will find in your Azure Portal, under your _IOT Hub > Shared Access policies > iothubowner > Connection string-primary key_ See heading ["Reading all messages received into Azure IoT Hub"](https://flows.nodered.org/node/node-red-contrib-azure-iot-hub) for more details.
+2. Access the Node-RED web interface by visiting [http://localhost:1880](http://localhost:1880) to configure Node-RED.
+3. Create an "Azure IoT Hub Receiver" node. Connect it it to your IOT Hub by setting the `connectionstring`, which you will find in your Azure Portal, under your _IOT Hub &gt; Shared Access policies &gt; iothubowner &gt; Connection string-primary key_ See heading ["Reading all messages received into Azure IoT Hub"](https://flows.nodered.org/node/node-red-contrib-azure-iot-hub) for more details.
 4. Create a "websocket output" node and connect the output of the Azure node to the input of the websocket node
 
 ![Azure IoT Hub Receiver connected to Node-RED Websocket Module](../../.gitbook/assets/node-red_azure_websocket.JPG)

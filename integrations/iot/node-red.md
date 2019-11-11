@@ -20,7 +20,7 @@ For example, to install the [connector for Azure IOT Hub](https://flows.nodered.
 
 ### Node-RED Websocket output
 
-ACAEngine connects to Node-RED via Node-RED's websockets modules \(one for input and one for output\). Drag an output websocket module into the Flow, double-click it and set the Type to `Listen on` and the Path to `/ws/`. 
+ACAEngine connects to Node-RED via Node-RED's websockets modules \(one for input and one for output\). Drag an output websocket module into the Flow, double-click it and set the Type to `Listen on` and the Path to `/ws/`.
 
 ![Node-RED Websocket output module](../../.gitbook/assets/node-red_websocket_module.JPG)
 

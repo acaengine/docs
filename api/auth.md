@@ -64,7 +64,7 @@ All interaction within this flow takes place within a client-side user agent, ma
 
 To authenticate you will need to direct users to the authorisation endpoint, accompanied by your registered application details.
 
-{% api-method method="post" host="https://aca.example.com" path="/auth/oauth/authorize" %}
+{% api-method method="get" host="https://aca.example.com" path="/auth/oauth/authorize" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -134,7 +134,7 @@ Using this flow, users first authorize your application by creating a short-live
 
 To generate the authorisation code, direct your users to the authorisation endpoint with `code` as the requested response type.
 
-{% api-method method="post" host="https://aca.example.com" path="/auth/oauth/authorize" %}
+{% api-method method="get" host="https://aca.example.com" path="/auth/oauth/authorize" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
