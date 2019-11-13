@@ -1,6 +1,6 @@
 # Zones
 
-aThe `/zones` endpoint provide access to discover, create and manage zones available. For more information on the role that zones play, see:
+The `/zones` endpoint provide access to discover, create and manage zones available. For more information on the role that zones play, see:
 
 {% page-ref page="../../key-concepts/zones.md" %}
 
@@ -16,7 +16,7 @@ aThe `/zones` endpoint provide access to discover, create and manage zones avail
 | triggers | `array` | List of trigger ID's to be applied to all systems that associate with this zone. |
 | created\_at | `integer` | Timestamp of creation. |
 
-## Management
+## Discovery
 
 {% api-method method="get" host="https://aca.example.com" path="/api/control/zones" %}
 {% api-method-summary %}
@@ -123,6 +123,8 @@ Queries default to searching for any of the entered terms \(words\). A small que
 | `(` and `)` | Provide precedence. |
 | `~N` | Specifies edit distance \(fuzziness\) after a word. |
 | `~N` | Specifies slop amount \(deviation\) after a phrase. |
+
+## Management
 
 {% api-method method="post" host="https://aca.example.com" path="/api/control/zones" %}
 {% api-method-summary %}

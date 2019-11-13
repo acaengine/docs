@@ -145,7 +145,7 @@ The `/modules` endpoint provides creation, management and direct interaction wit
         for modules shared by many systems (e.g. a lighting gateway).</td>
     </tr>
   </tbody>
-</table>## Management
+</table>## Discovery
 
 {% api-method method="get" host="https://aca.example.com" path="/api/control/modules" %}
 {% api-method-summary %}
@@ -232,6 +232,8 @@ Queries default to searching for any of the entered terms \(words\). A small que
 | `(` and `)` | Provide precedence. |
 | `~N` | Specifies edit distance \(fuzziness\) after a word. |
 | `~N` | Specifies slop amount \(deviation\) after a phrase. |
+
+## Management
 
 {% api-method method="post" host="https://aca.example.com" path="/api/control/modules" %}
 {% api-method-summary %}

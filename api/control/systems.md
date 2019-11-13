@@ -26,7 +26,7 @@ All systems provide a base set of metadata that helps to describe their role and
 | support\_url | `string` | A URL linking to the primary interface for controlling this system. |
 | version | `integer` | Incremental counter for handling stale updates. |
 
-## Management
+## Discovery
 
 {% api-method method="get" host="https://aca.example.com" path="/api/control/systems" %}
 {% api-method-summary %}
@@ -160,6 +160,8 @@ Queries default to searching for any of the entered terms \(words\). A small que
 | `(` and `)` | Provide precedence. |
 | `~N` | Specifies edit distance \(fuzziness\) after a word. |
 | `~N` | Specifies slop amount \(deviation\) after a phrase. |
+
+## Management
 
 {% api-method method="post" host="https://aca.example.com" path="/api/control/systems" %}
 {% api-method-summary %}
