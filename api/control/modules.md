@@ -765,7 +765,7 @@ State
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Gets the state information exposed by a module.i
+Gets the state information exposed by a module.
 {% endapi-method-description %}
 
 {% api-method-spec %}
