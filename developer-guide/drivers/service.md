@@ -61,17 +61,81 @@ end
 
 ### Request Options
 
-| Option | Verbs | Example | Effect |
-| :--- | :--- | :--- | :--- |
-| `query` | All | `query: "me=bob&other=rain"` === `query: {me: :bob, other: :rain}` | URI**?me=bob&other=rain** |
-| `body` | Put, Post | `body: "data=hello&other=world"` === `body: {data: :hello, other: :world}` | when body is a string it will be sent as is. When a hash, it will be form encoded. |
-| `headers` | All | `headers: {Name: 'value'}` | Some headers are transformed further. See bellow |
-| `file` | Put, Post | `file: 'path/to/file.ext'` | Will send the file as the body |
-| `keepalive` | All | `keepalive: false` | Will close the connection once the request has completed |
-| `ntlm` | All | `ntlm: {user: 'u', password: 'p', domain: 'd'}` | Will perform a request with an endpoint that requires NTLM auth |
-| `digest` | All | `digest: {user: 'u', password: 'p', domain: 'd'}` | Will perform a request with an endpoint that requires digest auth |
-
-NOTE:: Both NTLM and Digest auth are challenge response protocols and won’t work with HTTP 1.0 or keep alive false
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Option</th>
+      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Effect</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>query</code>
+      </td>
+      <td style="text-align:left"><code>query: &quot;me=bob&amp;other=rain&quot;</code> or
+        <br /> <code>query: {<br />  me: :bob,<br />  other: :rain<br />}</code>
+      </td>
+      <td style="text-align:left">URI<b>?me=bob&amp;other=rain</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>body</code>
+      </td>
+      <td style="text-align:left"><code>body: &quot;data=hello&amp;other=world&quot;</code> or
+        <br /> <code>body: {<br />  data: :hello,<br />  other: :world<br />}</code>
+      </td>
+      <td style="text-align:left">when body is a string it will be sent as is. When a hash, it will be form
+        encoded.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>headers</code>
+      </td>
+      <td style="text-align:left">
+        <p><code>headers: {<br />  Name: &apos;value&apos;</code>
+        </p>
+        <p><code>}</code>
+        </p>
+      </td>
+      <td style="text-align:left">Some headers are transformed further. See bellow</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>file</code>
+      </td>
+      <td style="text-align:left"><code>file: &apos;path/to/file.ext&apos;</code>
+      </td>
+      <td style="text-align:left">Will send the file as the body</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>keepalive</code>
+      </td>
+      <td style="text-align:left"><code>keepalive: false</code>
+      </td>
+      <td style="text-align:left">Will close the connection once the request has completed</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>ntlm</code>
+      </td>
+      <td style="text-align:left"><code>ntlm: {<br />  user: &apos;u&apos;,<br />  password: &apos;p&apos;,<br />  domain: &apos;d&apos;<br />}</code>
+      </td>
+      <td style="text-align:left">Will perform a request with an endpoint that requires NTLM auth</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>digest</code>
+      </td>
+      <td style="text-align:left"><code>digest: {<br />  user: &apos;u&apos;,<br />  password: &apos;p&apos;,<br />  domain: &apos;d&apos;<br />}</code>
+      </td>
+      <td style="text-align:left">Will perform a request with an endpoint that requires digest auth</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>proxy</code>
+      </td>
+      <td style="text-align:left"><code>proxy: {<br />  host: &apos;1.2.3.4&apos;,<br />  port: 80,<br />  username: &apos;bob&apos;,<br />  password: &apos;hunter2&apos;<br />}</code>
+      </td>
+      <td style="text-align:left">Use a proxy server for the request.</td>
+    </tr>
+  </tbody>
+</table>NOTE:: Both NTLM and Digest auth are challenge response protocols and won’t work with HTTP 1.0 or keep alive false
 
 ### Basic Authentication
 
@@ -121,4 +185,22 @@ Cookies are handled in the background in the same way a browser would handle coo
 There is a helper method that can be used to clear cookies: `clear_cookies`
 
 You can set cookies by setting the `cookie` header field. Supports both strings and hashes.
+
+## Proxy Support
+
+When building drivers that need to communicate with external endpoints, its good practice to provide proxy support. This can be achieved by passing the `proxy` parameter with requests. To provide user support of these, these can be loaded from settings and set as part of the defaults for every request.
+
+```ruby
+def on_update
+    proxy = setting(:proxy)
+    if proxy
+        config({
+            proxy: {
+                host: proxy[:host],
+                port: proxy[:port]
+            }
+        })
+    end
+end
+```
 
