@@ -17,7 +17,7 @@ If a driver for your device is not available, you can raise a request to have th
 * Sharp \(Displays\)
 * Panasonic \(Displays\)
 
-## Hardware
+## Video
 
 * Extron \(Switchers\)
 * Kramer \(Switchers\)
@@ -53,6 +53,12 @@ If a driver for your device is not available, you can raise a request to have th
 * Cisco ISE
 * Cisco Switches
 
+## Conferencing
+
+* Cisco Collaboration Endpoints
+* Polycom RealPresence Group Series
+* Pexip Management API
+
 ## Other
 
 * C Bus \(Lighting\)
@@ -61,8 +67,8 @@ If a driver for your device is not available, you can raise a request to have th
 * Lutron \(Lighting\)
 * Dali
 * Kentix Sensors
-* Pexip
 * Global Cache
 * Foxtel
 * Microsoft FindMe
+* Pressac Sensors \(via Azure IOT Hub\)
 
