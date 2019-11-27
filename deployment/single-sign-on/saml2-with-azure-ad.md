@@ -21,15 +21,15 @@ After following the steps in the above guide, two fields of the app Manifest nee
         "saml2Token": [
             {
                 "name": "email",
-                "essential": true,
+                "essential": true
             },
             {
                 "name": "upn",
-                "essential": true,
+                "essential": true
             },
             {
                 "name": "family_name",
-                "essential": true,
+                "essential": true
             },
             {
                 "name": "given_name",
