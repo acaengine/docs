@@ -1,6 +1,6 @@
 # Node-RED
 
-[Node-RED](https://nodered.org/) is now included by default as part of all ACAEngine deployments.
+To enable rapid connectivity, experimentation / prototyping, or re-use of existing integrations [Node-RED](https://nodered.org/) may be deployed alongside ACAEngine.
 
 ## Access to Node-RED web interface
 
