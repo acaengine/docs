@@ -85,6 +85,8 @@ In a new layer, using the “rectangle tool” begin create overlay for room boo
 
 In this layer “room bookings” you will be required to give room ids, usually provided by the client. Clients usually give the room ids/ specification to which they would like. Capitalised or lower case, room and level number order etc... but all rooms should be labeled according to the following “area- level. room number-status”.
 
+**IMPORTANT**: All IDs **MUST start with a LETTER** \(i.e. must not start with a number or other character\). This is due to the SVG format conventions.
+
 ![](../../.gitbook/assets/image%20%288%29.png)
 
 ## Step 12 - Adding Text
@@ -102,6 +104,8 @@ Lastly, on another layer, add icons to your map, icons should follow the brandin
 ## Step 14 - Checking Names/ID
 
 Once all elements are on your map go back to the booking layer and be sure to check the name and number of each room. We would recommend placing the names in order to ensure there are no double ups. Remember the SVG map will not work on the front end if two rooms have the same id.
+
+**IMPORTANT**: All IDs **MUST start with a LETTER** \(i.e. must not start with a number or other character\). This is due to the SVG format conventions.
 
 ![](../../.gitbook/assets/image.png)
 
