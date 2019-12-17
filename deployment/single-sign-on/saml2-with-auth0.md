@@ -9,7 +9,7 @@
 * Follow [these instructions](https://auth0.com/docs/dashboard/guides/applications/register-app-spa) to create a register a single-page-app for SAML2 SSO using Auth0
 * The `Name` of the applicaiton can be the domain name on which your instance of ACAEngine is located.
 * On the `Addons` tab, enable SAML2 Web App and use [these steps](https://auth0.com/docs/protocols/saml/saml2webapp-tutorial) as a guide.
-* Set the `Application Callback URL` to match ACAEngine's `Assertion URL` \(e.g. [https:///auth/adfs/callback?id=adfs-XXXXXX\](https:///auth/adfs/callback?id=adfs-XXXXXX\)\)
+* Set the `Application Callback URL` to match ACAEngine's `Assertion URL` \(e.g. [https:///auth/adfs/callback?id=adfs-XXXXXX\](https:///auth/adfs/callback?id=adfs-XXXXXX%29\)
 * Paste in the below for `Settings`:
 
   ```text
