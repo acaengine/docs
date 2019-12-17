@@ -16,8 +16,9 @@
   {
   "mappings": {
     "email": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
-    "full_name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
-    "upn": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"
+    "first_name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname",
+    "last_name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname",
+    "login_name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/windowsaccountname"
   }
   }
   ```
