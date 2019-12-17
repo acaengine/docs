@@ -89,10 +89,9 @@ You will need to enter these details from Step 1 into your SAML2 Identity provid
 4. Optionally, the **SAML2 Metadata URL**. This can XML file contains the above information and can be fed into to some configuration dashboard (like ADFS). For the engine auth source you created above in step 1.7, the metadata url will be "_https://engine.example-organisation.com/auth/adfs-XXXXXXXX**/metadata**?id=adfs-XXXXXXXX"_
  
 Follow the instructions for your Identity Provider:
- 
-* [Azure AD](https://app.gitbook.com/@acaengine/s/docs/~/drafts/-LwHHdlhyEubZB8JHLVU/deployment/single-sign-on/saml2-with-azure-ad)
-* [ADFS](https://app.gitbook.com/@acaengine/s/docs/~/drafts/-LwHHdlhyEubZB8JHLVU/deployment/single-sign-on/saml2-with-adfs)
-* [Auth0](https://app.gitbook.com/@acaengine/s/docs/~/drafts/-LwHHdlhyEubZB8JHLVU/deployment/single-sign-on/saml2-with-auth0)
+* [Azure AD](./saml2-with-azure-ad)
+* [ADFS](./saml2-with-adfs)
+* [Auth0](./saml2-with-auth0)
  
 ## Step 3: Update the ACAEngine SAML2 authentication source settings
  
