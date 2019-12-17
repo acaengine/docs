@@ -21,23 +21,26 @@ Switching to federated authentication is recommended. There are 3 steps required
 
 ## Step 1
 
+Add a new SAML2 authentication source to ACAEngine
+
 1. Login as an admin to backoffice \(https://&lt;engine-url&gt;/backoffice/\)
 2. On the **Domains** tab, select the Domain that represents the URL you wish to enable SAML2 for.
 3. In the Authentication section click "Add new", select "**SAML2 / ADFS**"
 4. In the "New Authentication Source" Window, 
-
    1. Enter a descriptive **Name** that represents your SAML2 Identity provider, e.g. "MyCompany ADFS"
    2. Enter some temporary text \(any text\) into the "**IDP Target URL**" field. It will be edited later with the correct details.
    3. Enter some temporary text \(any text\) into the "**Assertion URL**" field. It will be edited later with the correct details.
-
-5. Click **Save**
+   4. Paste the below default text into **Attribute Statements**:
+5. Click **Save.** The authentication source will be saved with some default values.
 6. The new Authentication source will now appear in the list. **Copy the URL** to your clipboard.
 7. Click edit on the Authentication source which was just created.
    1. In the Assertion URL field, paste the URL which was copied in the previous step, but edit it to include "/callback"
-   2. Example: If you copied _"https://engine.myorganisation.com/auth/adfs?id=adfs-XXXXXXXX"_ then set the Assertion URL to "_https://engine.myorganisation.com/auth/adfs/callback?id=adfs-XXXXXXXX"_
+   2. Example: If you copied _"https://engine.myorganisation.com/auth/adfs?id=adfs-XXXXXXXX"_ then set the Assertion URL to "_https://engine.myorganisation.com/auth/adfs**/callback**?id=adfs-XXXXXXXX"_
    3. Click Save
 
 ## Step 2
+
+Register ACAEngine as new service/app on your authentication provider
 
 You will need to enter these details from Step 1 into your SAML2 Identity provider dashboard:
 
@@ -50,6 +53,8 @@ Follow the instructions for your Identity Provider:
 * [GSuite](https://app.gitbook.com/@acaengine/s/docs/~/drafts/-LwHHdlhyEubZB8JHLVU/deployment/single-sign-on/saml2-with-gsuite)
 
 ## Step 3
+
+Update the ACAEngine SAML2 authentication source settings.
 
 You will enter these details from Step 2 into ACAEngine Backoffice:
 
