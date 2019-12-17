@@ -19,9 +19,7 @@ Switching to federated authentication is recommended. There are 3 steps required
 1. The domain where users will visit to login must exist as a valid **DNS** entry 
 2. Browsers should consider the domain secure: Valid **SSL certificates** should be in place and served by either your load balancer or the web server in front of ACAEngine.
 
-## Step 1
-
-Add a new SAML2 authentication source to ACAEngine
+## Step 1: Add a new SAML2 authentication source to ACAEngine
 
 1. Login as an admin to backoffice \(https://&lt;engine-url&gt;/backoffice/\)
 2. On the **Domains** tab, select the Domain that represents the URL you wish to enable SAML2 for.
@@ -79,9 +77,7 @@ Add a new SAML2 authentication source to ACAEngine
    2. Example: If you copied _"https://engine.example-organisation.com/auth/adfs?id=adfs-XXXXXXXX"_ then set the Assertion URL to "_https://engine.example-organisation.com/auth/adfs-XXXXXXXX**/callback**?id=adfs-XXXXXXXX"_
    3. Click Save
 
-## Step 2
-
-Register ACAEngine as new service/app on your authentication provider
+## Step 2: Register ACAEngine as new service/app on your authentication provider
 
 ### Prerequisites
 
@@ -98,9 +94,7 @@ Follow the instructions for your Identity Provider:
 * [ADFS](https://app.gitbook.com/@acaengine/s/docs/~/drafts/-LwHHdlhyEubZB8JHLVU/deployment/single-sign-on/saml2-with-adfs)
 * [Auth0](https://app.gitbook.com/@acaengine/s/docs/~/drafts/-LwHHdlhyEubZB8JHLVU/deployment/single-sign-on/saml2-with-auth0)
 
-## Step 3
-
-Update the ACAEngine SAML2 authentication source settings.
+## Step 3: Update the ACAEngine SAML2 authentication source settings.
 
 You will enter these details from Step 2 into ACAEngine Backoffice:
 
