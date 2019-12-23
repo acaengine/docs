@@ -33,9 +33,9 @@ Switching to federated authentication is recommended. There are 3 steps required
       ```text
         [
             {
-                "name": "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",
+                "name": "http://schemas.microsoft.com/ws/2008/06/identity/claims/upn",
                 "name_format": "urn:oasis:names:tc:SAML:2.0:attrname-format:basic",
-                "friendly_name": "Windows account name"
+                "friendly_name": "User Principal Name"
             },
             {
                 "name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
@@ -69,7 +69,7 @@ Switching to federated authentication is recommended. There are 3 steps required
                 "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"
             ],
             "login_name": [
-                "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
+                "http://schemas.microsoft.com/ws/2008/06/identity/claims/upn"
             ]
         }
       ```
