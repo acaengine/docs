@@ -33,9 +33,9 @@ Switching to federated authentication is recommended. There are 3 steps required
       ```text
         [
             {
-                "name": "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname",
+                "name": "http://schemas.microsoft.com/ws/2008/06/identity/claims/upn",
                 "name_format": "urn:oasis:names:tc:SAML:2.0:attrname-format:basic",
-                "friendly_name": "Windows account name"
+                "friendly_name": "User Principal Name"
             },
             {
                 "name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
@@ -69,7 +69,7 @@ Switching to federated authentication is recommended. There are 3 steps required
                 "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"
             ],
             "login_name": [
-                "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
+                "http://schemas.microsoft.com/ws/2008/06/identity/claims/upn"
             ]
         }
       ```
@@ -77,7 +77,7 @@ Switching to federated authentication is recommended. There are 3 steps required
 6. The new Authentication source will now appear in the list. **Copy the URL** to your clipboard.
 7. Click edit on the Authentication source which was just created.
    1. In the Assertion URL field, paste the URL which was copied in the previous step, but edit it to include "/callback"
-   2. Example: If you copied _"_[https://engine.example-organisation.com/auth/adfs?id=adfs-XXXXXXXX](https://engine.example-organisation.com/auth/adfs?id=adfs-XXXXXXXX)_"_ then set the Assertion URL to "[https://engine.example-organisation.com/auth/adfs-XXXXXXXX\*\*/callback\*\*?id=adfs-XXXXXXXX](https://engine.example-organisation.com/auth/adfs-XXXXXXXX**/callback**?id=adfs-XXXXXXXX)_"_
+   2. Example: If you copied _"_[https://engine.example-organisation.com/auth/adfs?id=adfs-XXXXXXXX](https://engine.example-organisation.com/auth/adfs?id=adfs-XXXXXXXX)_"_ then set the Assertion URL to "_https://engine.example-organisation.com/auth/adfs/callback?id=**adfs-XXXXXXXX**"_
    3. Click Save
 
 ## Step 2: Register ACAEngine as new service/app in your authentication provider
@@ -89,7 +89,7 @@ You will need to enter these details from Step 1 into your SAML2 Identity provid
 1. The **Assertion URL** \(also known as the **Callback URL**\)
 2. The **Issuer** \(also known as the **Identifier**\)
 3. The **Login URL** which is simple the homepage of the app \(e.g. [https://engine.example-organisation.com/app-name/](https://engine.example-organisation.com/app-name/)\)
-4. Optionally, the **SAML2 Metadata URL**. This can XML file contains the above information and can be fed into to some configuration dashboard \(like ADFS\). For the engine auth source you created above in step 1.7, the metadata url will be "[https://engine.example-organisation.com/auth/adfs-XXXXXXXX\*\*/metadata\*\*?id=adfs-XXXXXXXX](https://engine.example-organisation.com/auth/adfs-XXXXXXXX**/metadata**?id=adfs-XXXXXXXX)_"_
+4. Optionally, the **SAML2 Metadata URL**. This can XML file contains the above information and can be fed into to some configuration dashboard \(like ADFS\). For the engine auth source you created above in step 1.7, the metadata url will be "_https://engine.example-organisation.com/auth/adfs/metadata?id=**adfs-XXXXXXXX**"_
 
 Follow the instructions for your Identity Provider:
 
