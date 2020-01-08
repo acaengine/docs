@@ -52,13 +52,15 @@ When Engine is integrated with a Directory service \(e.g. Exchange Online, via G
 ### Settings
 
 * `map_id`: If a unique ID is entered here and that ID exists as a tag on the SVG map, then map enabled ACAEngine apps will attempt to locate and pin that SVG element when requested by the user. The ACAEngine app may also change the CSS colour of that element to indicate the system's availability.
-  * Example: `"map_id": "MyOrg-AU-SYD-BLD01-99.01"`
+
+  * Example: `"map_id": "MyOrg-AU-SYD-BLD01-99.01"`   
+
 * `allowed_groups`: An array optional of AD group names that are allowed to see and book this System in ACAEngine apps. If this setting is NOT present, then all users will be allowed to book the System.
-  * Example: `"allowed_groups": "All_Admins_Group"`
+
+  * Example: `"allowed_groups": "All_Admins_Group"` 
+
 * `extra_features`: A space separated list of IDs for room features can be listed here. ACAEngine apps may use this setting to know that the system has that feature
   * Example: `"extra_features": "vc skype mics window dinner coffee"`
-
->
 
 
 
