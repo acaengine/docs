@@ -47,7 +47,7 @@ Now you should have collected 3 text values that will be used in the next sectio
 
 ## Configure ACAEngine to connect to Graph API
 
-1. Login to https:///backoffice/\#/drivers/ and select an existing or create a new “Office365 Room Booking Panel Logic” driver and click edit \(pen icon at top right\). Note down the driver ID, which you will see in the browser URL bar and looks like “dep-xxxxxxxx” \(you will need this later\)
+1. Login to https://&lt;your-engine-url&gt;/backoffice/\#/drivers/ and select an existing or create a new “Office365 Room Booking Panel Logic” driver and click edit \(pen icon at top right\). Note down the driver ID, which you will see in the browser URL bar and looks like “dep-xxxxxxxx” \(you will need this later\)
 2. Enter the o365 values \(client, secret, tenant\) into the the placeholders which you should see. These values are on the portal.azure.com page where you created the Azure App Registration \(above\), then click Save.
    * `“office_client_id”`
    * `“office_tenant”`
