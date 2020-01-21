@@ -9,6 +9,7 @@
   * [Settings](key-concepts/settings.md)
   * [Interfaces](key-concepts/interfaces.md)
   * [Triggers](key-concepts/triggers.md)
+* [Security](security.md)
 
 ## Deployment
 

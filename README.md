@@ -18,7 +18,6 @@ If you’ve used traditional, hardware-based control systems before, welcome to 
 * **Scale-able** from rooms, to buildings, to precincts.
 * **Distributed** multi-node replication for live backup and fail-over.
 * **Secure** audit-able interaction with the physical environment and encrypted device communication.
-* **Insightful** provides analytics for physical systems.
 
 The platform handles the low level device communication, system management and connectivity with user interfaces so that you can focus on how these combine to create intuitive, modern, connected environments.
 
