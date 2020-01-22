@@ -27,7 +27,6 @@ While still in Azure Portal on the page for the above registered App:
    * `Calendars.ReadWrite`
 3. If there is a requirement for the application to know which groups \(e.g. AD Security group or mailing list\) user's exist in, then add the below additional Application permissions:
    * `Group.Read.All`
-   * `Directory.Read.All`
 4. If there is a requirement for the application to read/write user's Contacts, then add the below additional Application permissions:
    * `Contacts.ReadWrite`
 5. After adding the required Application permissions, click "Grant admin consent for ACA Projects" on the "API Permissions" page of the registered App, then click Yes.
