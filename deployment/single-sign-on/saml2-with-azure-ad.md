@@ -5,9 +5,15 @@ If using Azure Active Directory for SSO a new or exisiting "App Registration" wi
 ## Step 1 - New or Existing App Registration
 
 * Login to portal.azure.com and browse to [Azure AD &gt; App Registrations](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)
-* Locate the existing app that was created for [o365 Graph API access](https://github.com/acaprojects/docs/tree/be220954cefb53b2ac2ca82f775a56993117e99d/deployment/single-sign-on/integrations/directory-services/microsoft-office365.md). If none has been created yet, then create a new app registration now, as this app can be used for both SSO and o365 Graph API access. If creating a NEW app registration:
-  * Name it and select the appropriate "Support Account types" \(which is usually "Single tenant"\).
-  * Paste the ACAEngine **Assertion URL** \(generated in Step 1 of [Configuring ACAEngine for SAML2](configuring-acaengine-for-saml2.md)\) into the **Reply URL** field. Leave the type as "Web". Click Register to finish.
+* Locate the existing app that was created for [o365 Graph API access](https://github.com/acaprojects/docs/tree/be220954cefb53b2ac2ca82f775a56993117e99d/deployment/single-sign-on/integrations/directory-services/microsoft-office365.md). If none has been created yet, then create a new app registration now, as this app can be used for both SSO and o365 Graph API access. 
+
+  * If creating a NEW app registration:
+    * Name it and select the appropriate "Support Account types" \(which is usually "Single tenant"\).
+    * Paste the ACAEngine **Assertion URL** \(generated in Step 1 of [Configuring ACAEngine for SAML2](configuring-acaengine-for-saml2.md)\) into the **Reply URL** field. Leave the type as "Web". Click Register to finish.
+  
+  * If configuring an existing app registration:
+    * Navigate to Overview -> Redirect URIs
+    * Paste the ACAEngine **Assertion URL** \(generated in Step 1 of [Configuring ACAEngine for SAML2](configuring-acaengine-for-saml2.md)\) into the **Redirect URI** field. Leave the type as "Web". Click Save to finish.
 
 ## Step 2 - Edit the App Manifest
 
