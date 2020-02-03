@@ -39,7 +39,7 @@ This is a project that can run against the ACA Engine development environment,
 
 NB: If you are planning to run the user interface project without the ACAEngine Developer environment, in Step 6 above you will need to use `gulp serve --mock` this will allow the interface to run 'headless' with mock data for development purposes.
 
-NB: While the frontends are relatively plug'n'play with a locally spun up [ACAEngine environment](../getting-started.md#starting-up), a domain must first be set for localhost or your machine's IP address before authentication will be functional. Ensure the domain that's set is the same as what you're accessing the frontend with and matches the composer config in [settings.json](settings.json.md).
+NB: While the existing UIs are relatively plug'n'play with a locally spun up [ACAEngine environment](../getting-started.md#starting-up), a domain must first be set for localhost or your machine's IP address before authentication will be functional. Ensure the domain that's set is the same as what you're accessing the frontend app with and matches the composer config in [settings.json](settings.json.md). i.e. What's typed into the browser address bar matches the settings.json and the domain configured in ACAEngine.
 
 ## Angular Resources
 
