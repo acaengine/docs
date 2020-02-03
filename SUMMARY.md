@@ -71,6 +71,7 @@
   * [Composer](developer-guide/user-interfaces/composer.md)
   * [Virtual Systems](developer-guide/user-interfaces/virtual-systems.md)
   * [Widgets](developer-guide/user-interfaces/widgets.md)
+  * [Settings.json](developer-guide/user-interfaces/settings.json.md)
 
 ## API
 
