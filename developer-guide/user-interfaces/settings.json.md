@@ -109,7 +109,7 @@ In this example basic app-wide details are specified; these include page-wide ti
 
 ### Granular Configurations for Sections
 
-This snippet shows the configuration options for room booking on the defauly ACA Staff App.
+This snippet shows the configuration options for room booking on the default ACA Staff App.
 
 ```javascript
 {
