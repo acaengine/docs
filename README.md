@@ -11,6 +11,8 @@ description: >-
 If you’ve used traditional, hardware-based control systems before, welcome to the new world.
 {% endhint %}
 
+>
+
 * **Software only** built on the modern web.
 * **Open source** continuously improved and backed by a full-time team of developers.
 * **Extensible** able to run stand-alone, or integrated into staff, building or third party apps.

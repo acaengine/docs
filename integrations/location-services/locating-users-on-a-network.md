@@ -22,7 +22,7 @@ This can also be augmented with sensors, as required, however sensors can only b
 * A list of switch ports to desk mappings
 * A method for pairing staff to their devices
 
-Most switches expose an SNMP service for tracking details of port usage and the devices connected to each port.
+Most switches expose an SNMP service for tracking details of port usage and the devices connected to each port. If using SSH method, each switch is queried approximately once every 5 seconds.
 
 This is a standard common to most network hardware manufacturers and defined by the following standard [https://tools.ietf.org/html/rfc4293](https://tools.ietf.org/html/rfc4293)
 
