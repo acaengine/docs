@@ -111,14 +111,16 @@ You will enter these details from Step 2 into ACAEngine Backoffice:
    * Azure AD URLs are often in the format: https://login.microsoftonline.com/**&lt;tenant-ID&gt;**/saml2
    * ADFS URLs are often in the format: https://adfs.myorganistaion.com/adfs/ls
    * Auth0 URLs are often in the format: https://myorganisation.auth0.com/samlp/ 
+3. **Full Certificate** \(also known as **X509Certificate**\): This long text string needs to be copied from the ID provider's federation metadata XML file \(in the field _KeyInfo.X509Data.X509Certificate_\)
 
 ### Update Engine's new authentication settings
 
 Start by clicking edit \(pen icon\) on the Authentication that was created in Step 1 _"Add a new SAML2 authentication source to ACAEngine"_ \(top of this page\)
 
-1. Replace the Issuer field with the Issuer from your SAML2 ID provider \(unless your SAML2 ID provider already matches\)
-2. Replace the IDP Target URL field with the SAML2 Identity provider login url that was generated in Step 2 _"Register ACAEngine as new service/app on your authentication provider"_
-3. Click Save
+1. Replace the **Issuer** field with the Issuer from your SAML2 ID provider \(unless your SAML2 ID provider already matches\)
+2. Replace the **IDP Target URL** field with the SAML2 Identity provider login url that was generated in Step 2 _"Register ACAEngine as new service/app on your authentication provider"_
+3. Paste the long X509Certificate string into the **Full Certificate** field, without any appended/prepended text.
+4. Click Save
 
 ### Test new settings
 
