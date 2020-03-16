@@ -14,7 +14,7 @@ If using Azure Active Directory for SSO a new or exisiting "App Registration" wi
     * Paste the ACAEngine **Assertion URL** \(generated in Step 1 of [Configuring ACAEngine for SAML2](configuring-acaengine-for-saml2.md)\) into the **Redirect URI** field. Leave the type as "Web". Click Save to finish.
 * Confirm that you have access to the [SAML2 Federation Metadata URL](https://docs.microsoft.com/en-us/azure/active-directory/azuread-dev/azure-ad-federation-metadata) for your Azure Tenant. This is generally in the below format. Data in this XML file may be used later in Step 3, OR can be used to configure advanced custom claims.
 
-  * [https://login.microsoftonline.com/&lt;Tenant ID or Domain Name&gt;/FederationMetadata/2007-06/FederationMetadata.xml](https://login.microsoftonline.com/36da45f1-dd2c-4d1f-af13-5abe46b99921/FederationMetadata/2007-06/FederationMetadata.xml) 
+  * https://login.microsoftonline.com/&lt;Tenant ID or Domain Name&gt;/FederationMetadata/2007-06/FederationMetadata.xml 
 
 ## Step 2 - Edit the App Manifest
 
