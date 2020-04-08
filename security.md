@@ -1,6 +1,6 @@
 # Security
 
-A core problem that ACAEngine solves is providing a secure way to connect and interact with physical spaces. Deployments form an interface that isolates individual hardware components and subsystems of a building from direct communications. Connectivity to these is then provided by a modern API service that supports regular patching and updates to safely support integration.
+A core challenge that ACAEngine solves is providing a secure way to connect and interact with physical spaces. Deployments form an interface that isolates individual hardware components and subsystems of a building from direct communications. Connectivity to these is then provided by a modern API service that supports regular patching and updates to safely support integration.
 
 ## Data in Transit
 
