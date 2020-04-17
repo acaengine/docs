@@ -44,7 +44,7 @@ Now you should have collected 3 text values that will be used in the next sectio
 * `Directory (tenant) ID`
 * `Client secret`
 
-## Optional: Restrict App Permissions
+### Optional: Restrict App Permissions
 
 To restrict the Graph App's access to only the objects that exist in given AD groups, [**Application Access Policies**](https://docs.microsoft.com/en-us/powershell/module/exchange/organization/new-applicationaccesspolicy?view=exchange-ps) ****can be used.
 
