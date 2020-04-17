@@ -44,6 +44,19 @@ Now you should have collected 3 text values that will be used in the next sectio
 * `Directory (tenant) ID`
 * `Client secret`
 
+## Optional: Restrict App Permissions
+
+To restrict the Graph App's access to only the objects that exist in given AD groups, [**Application Access Policies**](https://docs.microsoft.com/en-us/powershell/module/exchange/organization/new-applicationaccesspolicy?view=exchange-ps) ****can be used.
+
+1. Ensure those resources \(users, rooms\) exist in those AD groups 
+2. Use powershell to add the new policy, e.g:
+
+`# Restrict to a group of Rooms  
+New-ApplicationAccessPolicy -AppId <Graph App ID> -PolicyScopeGroupId <AD group that all bookable rooms exist in> -AccessRight RestrictAccess -Description "Restrict this app to Engine bookable rooms"` 
+
+`# Restrict to a group of Users  
+New-ApplicationAccessPolicy -AppId <Graph App ID> -PolicyScopeGroupId <AD group that all staff app users exist in> -AccessRight RestrictAccess -Description "Restrict this app to Engine app users"`
+
 ## Configure ACAEngine to connect to Graph API
 
 1. Login to https://&lt;your-engine-url&gt;/backoffice/\#/drivers/ and select an existing or create a new “Office365 Room Booking Panel Logic” driver and click edit \(pen icon at top right\). Note down the driver ID, which you will see in the browser URL bar and looks like “dep-xxxxxxxx” \(you will need this later\)
