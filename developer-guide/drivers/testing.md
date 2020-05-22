@@ -14,7 +14,7 @@ For example usage, see:
 
 ## Checking Values
 
-The ACAEngine test framework uses [rspec-expectations](https://github.com/rspec/rspec-expectations) for verifying status variables and command results returned expected values.
+The Engine test framework uses [rspec-expectations](https://github.com/rspec/rspec-expectations) for verifying status variables and command results returned expected values.
 
 ## Helper Functions
 

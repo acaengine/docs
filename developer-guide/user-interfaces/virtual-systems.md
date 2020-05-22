@@ -10,11 +10,11 @@ There is a [settings file](https://github.com/acaprojects/ngx-composer-starter/b
 
 * The `"env"` key can be set to either `"dev"` or `"prod"`
   * When in `"dev"` mode the system will talk to the virtual systems
-  * When in `"prod"` mode the system expects to talk to a live ACA Engine instance.
+  * When in `"prod"` mode the system expects to talk to a live Engine instance.
 
 Production mode can also be used for development.
 
-* The `"domain"` key is used to proxy requests from your development machine to an ACA Engine instance.
+* The `"domain"` key is used to proxy requests from your development machine to an Engine instance.
   * This allows real-world testing to occur before building and deploying your interface.
   * All requests to `http://localhost:dev_port` are proxied to the remote instance at `"domain"`
 

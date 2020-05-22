@@ -26,7 +26,7 @@ Most switches expose an SNMP service for tracking details of port usage and the 
 
 This is a standard common to most network hardware manufacturers and defined by the following standard [https://tools.ietf.org/html/rfc4293](https://tools.ietf.org/html/rfc4293)
 
-CISCO switches support SSH and ACAEngine supports SSHv2 for secure data transfer [http://www.cisco.com/c/en/us/support/docs/security-vpn/secure-shell-ssh/4145-ssh.html](http://www.cisco.com/c/en/us/support/docs/security-vpn/secure-shell-ssh/4145-ssh.html)
+CISCO switches support SSH and Engine supports SSHv2 for secure data transfer [http://www.cisco.com/c/en/us/support/docs/security-vpn/secure-shell-ssh/4145-ssh.html](http://www.cisco.com/c/en/us/support/docs/security-vpn/secure-shell-ssh/4145-ssh.html)
 
 ## Laptop Docking Stations
 
@@ -64,7 +64,7 @@ There are multiple ways to get this information, and these can be used simultane
 
 The Windows domain controller is used to authenticate users as they log onto a device. This would typically a laptop, desktop computer or thin client.
 
-By auditing credential validation events [https://technet.microsoft.com/en-us/library/cc787567\(v=ws.10\).aspx](https://technet.microsoft.com/en-us/library/cc787567%28v=ws.10%29.aspx) it is possible to query these logs to inform ACAEngine of the user account and the corresponding IP address associated with the event.
+By auditing credential validation events [https://technet.microsoft.com/en-us/library/cc787567\(v=ws.10\).aspx](https://technet.microsoft.com/en-us/library/cc787567%28v=ws.10%29.aspx) it is possible to query these logs to inform Engine of the user account and the corresponding IP address associated with the event.
 
 [https://technet.microsoft.com/en-us/library/dd772679%28v=ws.10%29.aspx](https://technet.microsoft.com/en-us/library/dd772679%28v=ws.10%29.aspx)
 
@@ -78,8 +78,8 @@ Similar to the Windows domain controller method, audit logging can be enabled fo
 
 ## IP Address to MAC Address Resolution
 
-* ACAEngine will communicate with the switches over UDP port 161 or TCP port 22
-* The switches may communicate to ACAEngine over UDP port 162 \(Not required for SSH connections\)
+* Engine will communicate with the switches over UDP port 161 or TCP port 22
+* The switches may communicate to Engine over UDP port 162 \(Not required for SSH connections\)
 
 At this point, we have a user account and an IP address. We need to lookup the MAC address associated with the IP address so we can associate the user to the MAC address/device.
 

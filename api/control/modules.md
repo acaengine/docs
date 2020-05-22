@@ -147,7 +147,7 @@ The `/modules` endpoint provides creation, management and direct interaction wit
   </tbody>
 </table>## Discovery
 
-{% api-method method="get" host="https://aca.example.com" path="/api/control/modules" %}
+{% api-method method="get" host="https://example.com" path="/api/control/modules" %}
 {% api-method-summary %}
 Search
 {% endapi-method-summary %}
@@ -235,7 +235,7 @@ Queries default to searching for any of the entered terms \(words\). A small que
 
 ## Management
 
-{% api-method method="post" host="https://aca.example.com" path="/api/control/modules" %}
+{% api-method method="post" host="https://example.com" path="/api/control/modules" %}
 {% api-method-summary %}
 Create
 {% endapi-method-summary %}
@@ -348,7 +348,7 @@ Missing or invalid module configuration.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://aca.example/com" path="/api/control/modules/{id}" %}
+{% api-method method="get" host="https://example.com" path="/api/control/modules/{id}" %}
 {% api-method-summary %}
 Retrieve
 {% endapi-method-summary %}
@@ -411,7 +411,7 @@ ID of the modules to retrieve.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="https://aca.example.com" path="/api/control/modules/{id}" %}
+{% api-method method="put" host="https://example.com" path="/api/control/modules/{id}" %}
 {% api-method-summary %}
 Update
 {% endapi-method-summary %}
@@ -544,7 +544,7 @@ Validation error.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="https://aca.example/com" path="/api/control/modules/{id}" %}
+{% api-method method="delete" host="https://example.com" path="/api/control/modules/{id}" %}
 {% api-method-summary %}
 Delete
 {% endapi-method-summary %}
@@ -598,7 +598,7 @@ ID of the module to delete.
 
 ## Interaction
 
-{% api-method method="post" host="https://aca.example.com" path="/api/control/modules/{id}/start" %}
+{% api-method method="post" host="https://example.com" path="/api/control/modules/{id}/start" %}
 {% api-method-summary %}
 Start
 {% endapi-method-summary %}
@@ -660,7 +660,7 @@ An error occurred that prevented the module from starting.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://aca.example.com" path="/api/control/modules/{id}/stop" %}
+{% api-method method="post" host="https://example.com" path="/api/control/modules/{id}/stop" %}
 {% api-method-summary %}
 Stop
 {% endapi-method-summary %}
@@ -712,7 +712,7 @@ ID of the module to stop.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://aca.example.com" path="/api/control/modules/{id}/ping" %}
+{% api-method method="post" host="https://example.com" path="/api/control/modules/{id}/ping" %}
 {% api-method-summary %}
 Ping
 {% endapi-method-summary %}
@@ -759,7 +759,7 @@ The module specified is a logic module.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://aca.example.com" path="/api/control/modules/{id}/state" %}
+{% api-method method="get" host="https://example.com" path="/api/control/modules/{id}/state" %}
 {% api-method-summary %}
 State
 {% endapi-method-summary %}

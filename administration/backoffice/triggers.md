@@ -1,6 +1,6 @@
 # Triggers
 
-Triggers are a way to set process automation profiles in an ACAEngine system. You can set a condition based on the available functions of any driver and set an action to any other driver or logic module.  When the condition is met, the action is triggered. Triggers can be added or removed easily and becomes a way to make simple ongoing changes to your spaces without having to write logic code.
+Triggers are a way to set process automation profiles in an Engine system. You can set a condition based on the available functions of any driver and set an action to any other driver or logic module.  When the condition is met, the action is triggered. Triggers can be added or removed easily and becomes a way to make simple ongoing changes to your spaces without having to write logic code.
 
 Triggers can be used for a mix of support actions based on device/system conditions \(EG “if the display reaches 60^C, trigger a shutdown and email support”\) and space logic \(“EG “if Sensor status is “1”, trigger air conditioning pre-set “3”\). You can stack up as many triggers in your system as you like.
 

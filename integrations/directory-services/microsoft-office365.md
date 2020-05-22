@@ -30,7 +30,7 @@ While still in Azure Portal on the page for the above registered App:
 4. If there is a requirement for the application to read/write user's Contacts, then add the below additional Application permissions:
    * `Contacts.ReadWrite`
 5. After adding the required Application permissions, click "Grant admin consent for ACA Projects" on the "API Permissions" page of the registered App, then click Yes.
-6. On the "Overview" page of the App, copy the below two values, which will be used in the next section to configure ACAEngine to connect to this Registered App:
+6. On the "Overview" page of the App, copy the below two values, which will be used in the next section to configure Engine to connect to this Registered App:
    * `Application (client) ID`
    * `Directory (tenant) ID`
 7. On the "Certificates & secrets" page of the App, click "New client secret":
@@ -69,7 +69,7 @@ New-ApplicationAccessPolicy -AppId <Graph App ID> -PolicyScopeGroupId <AD group 
    * Edit the System: Set the System’s Email to a real email address that exists on the o365 tenant
    * On the About page of the system, Select `Bookings 1` from "Execute command", then select the function `fetch_bookings` and click “Send”. 
    * An array of booking details \(blue\) should be returned \(it might be empty `[]` if there are no bookings\), or an error \(red\), if there is an issue grabbing the events from o365.
-   * If blue, then the settings are correct and is currently being used for all Room Booking Panels. In the next step we'll configure ACAEngine Staff API to use the same credentials.
+   * If blue, then the settings are correct and is currently being used for all Room Booking Panels. In the next step we'll configure Engine Staff API to use the same credentials.
    * If red, capture the error from javascript console \(e.g. Chrome debug tools, Console tab\) which will help yourself, an integration partner or ACA to pinpoint the cause.
 4. Navigate to Domains \(menu bar on left\). Select the Domain that you’d like integrated with this Office 365 tenant and click it, then click edit \(pen icon at top right\).
 5. In the "Config" box, ensure that the “o365\_driver” value exactly matches the driver ID of the “Office365 Room Booking Panel Logic” driver which you gathered in step 1 \(e.g. "dep-xxxxxxxx”"\). Click Save. If there is none, then create one like this:

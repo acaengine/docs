@@ -18,7 +18,7 @@ The `/zones` endpoint provide access to discover, create and manage zones availa
 
 ## Discovery
 
-{% api-method method="get" host="https://aca.example.com" path="/api/control/zones" %}
+{% api-method method="get" host="https://example.com" path="/api/control/zones" %}
 {% api-method-summary %}
 Search
 {% endapi-method-summary %}
@@ -126,7 +126,7 @@ Queries default to searching for any of the entered terms \(words\). A small que
 
 ## Management
 
-{% api-method method="post" host="https://aca.example.com" path="/api/control/zones" %}
+{% api-method method="post" host="https://example.com" path="/api/control/zones" %}
 {% api-method-summary %}
 Create
 {% endapi-method-summary %}
@@ -182,7 +182,7 @@ Zone created.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://aca.example.com" path="/api/control/zones/{id}" %}
+{% api-method method="get" host="https://example.com" path="/api/control/zones/{id}" %}
 {% api-method-summary %}
 Retrieve
 {% endapi-method-summary %}
@@ -231,7 +231,7 @@ ID of the zone to retrieve.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="https://aca.example.com" path="/api/control/zones/{id}" %}
+{% api-method method="put" host="https://example.com" path="/api/control/zones/{id}" %}
 {% api-method-summary %}
 Update
 {% endapi-method-summary %}
@@ -302,7 +302,7 @@ ID of the zone to update.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="https://aca.example.com" path="/api/control/zones/{id}" %}
+{% api-method method="delete" host="https://example.com" path="/api/control/zones/{id}" %}
 {% api-method-summary %}
 Delete
 {% endapi-method-summary %}

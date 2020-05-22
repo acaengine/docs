@@ -1,11 +1,11 @@
 # Composer
 
-[Composer](https://github.com/acaprojects/ngx-composer) is an Angular library that simplifies interacting with ACA Engine. It abstracts the complexity of the WebSocket API and manages the following:
+[Composer](https://github.com/acaprojects/ngx-composer) is an Angular library that simplifies interacting with Engine. It abstracts the complexity of the WebSocket API and manages the following:
 
 * Directives for binding to Status variables
 * Calling functions in the Driver
 * Resource access \(database manipulation\)
-* Authentication with ACA Engine
+* Authentication with Engine
 * Driver debug binding directives
 
 The magic of Angular is that it allows you to build a dynamic web page in a declarative manner.
@@ -14,7 +14,7 @@ The magic of Angular is that it allows you to build a dynamic web page in a decl
 
 ## Status Variable Bindings
 
-Imagine the driver below running on ACA Engine.
+Imagine the driver below running on Engine.
 
 * [https://github.com/acaprojects/aca-device-modules/blob/master/modules/philips/display/sicp\_protocol.rb\#L117](https://github.com/acaprojects/aca-device-modules/blob/master/modules/philips/display/sicp_protocol.rb#L117)
 * It is a type of Display
@@ -150,7 +150,7 @@ You can `get` the following resource factories:
 
 ## Authentication
 
-Authentication with ACAEngine is handled automatically by composer.
+Authentication with Engine is handled automatically by composer.
 
 1. Composer will request `/auth/authority` which contains information about how to authenticate
 2. If composer doesn’t have a valid OAuth2 token it will redirect to the defined login page

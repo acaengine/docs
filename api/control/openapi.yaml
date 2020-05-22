@@ -1,0 +1,35 @@
+openapi: "3.0.2"
+info:
+  title: ACAEngine
+  version: 1.0.0
+  description: A modern software stack for buildings.
+servers:
+  - url: https://{domain}/api/control
+    variables:
+      domain:
+        default: aca.example.com
+        description: the base domain where you have deployed ACAEngine
+paths:
+  /systems:
+    get:
+      summary: Search for systems.
+      description: |
+        Foo
+      parameters:
+        - name: q
+          in: query
+          description: search query
+          schema:
+            type: string
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            format: int32
+            minimum: 0
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            format: int32
+            minimum: 0

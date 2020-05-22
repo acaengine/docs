@@ -7,7 +7,7 @@
 
 Whilst this might seem to occur naturally most of the time, network contention, network errors and high data rates will trip you up. CBus is one system where I’ve often see back to back messages returned in a single IO read.
 
-ACA Engine ships with two tokenisers to help you break up the incoming data. The default buffered tokeniser and the more advanced abstract tokeniser.
+Engine ships with two tokenisers to help you break up the incoming data. The default buffered tokeniser and the more advanced abstract tokeniser.
 
 ## Default Tokeniser
 

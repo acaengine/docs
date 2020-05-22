@@ -107,7 +107,7 @@ You will enter these details from Step 2 into Backoffice:
 
    For example, Azure AD defines fixed identifiers in the form _"spn:00000000-0000-0000-0000-000000000000"_  where the 0 digits are the _Application \(client\) ID_, found on the Overview page of the Azure AD Application.
 
-2. **IDP Target URL** \(also known as **Assertion URL**\): This is the url that ACAEngine redirects users to in order to login with your SAML2 ID provider
+2. **IDP Target URL** \(also known as **Assertion URL**\): This is the url that Engine redirects users to in order to login with your SAML2 ID provider
    * Azure AD URLs are often in the format: https://login.microsoftonline.com/**&lt;tenant-ID&gt;**/saml2
    * ADFS URLs are often in the format: https://adfs.myorganistaion.com/adfs/ls
    * Auth0 URLs are often in the format: https://myorganisation.auth0.com/samlp/ 
@@ -126,7 +126,7 @@ Start by clicking edit \(pen icon\) on the Authentication that was created in St
 
 Now test logging in by copying the URL for the Authentication \(e.g. [https://engine.example-organisation.com/auth/adfs?id=adfs-XXXXXXXX](https://engine.example-organisation.com/auth/adfs?id=adfs-XXXXXXXX) \) and opening a new private browser window \(e.g. Chrome incognito, Edge InPrivate session\) and pasting in that url. You should be redirected to your SAML2 ID provider's login page, and if successfully logged in, redirected again back to a the engine domain [https://engine.example-organisation.com/](https://engine.example-organisation.com/)
 
-If there are errors, the configuration on either the ID provider of Engine side may need to be tweaked to match. A [SAML2 troubleshooting guide](https://auth0.com/docs/protocols/saml/saml-configuration/troubleshoot) should be followed or an [ACAEngine Service Desk](https://support.acaprojects.com/) ticket can be raised for assistance. Once there are no login issues, this SAML2 authentication can be set as the default for the whole domain.
+If there are errors, the configuration on either the ID provider of Engine side may need to be tweaked to match. A [SAML2 troubleshooting guide](https://auth0.com/docs/protocols/saml/saml-configuration/troubleshoot) should be followed or an [Engine Service Desk](https://support.acaprojects.com/) ticket can be raised for assistance. Once there are no login issues, this SAML2 authentication can be set as the default for the whole domain.
 
 ### Make the new SAML2 authentication option the default login
 

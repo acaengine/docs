@@ -1,6 +1,6 @@
 # Dependencies
 
-When a driver is loaded into ACAEngine, it becomes a _dependency_. Dependencies are available as the blueprint from which modules are created.  The `/dependencies` endpoint provide methods to discover, load and update these. For more on the role the drivers play, see:
+When a driver is loaded into Engine, it becomes a _dependency_. Dependencies are available as the blueprint from which modules are created.  The `/dependencies` endpoint provide methods to discover, load and update these. For more on the role the drivers play, see:
 
 {% page-ref page="../../key-concepts/drivers.md" %}
 
@@ -81,7 +81,7 @@ When a driver is loaded into ACAEngine, it becomes a _dependency_. Dependencies 
   </tbody>
 </table>## Discovery
 
-{% api-method method="get" host="https://aca.example.com" path="/api/control/dependencies" %}
+{% api-method method="get" host="https://example.com" path="/api/control/dependencies" %}
 {% api-method-summary %}
 Search
 {% endapi-method-summary %}
@@ -154,13 +154,13 @@ Queries default to searching for any of the entered terms \(words\). A small que
 
 ## Management
 
-{% api-method method="post" host="https://aca.example.com" path="/api/control/dependencies" %}
+{% api-method method="post" host="https://example.com" path="/api/control/dependencies" %}
 {% api-method-summary %}
 Create
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Defines a new dependency. The driver this references must be available on the engine nodes running this instance of ACAEngine. Available drivers can be listed by using the discovery endpoint.
+Defines a new dependency. The driver this references must be available on the engine nodes running this instance of Engine. Available drivers can be listed by using the discovery endpoint.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -234,7 +234,7 @@ Validation exception.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://aca.example.com" path="/api/control/dependencies/{id}" %}
+{% api-method method="get" host="https://example.com" path="/api/control/dependencies/{id}" %}
 {% api-method-summary %}
 Retrieve
 {% endapi-method-summary %}
@@ -276,7 +276,7 @@ ID of the dependency to retrieve.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="https://aca.example.com" path="/api/control/dependencies/{id}" %}
+{% api-method method="put" host="https://example.com" path="/api/control/dependencies/{id}" %}
 {% api-method-summary %}
 Update
 {% endapi-method-summary %}
@@ -362,7 +362,7 @@ Validation error.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="https://aca.example.com" path="/api/control/dependencies/{id}" %}
+{% api-method method="delete" host="https://example.com" path="/api/control/dependencies/{id}" %}
 {% api-method-summary %}
 Delete
 {% endapi-method-summary %}
@@ -396,7 +396,7 @@ ID of the dependency to remove.
 
 ## Interaction
 
-{% api-method method="post" host="https://aca.example.com" path="/api/control/dependencies/{id}/reload" %}
+{% api-method method="post" host="https://example.com" path="/api/control/dependencies/{id}/reload" %}
 {% api-method-summary %}
 Reload
 {% endapi-method-summary %}

@@ -11,13 +11,13 @@ This can either be included as an `Authorization` header \(recommended\):
 {% tabs %}
 {% tab title="HTTPie" %}
 ```bash
-http aca.example.com/api/control/systems 'Authorization:bearer <access token>'
+http example.com/api/control/systems 'Authorization:bearer <access token>'
 ```
 {% endtab %}
 
 {% tab title="cURL" %}
 ```bash
-curl -H "Authorization: bearer <access token>" aca.example.com/api/control/systems
+curl -H "Authorization: bearer <access token>" example.com/api/control/systems
 ```
 {% endtab %}
 {% endtabs %}
@@ -27,13 +27,13 @@ Or, as a query parameter:
 {% tabs %}
 {% tab title="HTTPie" %}
 ```bash
-http aca.example.com/api/control/systems bearer_token==<access token>
+http example.com/api/control/systems bearer_token==<access token>
 ```
 {% endtab %}
 
 {% tab title="cURL" %}
 ```bash
-curl "aca.example.com/api/control/systems?bearer_token=<access token>"
+curl "example.com/api/control/systems?bearer_token=<access token>"
 ```
 {% endtab %}
 {% endtabs %}
@@ -64,7 +64,7 @@ All interaction within this flow takes place within a client-side user agent, ma
 
 To authenticate you will need to direct users to the authorisation endpoint, accompanied by your registered application details.
 
-{% api-method method="get" host="https://aca.example.com" path="/auth/oauth/authorize" %}
+{% api-method method="get" host="https://example.com" path="/auth/oauth/authorize" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -134,7 +134,7 @@ Using this flow, users first authorize your application by creating a short-live
 
 To generate the authorisation code, direct your users to the authorisation endpoint with `code` as the requested response type.
 
-{% api-method method="get" host="https://aca.example.com" path="/auth/oauth/authorize" %}
+{% api-method method="get" host="https://example.com" path="/auth/oauth/authorize" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -190,7 +190,7 @@ This response will also include the `state` parameter if it was included in your
 
 Your backend infrastructure may then extract this and exchange it for an access token that can be used to perform actions as the authorising user by using the token endpoint.
 
-{% api-method method="post" host="https://aca.example.com" path="/auth/oauth/token" %}
+{% api-method method="post" host="https://example.com" path="/auth/oauth/token" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -255,7 +255,7 @@ This flow should not be used as part of any components distributed to users or u
 
 This flow provides the ability to directly exchange a username and password for an access token as a single request.
 
-{% api-method method="post" host="https://aca.example.com" path="/auth/oauth/token" %}
+{% api-method method="post" host="https://example.com" path="/auth/oauth/token" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -326,7 +326,7 @@ When receiving a token, the server response will include a token expiry - `expir
 
 Along with the `access_token`, successful authentication requests may also contain a `refresh_token`. This can be used to renew the session at any time, extending access as long as both the application registration and user are still valid.
 
-{% api-method method="post" host="https://aca.example.com" path="/auth/oauth/token" %}
+{% api-method method="post" host="https://example.com" path="/auth/oauth/token" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}
@@ -381,7 +381,7 @@ Application client secret.
 
 To end a session, applications should request a token revocation. This will invalidate the token, preventing further use.
 
-{% api-method method="post" host="https://aca.example.com" path="/auth/oauth/revoke" %}
+{% api-method method="post" host="https://example.com" path="/auth/oauth/revoke" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}

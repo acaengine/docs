@@ -28,7 +28,7 @@ All systems provide a base set of metadata that helps to describe their role and
 
 ## Discovery
 
-{% api-method method="get" host="https://aca.example.com" path="/api/control/systems" %}
+{% api-method method="get" host="https://example.com" path="/api/control/systems" %}
 {% api-method-summary %}
 Search
 {% endapi-method-summary %}
@@ -163,7 +163,7 @@ Queries default to searching for any of the entered terms \(words\). A small que
 
 ## Management
 
-{% api-method method="post" host="https://aca.example.com" path="/api/control/systems" %}
+{% api-method method="post" host="https://example.com" path="/api/control/systems" %}
 {% api-method-summary %}
 Create
 {% endapi-method-summary %}
@@ -243,7 +243,7 @@ Defines a new system. Systems names must be unique within the instance they are 
     "modules": [],
     "settings": {},
     "created_at": 1562041110,
-    "support_url": "https://aca.example.com/foo",
+    "support_url": "https://example.com/foo",
     "id": "sys-rJQQlR4Cn7"
 }
 ```
@@ -252,7 +252,7 @@ Defines a new system. Systems names must be unique within the instance they are 
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://aca.example/com" path="/api/control/systems/{id}" %}
+{% api-method method="get" host="https://example.com" path="/api/control/systems/{id}" %}
 {% api-method-summary %}
 Retrieve
 {% endapi-method-summary %}
@@ -302,7 +302,7 @@ Include full models of all modules and zones associated with the system rather t
     ],
     "settings": {},
     "created_at": 1562041110,
-    "support_url": "https://aca.example.com/foo",
+    "support_url": "https://example.com/foo",
     "version": 3,
     "id": "sys-rJQQlR4Cn7"
 }
@@ -312,7 +312,7 @@ Include full models of all modules and zones associated with the system rather t
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="https://aca.example.com" path="/api/control/systems/{id}" %}
+{% api-method method="put" host="https://example.com" path="/api/control/systems/{id}" %}
 {% api-method-summary %}
 Update
 {% endapi-method-summary %}
@@ -398,7 +398,7 @@ The system metadata version. This must match the current version and increments 
     "modules": [],
     "settings": {},
     "created_at": 1562041110,
-    "support_url": "https://aca.example.com/foo",
+    "support_url": "https://example.com/foo",
     "id": "sys-rJQQlR4Cn7"
 }
 ```
@@ -417,7 +417,7 @@ The specified version does not match the current system version.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="https://aca.example.com" path="/api/control/systems/{id}" %}
+{% api-method method="delete" host="https://example.com" path="/api/control/systems/{id}" %}
 {% api-method-summary %}
 Delete
 {% endapi-method-summary %}
@@ -451,7 +451,7 @@ ID of the system to retrieve.
 
 ## Interaction
 
-{% api-method method="post" host="https://aca.example.com" path="/api/control/systems/{id}/start" %}
+{% api-method method="post" host="https://example.com" path="/api/control/systems/{id}/start" %}
 {% api-method-summary %}
 Start
 {% endapi-method-summary %}
@@ -483,7 +483,7 @@ ID of the system to start.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://aca.example.com" path="/api/control/systems/{id}/stop" %}
+{% api-method method="post" host="https://example.com" path="/api/control/systems/{id}/stop" %}
 {% api-method-summary %}
 Stop
 {% endapi-method-summary %}
@@ -515,7 +515,7 @@ ID of the system to stop.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://aca.example.com" path="/api/control/systems/{id}/exec" %}
+{% api-method method="post" host="https://example.com" path="/api/control/systems/{id}/exec" %}
 {% api-method-summary %}
 Exec
 {% endapi-method-summary %}
@@ -565,7 +565,7 @@ Response values are always wrapped in an outer array. This ensures that method w
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://aca.example.com" path="/api/control/systems/{id}/state" %}
+{% api-method method="get" host="https://example.com" path="/api/control/systems/{id}/state" %}
 {% api-method-summary %}
 State
 {% endapi-method-summary %}
@@ -614,7 +614,7 @@ A status key of interest. If included, the response filters to this value.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://aca.example.com" path="/api/control/systems/{id}/funcs" %}
+{% api-method method="get" host="https://example.com" path="/api/control/systems/{id}/funcs" %}
 {% api-method-summary %}
 Funcs
 {% endapi-method-summary %}
@@ -663,7 +663,7 @@ Class of the module.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://aca.example.com" path="/api/control/systems/{id}/count" %}
+{% api-method method="get" host="https://example.com" path="/api/control/systems/{id}/count" %}
 {% api-method-summary %}
 Count
 {% endapi-method-summary %}
@@ -703,7 +703,7 @@ Class name of the modules to count.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://aca.example.com" path="/api/control/systems/{id}/types" %}
+{% api-method method="get" host="https://example.com" path="/api/control/systems/{id}/types" %}
 {% api-method-summary %}
 Types
 {% endapi-method-summary %}

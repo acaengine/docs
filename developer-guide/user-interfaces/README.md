@@ -1,6 +1,6 @@
 # User Interfaces
 
-Building an interface for ACA Engine is the same as building any generic web application. We try to follow industry best practices and leverage the tools used by most developers in the industry.
+Building an interface for Engine is the same as building any generic web application. We try to follow industry best practices and leverage the tools used by most developers in the industry.
 
 * NOTE:: Windows users are recommended to install the [Linux subsystem for Windows](https://msdn.microsoft.com/en-au/commandline/wsl/install_guide).
   * Tools such as git and your preferred text editor make sense to run on Win32
@@ -28,7 +28,7 @@ The tools and libraries that help with development are available via `npm` which
 
 ## Running the Demo UI
 
-This is a project that can run against the ACA Engine development environment, for those who want some instant gratification.
+This is a project that can run against the Engine development environment, for those who want some instant gratification.
 
 1. Create a folder for storing your interface projects
 2. Open a command prompt at that location
@@ -37,9 +37,9 @@ This is a project that can run against the ACA Engine development environment,
 5. `npm install` to install the project dependencies
 6. `gulp serve` to run the development server
 
-NB: If you are planning to run the user interface project without the ACAEngine Developer environment, in Step 6 above you will need to use `gulp serve --mock` this will allow the interface to run 'headless' with mock data for development purposes.
+NB: If you are planning to run the user interface project without the Engine Developer environment, in Step 6 above you will need to use `gulp serve --mock` this will allow the interface to run 'headless' with mock data for development purposes.
 
-NB: While the existing UIs are relatively plug'n'play with a locally spun up [ACAEngine environment](../getting-started.md#starting-up), a domain must first be set for localhost or your machine's IP address before authentication will be functional. Ensure the domain that's set is the same as what you're accessing the frontend app with and matches the composer config in [settings.json](settings.json.md). i.e. What's typed into the browser address bar matches the settings.json and the domain configured in ACAEngine.
+NB: While the existing UIs are relatively plug'n'play with a locally spun up [Engine environment](../getting-started.md#starting-up), a domain must first be set for localhost or your machine's IP address before authentication will be functional. Ensure the domain that's set is the same as what you're accessing the frontend app with and matches the composer config in [settings.json](settings.json.md). i.e. What's typed into the browser address bar matches the settings.json and the domain configured in Engine.
 
 ## Angular Resources
 

@@ -1,6 +1,6 @@
 # Development Environment
 
-ACAEngine is distributed as a set of docker containers that are designed to deploy to your on-prem infrastructure or private cloud. To keep things simple for development, testing, and experimentation this is also packaged as a prebuilt environment that you can run on your local machine.
+Engine is distributed as a set of docker containers that are designed to deploy to your on-prem infrastructure or private cloud. To keep things simple for development, testing, and experimentation this is also packaged as a prebuilt environment that you can run on your local machine.
 
 This environment runs across MacOS, Windows, or Linux - feel free to pick where you work best.
 
@@ -57,7 +57,7 @@ If you get an error that says: `A Vagrant environment or target machine is requi
 
 ### Shutting Down
 
-When you’re done working with ACA Engine use
+When you’re done working with Engine use
 
 ```bash
 vagrant halt
@@ -65,7 +65,7 @@ vagrant halt
 
 to shutdown your environment.
 
-You can continue to use these two commands to start and stop your local ACAEngine instance as you need.
+You can continue to use these two commands to start and stop your local Engine instance as you need.
 
 ### Starting Over
 

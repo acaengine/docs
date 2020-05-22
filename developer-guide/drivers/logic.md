@@ -8,7 +8,7 @@ As such, they exist primarily to communicate with other drivers.
 
 ## Inter-driver communication
 
-ACAEngine guarantees that a single thread will access driver code at any point in time. Communication between driver instances is scheduled to ensure serial access. Furthermore the driver in question might not even be running on the same server.
+Engine guarantees that a single thread will access driver code at any point in time. Communication between driver instances is scheduled to ensure serial access. Furthermore the driver in question might not even be running on the same server.
 
 Because of this, all calls are asynchronous and always return a promise which allows you to access the return value of the function call or catch any errors that might have occurred. Error catching is optional and the error will be logged.
 

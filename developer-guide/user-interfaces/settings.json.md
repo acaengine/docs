@@ -39,7 +39,7 @@ When approaching an existing frontend first check to see if the change can be ma
 }
 ```
 
-The default composer config is setup for simple local development, if you require your app to work in conjunction with a local [ACAEngine instance](../getting-started.md) then the `domain` setting will have to match the corresponding domain listing in the admin panel of the instance \(Backoffice\).
+The default composer config is setup for simple local development, if you require your app to work in conjunction with a local [Engine instance](../getting-started.md) then the `domain` setting will have to match the corresponding domain listing in the admin panel of the instance \(Backoffice\).
 
 For example:
 

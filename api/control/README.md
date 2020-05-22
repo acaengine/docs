@@ -1,10 +1,10 @@
 ---
-description: The control API provides interactions with ACAEngine core.
+description: The control API provides interactions with Engine core.
 ---
 
 # Control
 
-The control API is the primary point for querying, structuring, defining and interacting with ACAEngine deployments. The endpoints that it provides enable interaction between drivers operating on an instance and the outside world.
+The control API is the primary point for querying, structuring, defining and interacting with Engine deployments. The endpoints that it provides enable interaction between drivers operating on an instance and the outside world.
 
 The exposed capabilities are dependent on the drivers loaded to an instance. Using this API provides a high level structure for discovering this configuration and interacting with the environment that it connects.
 
