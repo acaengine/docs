@@ -1,6 +1,6 @@
 # Settings
 
-_Settings_ are the configuration information that define how an ACAEngine deployment should behave. They are ultimately ingested and used by [modules](modules.md), but can be defined against [zones](zones.md), [systems](systems.md), [drivers](drivers.md) or [modules](modules.md) and compose to create an overall system configuration that can be managed at scale.
+_Settings_ are the configuration information that define how an Engine deployment should behave. They are ultimately ingested and used by [modules](modules.md), but can be defined against [zones](zones.md), [systems](systems.md), [drivers](drivers.md) or [modules](modules.md) and compose to create an overall system configuration that can be managed at scale.
 
 Settings are expressed as [JSON data](https://en.wikipedia.org/wiki/JSON#JSON_sample), or simply–key/value pairs:
 

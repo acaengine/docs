@@ -4,7 +4,7 @@ A full SVG Map Creation Guide can be downloaded [here](https://drive.google.com/
 
 ## Intro
 
-ACA maps are where function meets form, and are the starting point of any conversation between a user and the platform.
+Maps are where function meets form, and are the starting point of any conversation between a user and the platform.
 
 A bespoke map is like a tailored suit or custom jewellery piece - you can elevate something simple by perfecting the details which takes the final product to the next level. The choices you make along the way will define the story you tell with the finished product. This guide will step you through the process in creating a map that is easy to use and visually effective.
 

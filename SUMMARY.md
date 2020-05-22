@@ -1,6 +1,6 @@
 # Table of contents
 
-* [What is ACAEngine](README.md)
+* [What is Engine?](README.md)
 * [Key Concepts](key-concepts/README.md)
   * [Drivers](key-concepts/drivers.md)
   * [Modules](key-concepts/modules.md)
@@ -15,7 +15,7 @@
 
 * [System Architecture](deployment/architecture.md)
 * [Single Sign-On](deployment/single-sign-on/README.md)
-  * [Configuring ACAEngine for SAML2](deployment/single-sign-on/configuring-acaengine-for-saml2.md)
+  * [Configuring Engine for SAML2](deployment/single-sign-on/configuring-acaengine-for-saml2.md)
   * [SAML2 with Azure AD](deployment/single-sign-on/saml2-with-azure-ad.md)
   * [SAML2 with ADFS](deployment/single-sign-on/saml2-with-adfs.md)
   * [SAML2 with Auth0](deployment/single-sign-on/saml2-with-auth0.md)
@@ -93,6 +93,5 @@
 
 ## Support
 
-* [Tech Chat](support/chat.md)
 * [Service Desk](https://support.acaprojects.com)
 

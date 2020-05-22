@@ -1,6 +1,6 @@
 # System Architecture
 
-ACAEngine is packaged and distributed as a set of Docker containers for deployment within private cloud, or on-premise infrastructure. All application components run on hosts owned and managed by your organistation.
+Engine is packaged and distributed as a set of Docker containers for deployment within private cloud, or on-premise infrastructure. All application components run on hosts owned and managed by your organistation.
 
 ## Application Services
 
@@ -24,15 +24,15 @@ A dedicated search service is used to provide fast, efficient access to informat
 
 ## External Components
 
-In addition to the core application services, a number of external components contribute to the overall deployment environment. These are not created as part of ACAEngine, but may require configuration as part of the deployment.
+In addition to the core application services, a number of external components contribute to the overall deployment environment. These are not created as part of Engine, but may require configuration as part of the deployment.
 
 ### ![](../.gitbook/assets/components-client.svg) Clients
 
-Clients are devices running interfaces distributed by Web nodes, or native apps and other services which use the ACAEngine API. Common examples may be a phone running a staff app, room booking panels or wayfinding displays.
+Clients are devices running interfaces distributed by Web nodes, or native apps and other services which use the Engine API. Common examples may be a phone running a staff app, room booking panels or wayfinding displays.
 
 ### ![](../.gitbook/assets/components-identity.svg) Identity Provider
 
-Interactions with ACAEngine must be associated with a valid user. To simplify UX and improve security, authentication integrates tightly with existing identity providers operating in an environment. This may be services such as Azure AD, Google Sign-In or other services providing SAML or OAuth2 endpoints.
+Interactions with Engine must be associated with a valid user. To simplify UX and improve security, authentication integrates tightly with existing identity providers operating in an environment. This may be services such as Azure AD, Google Sign-In or other services providing SAML or OAuth2 endpoints.
 
 ### ![](../.gitbook/assets/components-load-balancer.svg) Load Balancer
 

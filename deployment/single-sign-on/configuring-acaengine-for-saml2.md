@@ -1,25 +1,25 @@
 ---
 description: >-
-  Steps required for enabling SAML2 sign on for users logging in to all
-  ACAEngine web apps
+  Steps required for enabling SAML2 sign on for users logging in to all Engine
+  web apps
 ---
 
-# Configuring ACAEngine for SAML2
+# Configuring Engine for SAML2
 
-By default, ACAEngine uses local authentication. An admin account is generated upon initial deployment and the administrator can manually create additional user accounts in the ACAEngine Backoffice \(on the Users tab\).
+By default, Engine uses local authentication. An admin account is generated upon initial deployment and the administrator can manually create additional user accounts in the Backoffice \(on the Users tab\).
 
 Switching to federated authentication is recommended. There are 3 steps required:
 
-1. In ACAEngine Backoffice, create a new SAML2 Identity provider entry
-2. In your organisation's SAML2 Identity provider dashboard \(e.g. Azure AD, ADFS, Auth0\), create the SAML2 Service provider for entry for ACAEngine
-3. Back in ACAEngine Backoffice, update the SAML2 Identity provider entry with the new details retrieved from step 2
+1. In Backoffice, create a new SAML2 Identity provider entry
+2. In your organisation's SAML2 Identity provider dashboard \(e.g. Azure AD, ADFS, Auth0\), create the SAML2 Service provider for entry for Engine
+3. Back in Backoffice, update the SAML2 Identity provider entry with the new details retrieved from step 2
 
 ## Prerequisites
 
 1. The domain where users will visit to login must exist as a valid **DNS** entry 
-2. Browsers should consider the domain secure: Valid **SSL certificates** should be in place and served by either your load balancer or the web server in front of ACAEngine.
+2. Browsers should consider the domain secure: Valid **SSL certificates** should be in place and served by either your load balancer or the web server in front of Engine.
 
-## Step 1: Add a new SAML2 authentication source to ACAEngine
+## Step 1: Add a new SAML2 authentication source
 
 1. Login as an admin to backoffice \([https://&lt;engine-url&gt;/backoffice/\](https://<engine-url>/backoffice/\)\)
 2. On the **Domains** tab, select the Domain that represents the URL you wish to enable SAML2 for.
@@ -80,7 +80,7 @@ Switching to federated authentication is recommended. There are 3 steps required
    2. Example: If you copied _"_[https://engine.example-organisation.com/auth/adfs?id=adfs-XXXXXXXX](https://engine.example-organisation.com/auth/adfs?id=adfs-XXXXXXXX)_"_ then set the Assertion URL to "_https://engine.example-organisation.com/auth/adfs/callback?id=**adfs-XXXXXXXX**"_
    3. Click Save
 
-## Step 2: Register ACAEngine as new service/app in your authentication provider
+## Step 2: Register a new service/app in your authentication provider
 
 ### Prerequisites
 
@@ -97,13 +97,13 @@ Follow the instructions for your Identity Provider:
 * [ADFS](saml2-with-adfs.md)
 * [Auth0](saml2-with-auth0.md)
 
-## Step 3: Update the ACAEngine SAML2 authentication source settings
+## Step 3: Update the SAML2 authentication source settings
 
-You will enter these details from Step 2 into ACAEngine Backoffice:
+You will enter these details from Step 2 into Backoffice:
 
 ### Prerequisites
 
-1. **Issuer** \(also known as **Identifier**\): If your ID provider defines an Identifier instead of letting you define one, Update the ACAEngine auth settings to use the required Identifier. 
+1. **Issuer** \(also known as **Identifier**\): If your ID provider defines an Identifier instead of letting you define one, Update the auth settings to use the required Identifier. 
 
    For example, Azure AD defines fixed identifiers in the form _"spn:00000000-0000-0000-0000-000000000000"_  where the 0 digits are the _Application \(client\) ID_, found on the Overview page of the Azure AD Application.
 
@@ -115,10 +115,10 @@ You will enter these details from Step 2 into ACAEngine Backoffice:
 
 ### Update Engine's new authentication settings
 
-Start by clicking edit \(pen icon\) on the Authentication that was created in Step 1 _"Add a new SAML2 authentication source to ACAEngine"_ \(top of this page\)
+Start by clicking edit \(pen icon\) on the Authentication that was created in Step 1 _"Add a new SAML2 authentication source"_ \(top of this page\)
 
 1. Replace the **Issuer** field with the Issuer from your SAML2 ID provider \(unless your SAML2 ID provider already matches\)
-2. Replace the **IDP Target URL** field with the SAML2 Identity provider login url that was generated in Step 2 _"Register ACAEngine as new service/app on your authentication provider"_
+2. Replace the **IDP Target URL** field with the SAML2 Identity provider login url that was generated in Step 2 _"Register a new service/app on your authentication provider"_
 3. Paste the long X509Certificate string into the **Full Certificate** field, without any appended/prepended text.
 4. Click Save
 

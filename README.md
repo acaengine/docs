@@ -1,17 +1,15 @@
 ---
 description: >-
-  ACAEngine is a platform for creating digital experiences for physical
+  Engine is a platform for creating digital experiences for physical
   environments. It connects devices, hardware systems and third-party software
   to provide an API for the built environment.
 ---
 
-# What is ACAEngine
+# What is Engine?
 
 {% hint style="success" %}
 If you’ve used traditional, hardware-based control systems before, welcome to the new world.
 {% endhint %}
-
->
 
 * **Software only** built on the modern web.
 * **Open source** continuously improved and backed by a full-time team of developers.
@@ -31,5 +29,5 @@ There are no restrictions on what can be built, but here are some examples of [w
 
 ## Who builds it?
 
-[ACA Projects](https://www.acaprojects.com/staff) are a fast-paced team of developers and designers based across Australia, Singapore, Hong Kong, Shanghai and London. We believe in modern tech and despise black boxes.
+[Place Technology](https://place.technology) is a team of developers, designers and technologists based across Australia, Singapore, Hong Kong, Shanghai and London. We believe in modern tech and despise black boxes.
 

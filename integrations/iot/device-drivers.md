@@ -1,6 +1,6 @@
 # Device Drivers
 
-ACAEngine provides a range of pre-built drivers for integrating with third party hardware and software. ACAEngine Device Drivers are all written in Ruby.
+Place Technology provide a range of pre-built drivers for integrating with third party hardware and software. Engine Device Drivers are all written in Ruby.
 
 You can view a full list of available drivers on our [GitHub Page](https://github.com/acaprojects/ruby-engine-drivers).
 

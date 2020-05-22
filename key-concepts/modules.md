@@ -2,10 +2,6 @@
 
 _Modules_ are instances of [drivers](drivers.md). These represent a device to be controlled, service integration or piece of logic that controls how a system should behave.
 
-{% hint style="info" %}
-Modules were referred to as 'Devices' in older versions of ACAEngine.
-{% endhint %}
-
 ![Modules are instances of drivers.](../.gitbook/assets/concepts-modules.svg)
 
 All modules expose two things:
@@ -15,7 +11,7 @@ All modules expose two things:
 
 
 
-Each module can be individual started or stopped at any time. When started, ACAEngine will attempt to connect to the associated physical device or service and keep track of its status. When Stopped, ACAEngine will disconnect from that device and not send any commands to it. Or in the case of logic modules, this can be used to enable / disable its functionality.
+Each module can be individual started or stopped at any time. When started, ngine will attempt to connect to the associated physical device or service and keep track of its status. When Stopped, Engine will disconnect from that device and not send any commands to it. Or in the case of logic modules, this can be used to enable / disable its functionality.
 
 Modules must be associated with at least one [system](systems.md). Where a device or service is used across multiple systems \(such as a lighting gateway, centrally racked matrix switcher, or common service such as a chatbot integration\) the same instance can be shared across everywhere it is needed.
 
