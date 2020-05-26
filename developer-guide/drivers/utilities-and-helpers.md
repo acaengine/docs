@@ -1,6 +1,6 @@
 # Utilities and Helpers
 
-Engine comes packaged with some handy helper functions that make interfacing with the wide variety of common IoT protocols  easier.
+Engine comes packaged with some handy helper functions that make interfacing with the wide variety of common IoT protocols easier.
 
 ## Functions and Constants
 

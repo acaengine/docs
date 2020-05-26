@@ -6,146 +6,101 @@ The `/modules` endpoint provides creation, management and direct interaction wit
 
 ## Model
 
+| Attribute | Type | Description |
+| :--- | :--- | :--- |
+
+
+| id | `string` | A universally unique ID for this module. |
+| :--- | :--- | :--- |
+
+
+| dependency\_id | `string` | ID of the driver that defines this module. |
+| :--- | :--- | :--- |
+
+
+| control\_system\_id | `string` | ID of the system this module is bound to \(logic modules only\). |
+| :--- | :--- | :--- |
+
+
+| edge\_id | `string` | ID of the preferred engine node to run on. |
+| :--- | :--- | :--- |
+
+
+| ip | `string` | IP address or resolvable hostname of the device this module connects to. |
+| :--- | :--- | :--- |
+
+
+| tls | `boolean` | True if the device communicates securely. |
+| :--- | :--- | :--- |
+
+
+| udp | `boolean` | Protocol uses UDP rather that TCP. |
+| :--- | :--- | :--- |
+
+
+| port | `integer` | The TCP or UDP port that the associated device communicates on. |
+| :--- | :--- | :--- |
+
+
+| makebreak | `boolean` | If enabled, provides an ephemeral connection that disconnects during idle periods. |
+| :--- | :--- | :--- |
+
+
+| uri | `string` | The based URI of the remote service \(service modules only\). |
+| :--- | :--- | :--- |
+
+
+| custom\_name | `string` | The modules class name \(`Display`, `Lighting` etc\) if it should differ from the default defined in the dependency. |
+| :--- | :--- | :--- |
+
+
+| settings | `object` | A JSON object containing module configuration. |
+| :--- | :--- | :--- |
+
+
+| updated\_at | `integer` | Timestamp of last update. |
+| :--- | :--- | :--- |
+
+
+| created\_at | `integer` | Timestamp of creation. |
+| :--- | :--- | :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Attribute</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">id</td>
-      <td style="text-align:left"><code>string</code>
-      </td>
-      <td style="text-align:left">A universally unique ID for this module.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">dependency_id</td>
-      <td style="text-align:left"><code>string</code>
-      </td>
-      <td style="text-align:left">ID of the driver that defines this module.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">control_system_id</td>
-      <td style="text-align:left"><code>string</code>
-      </td>
-      <td style="text-align:left">ID of the system this module is bound to (logic modules only).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">edge_id</td>
-      <td style="text-align:left"><code>string</code>
-      </td>
-      <td style="text-align:left">ID of the preferred engine node to run on.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ip</td>
-      <td style="text-align:left"><code>string</code>
-      </td>
-      <td style="text-align:left">IP address or resolvable hostname of the device this module connects to.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">tls</td>
-      <td style="text-align:left"><code>boolean</code>
-      </td>
-      <td style="text-align:left">True if the device communicates securely.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">udp</td>
-      <td style="text-align:left"><code>boolean</code>
-      </td>
-      <td style="text-align:left">Protocol uses UDP rather that TCP.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">port</td>
-      <td style="text-align:left"><code>integer</code>
-      </td>
-      <td style="text-align:left">The TCP or UDP port that the associated device communicates on.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">makebreak</td>
-      <td style="text-align:left"><code>boolean</code>
-      </td>
-      <td style="text-align:left">If enabled, provides an ephemeral connection that disconnects during idle
-        periods.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">uri</td>
-      <td style="text-align:left"><code>string</code>
-      </td>
-      <td style="text-align:left">The based URI of the remote service (service modules only).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">custom_name</td>
-      <td style="text-align:left"><code>string</code>
-      </td>
-      <td style="text-align:left">The modules class name (<code>Display</code>, <code>Lighting</code> etc)
-        if it should differ from the default defined in the dependency.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">settings</td>
-      <td style="text-align:left"><code>object</code>
-      </td>
-      <td style="text-align:left">A JSON object containing module configuration.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">updated_at</td>
-      <td style="text-align:left"><code>integer</code>
-      </td>
-      <td style="text-align:left">Timestamp of last update.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">created_at</td>
-      <td style="text-align:left"><code>integer</code>
-      </td>
-      <td style="text-align:left">Timestamp of creation.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">role</td>
-      <td style="text-align:left"><code>integer</code>
-      </td>
-      <td style="text-align:left">
+      <th style="text-align:left">role</th>
+      <th style="text-align:left"><code>integer</code>
+      </th>
+      <th style="text-align:left">
         <p>The module type. One of:</p>
         <p><code>0</code> ssh</p>
         <p><code>1</code> device</p>
         <p><code>2</code> service</p>
         <p><code>3</code> logic</p>
-      </td>
+      </th>
     </tr>
-    <tr>
-      <td style="text-align:left">notes</td>
-      <td style="text-align:left"><code>string</code>
-      </td>
-      <td style="text-align:left">Markdown formatted text that describes this module.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">connected</td>
-      <td style="text-align:left"><code>boolean</code>
-      </td>
-      <td style="text-align:left">Flag for connectivity state.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">running</td>
-      <td style="text-align:left"><code>boolean</code>
-      </td>
-      <td style="text-align:left">Module start/stop state.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ignore_connected</td>
-      <td style="text-align:left"><code>boolean</code>
-      </td>
-      <td style="text-align:left">If enabled, system metrics ignore connectivity state.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ignore_startstop</td>
-      <td style="text-align:left"><code>boolean</code>
-      </td>
-      <td style="text-align:left">If enabled, system level start and stop actions are ignored. This is recommended
-        for modules shared by many systems (e.g. a lighting gateway).</td>
-    </tr>
-  </tbody>
-</table>## Discovery
+  </thead>
+  <tbody></tbody>
+</table>| notes | `string` | Markdown formatted text that describes this module. |
+| :--- | :--- | :--- |
+
+
+| connected | `boolean` | Flag for connectivity state. |
+| :--- | :--- | :--- |
+
+
+| running | `boolean` | Module start/stop state. |
+| :--- | :--- | :--- |
+
+
+| ignore\_connected | `boolean` | If enabled, system metrics ignore connectivity state. |
+| :--- | :--- | :--- |
+
+
+| ignore\_startstop | `boolean` | If enabled, system level start and stop actions are ignored. This is recommended for modules shared by many systems \(e.g. a lighting gateway\). |
+| :--- | :--- | :--- |
+
 
 {% api-method method="get" host="https://example.com" path="/api/control/modules" %}
 {% api-method-summary %}
@@ -223,15 +178,15 @@ Return modules that are an instance of the specified dependency.
 
 Queries default to searching for any of the entered terms \(words\). A small query language provides the ability to structure complex queries.
 
-| Operator | Action |
-| :--- | :--- |
-| `+` | Matches both terms. |
-| `|` | Matches either terms. |
-| `-` | Negates a single token. |
-| `"` | Wraps tokens to form a phrase. |
-| `(` and `)` | Provide precedence. |
-| `~N` | Specifies edit distance \(fuzziness\) after a word. |
-| `~N` | Specifies slop amount \(deviation\) after a phrase. |
+| Operator | Action |  |
+| :--- | :--- | :--- |
+| `+` | Matches both terms. |  |
+| \` | \` | Matches either terms. |
+| `-` | Negates a single token. |  |
+| `"` | Wraps tokens to form a phrase. |  |
+| `(` and `)` | Provide precedence. |  |
+| `~N` | Specifies edit distance \(fuzziness\) after a word. |  |
+| `~N` | Specifies slop amount \(deviation\) after a phrase. |  |
 
 ## Management
 
@@ -403,7 +358,7 @@ ID of the modules to retrieve.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -516,7 +471,7 @@ Module updated.
 The user does not have permissions to update this module.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -526,7 +481,7 @@ The user does not have permissions to update this module.
 The passed module ID does not exist.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -536,7 +491,7 @@ The passed module ID does not exist.
 Validation error.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -568,7 +523,7 @@ ID of the module to delete.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -578,7 +533,7 @@ ID of the module to delete.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -588,7 +543,7 @@ ID of the module to delete.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -622,7 +577,7 @@ ID of the module to start.
 Module started.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -632,7 +587,7 @@ Module started.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -642,7 +597,7 @@ Module started.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -652,7 +607,7 @@ Module started.
 An error occurred that prevented the module from starting.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -684,7 +639,7 @@ ID of the module to stop.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -694,7 +649,7 @@ ID of the module to stop.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -704,7 +659,7 @@ ID of the module to stop.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -751,7 +706,7 @@ ID of the module to check.
 The module specified is a logic module.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}

@@ -26,7 +26,7 @@ When approaching an existing frontend first check to see if the change can be ma
 ```javascript
 {
     ...
-    
+
     "composer": {
         "domain": "",
         "route": "",
@@ -34,7 +34,7 @@ When approaching an existing frontend first check to see if the change can be ma
         "use_domain": true,
         "local_login": false
     }
-    
+
     ...
 }
 ```
@@ -46,7 +46,7 @@ For example:
 ```javascript
 {
     ...
-    
+
     "composer": {
         "domain": "localhost:4200",
         "route": "",
@@ -54,10 +54,9 @@ For example:
         "use_domain": true,
         "local_login": false
     }
-    
+
     ...
 }
-
 ```
 
 NB: This assumes the app is being served with default settings with the `gulp serve` terminal command - i.e. utilizing port `4200`. A production `settings.json` file will be created from this with modified settings at compile time. These production values overrides will exist within `/config/default.ts`.
@@ -67,7 +66,7 @@ NB: This assumes the app is being served with default settings with the `gulp se
 ```javascript
 {
     ...
-    
+
     "app": {
         "title": "ACA Staff App",
         "name": "Staff App",
@@ -97,10 +96,10 @@ NB: This assumes the app is being served with default settings with the `gulp se
             "src": "assets/img/background-hero.jpg"
         },
         "copyright": "Copyright 2020 ACA Projects",
-        
+
         ...
     }
-    
+
     ...
 }
 ```
@@ -114,7 +113,7 @@ This snippet shows the configuration options for room booking on the default ACA
 ```javascript
 {
     ...
-    
+
     "booking": {
             "min_attendees": 0,
             "external_visitors": false,
@@ -177,9 +176,9 @@ This snippet shows the configuration options for room booking on the default ACA
                     "control_type": "custom",
                     "required": true
                 }
-                
+
                 ...
-                
+
             ],
             "banner": {
                 "enabled": true,
@@ -195,10 +194,8 @@ This snippet shows the configuration options for room booking on the default ACA
                 ]
             }
         }
-        
+
     ...
 }
 ```
-
-
 

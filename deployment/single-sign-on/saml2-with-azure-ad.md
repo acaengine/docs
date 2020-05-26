@@ -8,13 +8,12 @@ If using Azure Active Directory for SSO a new or exisiting "App Registration" wi
 * Locate the existing app that was created for [o365 Graph API access](https://github.com/acaprojects/docs/tree/be220954cefb53b2ac2ca82f775a56993117e99d/deployment/single-sign-on/integrations/directory-services/microsoft-office365.md). If none has been created yet, then create a new app registration now, as this app can be used for both SSO and o365 Graph API access.
   * If creating a NEW app registration:
     * Name it and select the appropriate "Support Account types" \(which is usually "Single tenant"\).
-    * Paste the Engine **Assertion URL** \(generated in Step 1 of [Configuring Engine for SAML2](configuring-Engine-for-saml2.md)\) into the **Reply URL** field. Leave the type as "Web". Click Register to finish.
+    * Paste the Engine **Assertion URL** \(generated in Step 1 of [Configuring Engine for SAML2](https://github.com/acaengine/docs/tree/290606a3bdbee7adcb62f37e2da8c19d25352b53/deployment/single-sign-on/configuring-Engine-for-saml2.md)\) into the **Reply URL** field. Leave the type as "Web". Click Register to finish.
   * If configuring an existing app registration:
     * Navigate to Overview -&gt; Redirect URIs
-    * Paste the Engine **Assertion URL** \(generated in Step 1 of [Configuring Engine for SAML2](configuring-Engine-for-saml2.md)\) into the **Redirect URI** field. Leave the type as "Web". Click Save to finish.
+    * Paste the Engine **Assertion URL** \(generated in Step 1 of [Configuring Engine for SAML2](https://github.com/acaengine/docs/tree/290606a3bdbee7adcb62f37e2da8c19d25352b53/deployment/single-sign-on/configuring-Engine-for-saml2.md)\) into the **Redirect URI** field. Leave the type as "Web". Click Save to finish.
 * Confirm that you have access to the [SAML2 Federation Metadata URL](https://docs.microsoft.com/en-us/azure/active-directory/azuread-dev/azure-ad-federation-metadata) for your Azure Tenant. This is generally in the below format. Data in this XML file may be used later in Step 3, OR can be used to configure advanced custom claims.
-
-  * https://login.microsoftonline.com/&lt;Tenant ID or Domain Name&gt;/FederationMetadata/2007-06/FederationMetadata.xml 
+  * [https://login.microsoftonline.com/&lt;Tenant](https://login.microsoftonline.com/<Tenant) ID or Domain Name&gt;/FederationMetadata/2007-06/FederationMetadata.xml 
 
 ## Step 2 - Edit the App Manifest
 
@@ -55,7 +54,7 @@ Now two fields of the app Manifest need to be edited \(`groupMembershipClaims` a
 
 ## Step 3 - Collect data required by Backoffice
 
-The App Registration is now configured for Engine. Three pieces of info are required to be entered back into Backoffice \(Step 3 of [Configuring Engine for SAML2](configuring-Engine-for-saml2.md)\):
+The App Registration is now configured for Engine. Three pieces of info are required to be entered back into Backoffice \(Step 3 of [Configuring Engine for SAML2](https://github.com/acaengine/docs/tree/290606a3bdbee7adcb62f37e2da8c19d25352b53/deployment/single-sign-on/configuring-Engine-for-saml2.md)\):
 
 ### **Issuer**
 
@@ -67,5 +66,5 @@ Also known as **SAML2 sign-on endpoint.** This is the url that Engine redirects 
 
 ### Full Certificate
 
-Also known as **X509Certificate**\). This long text string needs to be copied from the ID provider's federation metadata XML \(see [Step 1](saml2-with-azure-ad.md#step-1-new-or-existing-app-registration)\) file in the field _KeyInfo.X509Data.X509Certificate_. 
+Also known as **X509Certificate**\). This long text string needs to be copied from the ID provider's federation metadata XML \(see [Step 1](saml2-with-azure-ad.md#step-1-new-or-existing-app-registration)\) file in the field _KeyInfo.X509Data.X509Certificate_.
 

@@ -114,15 +114,15 @@ Return zones of this tag only.
 
 Queries default to searching for any of the entered terms \(words\). A small query language provides the ability to structure complex queries.
 
-| Operator | Action |
-| :--- | :--- |
-| `+` | Matches both terms. |
-| `|` | Matches either terms. |
-| `-` | Negates a single token. |
-| `"` | Wraps tokens to form a phrase. |
-| `(` and `)` | Provide precedence. |
-| `~N` | Specifies edit distance \(fuzziness\) after a word. |
-| `~N` | Specifies slop amount \(deviation\) after a phrase. |
+| Operator | Action |  |
+| :--- | :--- | :--- |
+| `+` | Matches both terms. |  |
+| \` | \` | Matches either terms. |
+| `-` | Negates a single token. |  |
+| `"` | Wraps tokens to form a phrase. |  |
+| `(` and `)` | Provide precedence. |  |
+| `~N` | Specifies edit distance \(fuzziness\) after a word. |  |
+| `~N` | Specifies slop amount \(deviation\) after a phrase. |  |
 
 ## Management
 
@@ -326,7 +326,7 @@ ID of the zone to remove.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}

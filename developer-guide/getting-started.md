@@ -15,7 +15,7 @@ Outside of these, nothing will need to be installed or modified on your machine.
 
 Setup these now, then drop back - we’ve prepared some music to play while you do this...
 
-{% embed url="https://youtu.be/S5PvBzDlZGs" %}
+{% embed url="https://youtu.be/S5PvBzDlZGs" caption="" %}
 
 Welcome back.
 

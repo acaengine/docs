@@ -1,85 +1,63 @@
 # Dependencies
 
-When a driver is loaded into Engine, it becomes a _dependency_. Dependencies are available as the blueprint from which modules are created.  The `/dependencies` endpoint provide methods to discover, load and update these. For more on the role the drivers play, see:
+When a driver is loaded into Engine, it becomes a _dependency_. Dependencies are available as the blueprint from which modules are created. The `/dependencies` endpoint provide methods to discover, load and update these. For more on the role the drivers play, see:
 
 {% page-ref page="../../key-concepts/drivers.md" %}
 
 ## Model <a id="model"></a>
 
+| Attribute | Type | Description |
+| :--- | :--- | :--- |
+
+
+| id | `string` | The dependency's unique ID. |
+| :--- | :--- | :--- |
+
+
+| name | `string` | Human readable name for the dependency. |
+| :--- | :--- | :--- |
+
+
+| class\_name | `string` | The Ruby class name of the driver. |
+| :--- | :--- | :--- |
+
+
+| module\_name | `string` | The kind of module this instantiates \(e.g. `Display`\). |
+| :--- | :--- | :--- |
+
+
+| role | `string` | One of `ssh`, `device`, `service`, or `logic`. |
+| :--- | :--- | :--- |
+
+
+| description | `string` | Additional information that describes the dependency. |
+| :--- | :--- | :--- |
+
+
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Attribute</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">id</td>
-      <td style="text-align:left"><code>string</code>
-      </td>
-      <td style="text-align:left">The dependency&apos;s unique ID.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">name</td>
-      <td style="text-align:left"><code>string</code>
-      </td>
-      <td style="text-align:left">Human readable name for the dependency.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">class_name</td>
-      <td style="text-align:left"><code>string</code>
-      </td>
-      <td style="text-align:left">The Ruby class name of the driver.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">module_name</td>
-      <td style="text-align:left"><code>string</code>
-      </td>
-      <td style="text-align:left">The kind of module this instantiates (e.g. <code>Display</code>).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">role</td>
-      <td style="text-align:left"><code>string</code>
-      </td>
-      <td style="text-align:left">One of <code>ssh</code>, <code>device</code>, <code>service</code>, or <code>logic</code>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">description</td>
-      <td style="text-align:left"><code>string</code>
-      </td>
-      <td style="text-align:left">Additional information that describes the dependency.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">default</td>
-      <td style="text-align:left">
+      <th style="text-align:left">default</th>
+      <th style="text-align:left">
         <p><code>string</code> or</p>
         <p><code>integer</code>
         </p>
-      </td>
-      <td style="text-align:left">A URL or port number that is typical for modules using this.</td>
+      </th>
+      <th style="text-align:left">A URL or port number that is typical for modules using this.</th>
     </tr>
-    <tr>
-      <td style="text-align:left">ignore_connected</td>
-      <td style="text-align:left"><code>boolean</code>
-      </td>
-      <td style="text-align:left">Default state of connectivity monitoring for instances.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">settings</td>
-      <td style="text-align:left"><code>object</code>
-      </td>
-      <td style="text-align:left">A JSON object containing configuration shared by all instances.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">created_at</td>
-      <td style="text-align:left"><code>integer</code>
-      </td>
-      <td style="text-align:left">Timestamp of creation.</td>
-    </tr>
-  </tbody>
-</table>## Discovery
+  </thead>
+  <tbody></tbody>
+</table>| ignore\_connected | `boolean` | Default state of connectivity monitoring for instances. |
+| :--- | :--- | :--- |
+
+
+| settings | `object` | A JSON object containing configuration shared by all instances. |
+| :--- | :--- | :--- |
+
+
+| created\_at | `integer` | Timestamp of creation. |
+| :--- | :--- | :--- |
+
 
 {% api-method method="get" host="https://example.com" path="/api/control/dependencies" %}
 {% api-method-summary %}
@@ -142,15 +120,15 @@ Filter to a specific role.
 
 Queries default to searching for any of the entered terms \(words\). A small query language provides the ability to structure complex queries.
 
-| Operator | Action |
-| :--- | :--- |
-| `+` | Matches both terms. |
-| `|` | Matches either terms. |
-| `-` | Negates a single token. |
-| `"` | Wraps tokens to form a phrase. |
-| `(` and `)` | Provide precedence. |
-| `~N` | Specifies edit distance \(fuzziness\) after a word. |
-| `~N` | Specifies slop amount \(deviation\) after a phrase. |
+| Operator | Action |  |
+| :--- | :--- | :--- |
+| `+` | Matches both terms. |  |
+| \` | \` | Matches either terms. |
+| `-` | Negates a single token. |  |
+| `"` | Wraps tokens to form a phrase. |  |
+| `(` and `)` | Provide precedence. |  |
+| `~N` | Specifies edit distance \(fuzziness\) after a word. |  |
+| `~N` | Specifies slop amount \(deviation\) after a phrase. |  |
 
 ## Management
 
@@ -226,7 +204,7 @@ Created.
 Validation exception.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -354,7 +332,7 @@ Updated.
 Validation error.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -386,7 +364,7 @@ ID of the dependency to remove.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -420,7 +398,7 @@ ID of the dependency to reload.
 Reload successful.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -430,7 +408,7 @@ Reload successful.
 An error was detected in the updated driver and the reload is blocked. If this occurs, the previously operating driver will continue to run uninterrupted.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}

@@ -16,5 +16,5 @@ A connection to the real-time API can be established by requesting the `/control
 let socket = new WebSocket('wss://example.com/control/websocket?bearer_token=<access token>');
 ```
 
- When opened, this will provide a full-duplex stream for communications.
+When opened, this will provide a full-duplex stream for communications.
 
