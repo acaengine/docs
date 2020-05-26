@@ -65,7 +65,7 @@ Switching to federated authentication is recommended. There are 3 steps required
                 "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"
             ],
             "login_name": [
-                "http://schemas.microsoft.com/ws/2008/06/identity/claims/objectidentifier"
+              "http://schemas.microsoft.com/identity/claims/objectidentifier"
             ]
         }
       ```
