@@ -29,9 +29,9 @@ Switching to federated authentication is recommended. There are 3 steps required
    ```text
         [
             {
-                "name": "http://schemas.microsoft.com/ws/2008/06/identity/claims/upn",
-                "name_format": "urn:oasis:names:tc:SAML:2.0:attrname-format:basic",
-                "friendly_name": "User Principal Name"
+             "name": "http://schemas.microsoft.com/ws/2008/06/identity/claimsclaims/objectidentifier",
+             "name_format": "urn:oasis:names:tc:SAML:2.0:attrname-format:basic",
+             "friendly_name": "Unique ID"
             },
             {
                 "name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
