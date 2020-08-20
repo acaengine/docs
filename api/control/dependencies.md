@@ -47,7 +47,9 @@ When a driver is loaded into Engine, it becomes a _dependency_. Dependencies are
     </tr>
   </thead>
   <tbody></tbody>
-</table>| ignore\_connected | `boolean` | Default state of connectivity monitoring for instances. |
+</table>
+
+| ignore\_connected | `boolean` | Default state of connectivity monitoring for instances. |
 | :--- | :--- | :--- |
 
 

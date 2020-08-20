@@ -82,7 +82,9 @@ Minimal configuration information is stored on disk as part of the on-premise in
       </td>
     </tr>
   </tbody>
-</table>The [search service](https://docs.acaengine.com/deployment/architecture#search) stores an optimised index of system, zone and device names and descriptions.
+</table>
+
+The [search service](https://docs.acaengine.com/deployment/architecture#search) stores an optimised index of system, zone and device names and descriptions.
 
 ## Authentication
 

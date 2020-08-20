@@ -82,7 +82,9 @@ The `/modules` endpoint provides creation, management and direct interaction wit
     </tr>
   </thead>
   <tbody></tbody>
-</table>| notes | `string` | Markdown formatted text that describes this module. |
+</table>
+
+| notes | `string` | Markdown formatted text that describes this module. |
 | :--- | :--- | :--- |
 
 

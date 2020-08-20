@@ -135,7 +135,9 @@ end
       <td style="text-align:left">Use a proxy server for the request.</td>
     </tr>
   </tbody>
-</table>NOTE:: Both NTLM and Digest auth are challenge response protocols and won’t work with HTTP 1.0 or keep alive false
+</table>
+
+NOTE:: Both NTLM and Digest auth are challenge response protocols and won’t work with HTTP 1.0 or keep alive false
 
 ### Basic Authentication
 
