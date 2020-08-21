@@ -24,6 +24,7 @@
 
 ## Integrations
 
+* [Supported Integrations](integrations/supported-integrations.md)
 * [Directory Services](integrations/directory-services/README.md)
   * [Microsoft Office365](integrations/directory-services/microsoft-office365.md)
 * [IoT](integrations/iot/README.md)
