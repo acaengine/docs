@@ -34,6 +34,17 @@ If a driver for your device is not available, you can raise a request to have th
 * IBM Domino
 * Native PlaceOS resource booking
 
+## Common Protocols/Standards
+
+* HTTPS REST / JSON
+* HTTPS Webhook \(post and receive\)
+* TCP/IP
+* MQTT
+* SNMPv2
+* KNX \(via IP Gateway\)
+* BACnet \(via IP Gateway\)
+* Modbus TCP
+
 ## Real Time Location
 
 * Cisco Meraki RTLS
