@@ -64,7 +64,3 @@ For Azure AD the "Issuer" will be the "Application \(client\) ID" found on the O
 
 Also known as **SAML2 sign-on endpoint.** This is the url that Engine redirects users to in order to login with your SAML2 ID provider. For Azure AD it is : [**https://login.microsoftonline.com/**](https://login.microsoftonline.com/)**&lt;TENANT-ID&gt;/**_**saml2**_ _\*\*_ where the Directoy \(tenant\) ID can be seen on the Overview tab of your Azure App Registration. Paste this into the IDP Target URL field of the SAML2 auth object that was created in Engine
 
-### Full Certificate
-
-Also known as **X509Certificate**\). This long text string needs to be copied from the ID provider's federation metadata XML \(see [Step 1](saml2-with-azure-ad.md#step-1-new-or-existing-app-registration)\) file in the field _KeyInfo.X509Data.X509Certificate_.
-

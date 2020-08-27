@@ -24,16 +24,14 @@ While still in Azure Portal on the page for the above registered App:
 1. In the menu on the left, select “API permissions” and click “Add a permission”. Then select “Microsoft Graph” as the API and select _“Application Permissions”_ as the permission.
 2. Typically, allow the below permissions \(the list may vary depending on the desired functionality/restrictions on the web applications that will be using this Graph API integration\):
    * `User.Read.All`
-   * `Calendars.ReadWrite`
-3. If there is a requirement for the application to know which groups \(e.g. AD Security group or mailing list\) user's exist in, then add the below additional Application permissions:
    * `Group.Read.All`
-4. If there is a requirement for the application to read/write user's Contacts, then add the below additional Application permissions:
-   * `Contacts.ReadWrite`
-5. After adding the required Application permissions, click "Grant admin consent for ACA Projects" on the "API Permissions" page of the registered App, then click Yes.
-6. On the "Overview" page of the App, copy the below two values, which will be used in the next section to configure Engine to connect to this Registered App:
+   * `Place.Read.All`
+   * `Calendars.ReadWrite`
+3. After adding the required Application permissions, click "Grant admin consent for ACA Projects" on the "API Permissions" page of the registered App, then click Yes.
+4. On the "Overview" page of the App, copy the below two values, which will be used in the next section to configure Engine to connect to this Registered App:
    * `Application (client) ID`
    * `Directory (tenant) ID`
-7. On the "Certificates & secrets" page of the App, click "New client secret":
+5. On the "Certificates & secrets" page of the App, click "New client secret":
    * Add a meaningful description
    * Set Expiry to "Never", or as appropriate \(ACA will no longer be allowed to use this credential after expiry\)
    * Copy the Value of the secret, as it will be used in the next section to configure Engine.

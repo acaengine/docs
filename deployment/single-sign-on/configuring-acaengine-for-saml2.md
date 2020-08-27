@@ -107,8 +107,7 @@ You will enter these details from Step 2 into Backoffice:
 2. **IDP Target URL** \(also known as **Assertion URL**\): This is the url that Engine redirects users to in order to login with your SAML2 ID provider
    * Azure AD URLs are often in the format: [https://login.microsoftonline.com/\*\*&lt;tenant-ID&gt;\*\*/saml2](https://login.microsoftonline.com/**<tenant-ID>**/saml2)
    * ADFS URLs are often in the format: [https://adfs.myorganistaion.com/adfs/ls](https://adfs.myorganistaion.com/adfs/ls)
-   * Auth0 URLs are often in the format: [https://myorganisation.auth0.com/samlp/](https://myorganisation.auth0.com/samlp/) 
-3. **Full Certificate** \(also known as **X509Certificate**\): This long text string needs to be copied from the ID provider's federation metadata XML file \(in the field _KeyInfo.X509Data.X509Certificate_\)
+   * Auth0 URLs are often in the format: [https://myorganisation.auth0.com/samlp/](https://myorganisation.auth0.com/samlp/)
 
 ### Update Engine's new authentication settings
 
