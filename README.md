@@ -7,8 +7,8 @@ description: >-
 
 # What is Engine?
 
-{% hint style="success" %}
-If you’ve used traditional, hardware-based control systems before, welcome to the new world.
+{% hint style="warning" %}
+Engine was the pre-cursor to PlaceOS. These guides are provided as a reference for existing deployments. For up-to-date information on the current platform release, please see [place.technology](https://place.technology).
 {% endhint %}
 
 * **Software only** built on the modern web.
