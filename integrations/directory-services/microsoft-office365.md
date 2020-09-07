@@ -6,8 +6,8 @@ Engine integrates with Microsoft Office 365 via [Graph API](https://docs.microso
 
 The below Microsoft article and video can be referred to for additional context:
 
-* Article: Register an application with the Microsoft identity platform
-* Video: Getting Started with Microsoft Graph and Application Registration
+* Article: [Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)
+* Video: [Getting Started with Microsoft Graph and Application Registration](https://www.youtube.com/watch?v=93j0MmRruFo)
 
 An Azure user with admin permissions for Azure Active Directory will need to perform these actions:
 
