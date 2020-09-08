@@ -115,8 +115,7 @@ Start by clicking edit \(pen icon\) on the Authentication that was created in St
 
 1. Replace the **Issuer** field with the Issuer from your SAML2 ID provider \(unless your SAML2 ID provider already matches\)
 2. Replace the **IDP Target URL** field with the SAML2 Identity provider login url that was generated in Step 2 _"Register a new service/app on your authentication provider"_
-3. Paste the long X509Certificate string into the **Full Certificate** field, without any appended/prepended text.
-4. Click Save
+3. Click Save
 
 ### Test new settings
 
