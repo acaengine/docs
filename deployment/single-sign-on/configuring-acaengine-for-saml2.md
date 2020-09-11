@@ -127,8 +127,8 @@ If there are errors, the configuration on either the ID provider of Engine side 
 
 Still on the Domains tab, edit the DOMAIN by clicking the pen icon at the top right \(above the "Users" sub-tab\)
 
-1. Replace the **Login url** with _/auth/login?provider=adfs&id=**adfs-XXXXXXXXX**&continue=_ where _**adfs-XXXXXXXXX**_ _\*\*_is the ID from Engine's SAML2 login url
-2. Replace the **Logout url** with _/auth/logout?continue=**&lt;SAML2\_LOGOUT\_URL&gt;**_ where &lt;_**SAML2\_LOGOUT\_URL&gt;**_ _\*\*_is the logout url provided by your SAML2 identity provider.
+1. Replace the **Login url** with _/auth/login?provider=adfs&id=**adfs-XXXXXXXXX**&continue=_ where _**adfs-XXXXXXXXX**_ \_\*\*\_is the ID from Engine's SAML2 login url
+2. Replace the **Logout url** with _/auth/logout?continue=**&lt;SAML2\_LOGOUT\_URL&gt;**_ where &lt;_**SAML2\_LOGOUT\_URL&gt;**_ \_\*\*\_is the logout url provided by your SAML2 identity provider.
 3. Azure AD logout URLs are often in the format: [https://login.microsoftonline.com/](https://login.microsoftonline.com/)_/saml2_
 4. ADFS logout URLs are often in the format: [https://example-organisation.com/adfs/ls/?wa=wsignout1.0](https://example-organisation.com/adfs/ls/?wa=wsignout1.0)
 5. Auth0 logout URLs are often in the format: [https://example-organisation.com.auth0.com/samlp/](https://example-organisation.com.auth0.com/samlp/)_/logout_

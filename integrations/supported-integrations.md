@@ -84,11 +84,11 @@ If a driver for your device is not available, you can raise a request to have th
 ## Displays
 
 * LG \(Displays\)
-* Sony \(Displays/Projectors\)
 * NEC \(Displays/Projectors\)
+* Panasonic \(Displays/Projectors\)
+* Sony \(Displays/Projectors\)
 * Samsung \(Displays\)
 * Sharp \(Displays\)
-* Panasonic \(Displays/Projectors\)
 * Screen Technics \(Screens/Lifts\)
 * PJLink projectors
 
