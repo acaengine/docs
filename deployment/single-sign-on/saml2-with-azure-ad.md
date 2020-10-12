@@ -54,7 +54,7 @@ Now two fields of the app Manifest need to be edited \(`groupMembershipClaims` a
 
 ## Step 3 - Collect data required by Backoffice
 
-The App Registration is now configured for Engine. Three pieces of info are required to be entered back into Backoffice \(Step 3 of [Configuring Engine for SAML2](https://github.com/acaengine/docs/tree/290606a3bdbee7adcb62f37e2da8c19d25352b53/deployment/single-sign-on/configuring-Engine-for-saml2.md)\):
+The App Registration is now configured for Engine. Two pieces of info are required to be entered back into Backoffice \(Step 3 of [Configuring Engine for SAML2](https://github.com/acaengine/docs/tree/290606a3bdbee7adcb62f37e2da8c19d25352b53/deployment/single-sign-on/configuring-Engine-for-saml2.md)\):
 
 ### **Issuer**
 
