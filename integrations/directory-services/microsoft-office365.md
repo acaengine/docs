@@ -26,6 +26,7 @@ While still in Azure Portal on the page for the above registered App:
    * `User.Read.All`
    * `Group.Read.All`
    * `Place.Read.All`
+   * `Contacts.Read.All`
    * `Calendars.ReadWrite`
 3. After adding the required Application permissions, click "Grant admin consent for ACA Projects" on the "API Permissions" page of the registered App, then click Yes.
 4. On the "Overview" page of the App, copy the below two values, which will be used in the next section to configure Engine to connect to this Registered App:
