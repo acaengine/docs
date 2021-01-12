@@ -21,7 +21,7 @@ An Azure user with admin permissions for Azure Active Directory will need to per
 
 While still in Azure Portal on the page for the above registered App:
 
-1. In the menu on the left, select “API permissions” and click “Add a permission”. Then select “Microsoft Graph” as the API and select _“Application Permissions”_ as the permission.
+1. In the menu on the left, select “API permissions” and click “Add a permission”. Then select “Microsoft Graph” as the API and select **Application Permissions** as the permission.
 2. Typically, allow the below permissions \(the list may vary depending on the desired functionality/restrictions on the web applications that will be using this Graph API integration\):
    * `User.Read.All`
    * `Group.Read.All`
