@@ -25,9 +25,9 @@ While still in Azure Portal on the page for the above registered App:
 2. Typically, allow the below permissions \(the list may vary depending on the desired functionality/restrictions on the web applications that will be using this Graph API integration\):
    * `User.Read.All`
    * `Group.Read.All`
-   * `Place.Read.All`
-   * `Contacts.Read.All`
    * `Calendars.ReadWrite`
+   * `Contacts.Read.All`
+   * `Place.Read.All`
 3. After adding the required Application permissions, click "Grant admin consent for ACA Projects" on the "API Permissions" page of the registered App, then click Yes.
 4. On the "Overview" page of the App, copy the below two values, which will be used in the next section to configure Engine to connect to this Registered App:
    * `Application (client) ID`
