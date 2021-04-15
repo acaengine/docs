@@ -56,7 +56,10 @@ If a driver for your device is not available, you can raise a request to have th
 * MQTT ingest
 * Azure IOT Hub
 * Vergesense
+* XY Sense
+* Freespace
 * Floorsense
+* Officernd
 * Pressac
 * PointGrab Cognipoint
 
