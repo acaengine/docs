@@ -7,8 +7,8 @@ description: >-
 
 # What is Engine?
 
-{% hint style="warning" %}
-Engine was the pre-cursor to PlaceOS. These guides are provided as a reference for existing deployments. For up-to-date information on the current platform, please see [place.technology](https://place.technology).
+{% hint style="info" %}
+Engine was the pre-cursor to PlaceOS. These guides are provided as a reference for existing deployments. For up-to-date information on the current platform, head on over to [placeos.com](https://placeos.com).
 {% endhint %}
 
 * **Software only** built on the modern web.
